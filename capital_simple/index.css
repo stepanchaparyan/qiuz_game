@@ -10,7 +10,7 @@ body {
   padding: 10px;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  background: url("./images/city-scape.jpg") no-repeat center center fixed;
+  background: url("./images/orange_city_2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,7 +25,8 @@ section {
 
 
 header {
-  background-color: rgba(174, 208, 239, 0.5);
+  background-color: rgb(250,215,160);
+  opacity:0.6;
   text-align: center;
 }
 
@@ -52,8 +53,9 @@ header h1 {
 .start-page,
 .quiz-questions,
 .feedback-page {
-  background: rgba(255, 255, 255, 0.8);
+  background: #FAD7A0;
   padding: 15px;
+  opacity:0.9;
 }
 
 fieldset {
