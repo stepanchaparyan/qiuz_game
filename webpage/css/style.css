@@ -625,3 +625,12 @@ body{
 .button-style:hover {
   background-color: #ab8e1d;
 }
+
+button:disabled {
+    background: #dddddd;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+		background: #dddddd;
+}
