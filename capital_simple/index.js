@@ -5,7 +5,7 @@ let displayCounter = counter + 1;
 
 const QUIZ = [
 // question one
-{ 
+{
   question: "What is the capital city of the United States?",
   answers: [
   "New York, NY",
@@ -16,24 +16,24 @@ const QUIZ = [
   correctAnswerString: "Washington, D.C.",
 },
 // question two
-{ 
+{
   question: "What is the capital city of Spain?",
   answers: [
   "Madrid",
-  "Barcelona", 
-  "San Sebasti&#225;n", 
+  "Barcelona",
+  "San Sebasti&#225;n",
   "Pamplona"
   ],
   correctAnswerString: "Madrid",
 },
 //question three
-{ 
+{
   question: "What is the capital city of France?",
   answers: [
   "Marseille",
   "Nice",
   "Avignon",
-  "Paris" 
+  "Paris"
   ],
   correctAnswerString: "Paris",
 },
@@ -110,7 +110,7 @@ const QUIZ = [
 ];
 
 
-//Click on Start Button to set display of .start-page to none, 
+//Click on Start Button to set display of .start-page to none,
 //and set .quiz-questions display:none to visible
 function startQuiz() {
   $('.start-button').on('click', function(event) {
@@ -144,7 +144,7 @@ function generateQuestions(counter) {
         <input type="radio" name="question-option" id="question-option-four" value="${currentQuestion.answers[3]}">
         <label for="question-option-four">${currentQuestion.answers[3]}</label>
       </fieldset>
-      </form> 
+      </form>
       <p>Question: ${counter + 1}/10</p>
       <p>Score: ${scoreCount}/10</p>`;
     $('#quiz-questions').html(quizHTML);
@@ -157,7 +157,7 @@ function answerFeedback (counter) {
   if (counter < 10) {
     let correctAnswer = QUIZ[counter].correctAnswerString;
     $('input[type=radio]').click(function(event) {
-      $('.options').children('input').attr('disabled', true); 
+      $('.options').children('input').attr('disabled', true);
       let userAnswer = $(this).val();
       if (userAnswer === correctAnswer) {
         scoreCount += 1;

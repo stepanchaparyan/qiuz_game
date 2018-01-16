@@ -1,3 +1,7 @@
+.test {
+  background-color: red;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +14,7 @@ body {
   padding: 10px;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  background: url("./images/city-scape.jpg") no-repeat center center fixed;
+  background-color: #48B484;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,7 +29,8 @@ section {
 
 
 header {
-  background-color: rgba(174, 208, 239, 0.5);
+  background-color: rgb(250,215,160);
+  opacity:0.6;
   text-align: center;
 }
 
@@ -52,8 +57,9 @@ header h1 {
 .start-page,
 .quiz-questions,
 .feedback-page {
-  background: rgba(255, 255, 255, 0.8);
+  background-color: #FAD7A0;
   padding: 15px;
+  opacity:0.9;
 }
 
 fieldset {
@@ -116,4 +122,16 @@ p .final-score {
     width: 50%;
     margin: 0 auto;
   }
+}
+
+*****Footer*******
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
 }

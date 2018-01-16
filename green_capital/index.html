@@ -14,9 +14,16 @@
 
   <link rel="stylesheet" href="css/custom.css">
 
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
 </head>
 <body>
 
+<!--******** Navbar *********-->
     <nav class="navbar navbar-righ">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -33,29 +40,44 @@
       </div>
     </nav>
 
+<!--******** Start_card ************-->
     <div class="row">
-      <div class="col-sm-2 left-part">kkhk
+      <div class="col-sm-2 left-part">
       </div>
     <div class="col-sm-8 center-part">
-
       <div>
-
-        <div class="card-center">
+        <div class="card-center" id="start">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
             <div class="card-body" >
               <h4 class="card-title">Capitals</h4>
               <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
-              <button class="button-style" onclick="window.location='../capital_simple/index.html';">Start this game</button>
+              <button class="button-style" onclick="start()">Start this game</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="questions" class="no-display">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
+            <div class="card-body" >
+              <h4 class="card-title">Cadfvdfvdfvpitals</h4>
+              <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
+              <button class="button-style" onclick="start()">Start this game</button>
             </div>
           </div>
         </div>
 
       </div>
-
     </div>
       <div class="col-sm-2 right-part">.col-sm-3</div>
     </div>
+
+<div id="questions" class="no-display">
+  lhkygmykgy
+</div>
+
+
 
 <footer>Copyright &copy; W3Schools.com</footer>
 
