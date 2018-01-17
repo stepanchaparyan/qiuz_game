@@ -116,21 +116,22 @@ function generateQuestions(counter) {
     let currentQuestion = QUIZ[counter];
     let quizHTML = `
       <form>
-      <h1 class="question-one">${currentQuestion.question}</h1>
+      <div class="question-one">${currentQuestion.question}</div>
       <fieldset class="options">
         <input type="radio" name="question-option" id="question-option-one" value="${currentQuestion.answers[0]}">
         <label for="question-option-one">${currentQuestion.answers[0]}</label>
-        <br><br>
+        <br>
         <input type="radio" name="question-option" id="question-option-two" value="${currentQuestion.answers[1]}">
         <label for="question-option-two">${currentQuestion.answers[1]}</label>
-        <br><br>
+        <br>
         <input type="radio" name="question-option" id="question-option-three" value="${currentQuestion.answers[2]}">
         <label for="question-option-three">${currentQuestion.answers[2]}</label>
-        <br><br>
+        <br>
         <input type="radio" name="question-option" id="question-option-four" value="${currentQuestion.answers[3]}">
         <label for="question-option-four">${currentQuestion.answers[3]}</label>
       </fieldset>
       </form>
+      <br>
       <p>Question: ${counter + 1}/10</p>
       <p>Score: ${scoreCount}/10</p>`;
     $('#quiz-questions').html(quizHTML);
@@ -144,10 +145,9 @@ function startQuiz() {
   $('.button-style').on('click', function (event) {
       console.log('Hide start page and display questions');
       $('#quiz-questions').removeClass("no-display");
+      $('#quiz-image').removeClass("no-display");
       $('#start').addClass("no-display");
-//    $('#quiz-nav').removeClass("hide-display");
-      console.log('Hide shgvyjbplay questions');
-
+      $('#quiz-nav').removeClass("no-display");
     });
 }
 

@@ -104,61 +104,42 @@ footer {
     display: none;
 }
 
-/***  quiz-questions ***/
+/*** quiz-questions ***/
 
-
-body {
-  padding: 10px;
-  font-family: 'Raleway', sans-serif;
+#quiz-questions {
+  width: 70%;
+  margin: 15%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   font-size: 16px;
-  background: url("./images/city-scape.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  text-align: left;
 }
 
-header,
-section {
-  width: 100%;
-  margin: 0 auto;
+#quiz-image {
+  width: 40%;
+  margin-top: 2%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-
-header {
-  background-color: rgba(174, 208, 239, 0.5);
+.question-one {
   text-align: center;
+  font-size: 25px;
+  background-color: #48B484;
 }
 
-header h1 {
-  font-size: 2.8rem;
-  font-family: 'Josefin sans', sans-serif;
-  padding: 20px;
+fieldset>input[type=radio] {
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 0;
 }
 
-
-.quiz-questions h1 {
-  font-size: 1.3em;
-  font-family: 'Raleway', sans-serif;
+.options {
+  background-color: #b4e1cd;
 }
 
-.feedback-page h1 {
-  font-size: 2.8em;
-}
-
-.start-page {
-  text-align: center;
-}
-
-.start-page,
-.quiz-questions,
-.feedback-page {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-}
-
-fieldset {
-  border: 0px;
+label {
+  padding: 5px;
 }
 
 button {
@@ -169,18 +150,32 @@ button {
   border-radius: 5px;
 }
 
-.quiz-nav p {
-  display: inline-block;
-  margin-top: 25px;
-  margin-right: 10px;
+.quiz-nav {
+  margin-left: 15%;
+  border: 1px lightblue solid;
+  background-color: lightblue;
+  border-radius: 5px;
+  width: 70%;
+}
+
+#quiz-questions p {
+  display: inline-flex;
+  padding: 6px;
+  border: 1px lightblue solid;
+  background-color: #f5f0e4;
+  border-radius: 5px;
+  width: 49%;
 }
 
 
-#quiz-questions p {
-  display: inline-block;
-  margin: 10px;
-  padding: 5px;
-  border: 1px black solid;
+
+.feedback-page h1 {
+  font-size: 2.8em;
+}
+
+.feedback-page {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
 }
 
 #quiz-questions .correct-answer {
@@ -189,15 +184,10 @@ button {
   border-radius: 10px;
 }
 
-label {
-  padding: 5px;
-}
-
 p .final-score {
   padding: 50px;
   margin-bottom: 10px;
 }
-
 
 .correct-answer {
   background: rgba(91, 140, 59, 0.3);

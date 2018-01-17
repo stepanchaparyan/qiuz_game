@@ -117,7 +117,7 @@ function startQuiz() {
     console.log('Hide start page and display questions');
     $('#quiz-questions').removeClass("hide-display");
     $('#start-page').addClass("hide-display");
-   $('#quiz-nav').removeClass("hide-display");
+    $('#quiz-nav').removeClass("hide-display");
   });
 }
 
