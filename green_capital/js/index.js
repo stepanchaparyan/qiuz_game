@@ -109,36 +109,48 @@ const QUIZ = [
  }
 ];
 
+
+//Click on Start Button to set display of .start-page to none,
+//and set .quiz-questions display:none to visible
+function startQuiz() {
+  $('.button-style').on('click', function(event) {
+    console.log('Hide start page and display questions');
+    $('#quiz-questions').removeClass("hide-display");
+    $('#start-page').addClass("hide-display");
+   $('#quiz-nav').removeClass("hide-display");
+  });
+}
+
 //Generate questions in a form
 // pass in the counter variable
 // retrieve the question with the index of the counter variable
 // display the question
 function generateQuestions(counter) {
-    if (counter < 10) {
+  if (counter < 10) {
     let currentQuestion = QUIZ[counter];
     let quizHTML = `
       <form>
-      <div class="question-one">${currentQuestion.question}</div>
+      <h1 class="question-one">${currentQuestion.question}</h1>
       <fieldset class="options">
         <input type="radio" name="question-option" id="question-option-one" value="${currentQuestion.answers[0]}">
         <label for="question-option-one">${currentQuestion.answers[0]}</label>
-        <br>
+        <br><br>
         <input type="radio" name="question-option" id="question-option-two" value="${currentQuestion.answers[1]}">
         <label for="question-option-two">${currentQuestion.answers[1]}</label>
-        <br>
+        <br><br>
         <input type="radio" name="question-option" id="question-option-three" value="${currentQuestion.answers[2]}">
         <label for="question-option-three">${currentQuestion.answers[2]}</label>
-        <br>
+        <br><br>
         <input type="radio" name="question-option" id="question-option-four" value="${currentQuestion.answers[3]}">
         <label for="question-option-four">${currentQuestion.answers[3]}</label>
       </fieldset>
       </form>
-      <br>
       <p>Question: ${counter + 1}/10</p>
       <p>Score: ${scoreCount}/10</p>`;
     $('#quiz-questions').html(quizHTML);
   };
 }
+
 
 //press on answer and receive a correct or wrong message
 function answerFeedback (counter) {
@@ -152,7 +164,7 @@ function answerFeedback (counter) {
         $('input[type=radio]:checked').next('label').addClass('correct-answer');
         $('#quiz-questions').append(`<p class='correct-answer'>Correct!</p>`);
       } else {
-        $('#quiz-questions').append(`<p class='wrong-answer'>Wrong! The correct answer is: ${correctAnswer}</p>`)
+        $('#quiz-questions').append(`<p class='correct-answer'>Wrong! The correct answer is: ${correctAnswer}</p>`)
         $('input[type=radio]:checked').next('label').addClass('wrong-answer');
       }
     });
@@ -189,9 +201,9 @@ function nextQuestionButton () {
 function finalFeedback() {
   $('.next-button').on('click', function() {
     if (counter === 10) {
-      $('#quiz-questions').addClass('no-display');
-      $('#quiz-nav').addClass("no-display");
-      $('.feedback-page').removeClass('no-display');
+      $('#quiz-questions').addClass('hide-display');
+      $('#quiz-nav').addClass("hide-display");
+      $('.feedback-page').removeClass('hide-display');
       $('.final-score').append(`You got ${scoreCount}/10 questions right!`)
     }
   });
@@ -204,20 +216,8 @@ function tryAgain() {
   });
 }
 
-//Click on Start Button to set display of .start-page to none,
-//and set .quiz-questions display:none to visible
-function startQuiz() {
-  $('.button-style').on('click', function (event) {
-      console.log('Hide start page and display questions');
-      $('#quiz-questions').removeClass("no-display");
-      $('#quiz-image').removeClass("no-display");
-      $('#start').addClass("no-display");
-      $('#quiz-nav').removeClass("no-display");
-    });
-}
 
-
-function start() {
+function renderQuiz() {
   startQuiz();
   generateQuestions(counter);
   answerFeedback(counter);
@@ -226,4 +226,4 @@ function start() {
   tryAgain();
 }
 
-$(start);
+$(renderQuiz);

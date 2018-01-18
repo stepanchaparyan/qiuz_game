@@ -57,7 +57,7 @@
             <div class="card-body" >
               <h4 class="card-title">Capitals</h4>
               <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
-              <button class="button-style" onclick="start()">Start this game</button>
+              <button class="button-style" onclick="renderQuiz()">Start this game</button>
             </div>
           </div>
         </div>
@@ -69,22 +69,21 @@
           <button class="next-button nav-button" role="button" id="btn-next">Next</button>
         </div>
 
+        <div class="feedback-page no-display" id="feedback-page">
+          <h1>Your results!</h1>
+          <p class="final-score"></p>
+          <button id="btn-try-again" class="try-again-button" role="button">Try Again</button>
+        </div>
+
       </div>
 
     </div>
       <div class="col-sm-2 right-part"></div>
     </div>
 
-    <div class="feedback-page no-display" id="feedback-page">
-      <h1>Your results!</h1>
-      <p class="final-score"></p>
-      <button class="try-again-button" role="button">Try Again</button>
-    </div>
-
 <footer>
-  <div class="col-sm-2 footer-left">Chaparyan</div>
-  <div class="col-sm-8 footer-center">Oops</div>
-  <div class="col-sm-2 footer-right">Geography Quiz<div>
+  <span class="coll-sm-6 footer-left">Chaparyan</span>
+  <span class="coll-sm-6 footer-right">Geography Quiz<span>
 </footer>
 
 </body>
