@@ -1,3 +1,8 @@
+//array of objects with questions and answers
+let scoreCount = 0;
+let counter = 0;
+let displayCounter = counter + 1;
+
 const QUIZ = [
 // question one
 {
@@ -104,13 +109,10 @@ const QUIZ = [
  }
 ];
 
-
 //Generate questions in a form
 // pass in the counter variable
 // retrieve the question with the index of the counter variable
 // display the question
-let scoreCount = 3;
-let counter = 5;
 function generateQuestions(counter) {
     if (counter < 10) {
     let currentQuestion = QUIZ[counter];
@@ -138,6 +140,69 @@ function generateQuestions(counter) {
   };
 }
 
+//press on answer and receive a correct or wrong message
+function answerFeedback (counter) {
+  if (counter < 10) {
+    let correctAnswer = QUIZ[counter].correctAnswerString;
+    $('input[type=radio]').click(function(event) {
+      $('.options').children('input').attr('disabled', true);
+      let userAnswer = $(this).val();
+      if (userAnswer === correctAnswer) {
+        scoreCount += 1;
+        $('input[type=radio]:checked').next('label').addClass('correct-answer');
+        $('#quiz-questions').append(`<p class='correct-answer'>Correct!</p>`);
+      } else {
+        $('#quiz-questions').append(`<p class='wrong-answer'>Wrong! The correct answer is: ${correctAnswer}</p>`)
+        $('input[type=radio]:checked').next('label').addClass('wrong-answer');
+      }
+    });
+  }
+}
+
+
+//prevents Next Button from being clicked on if no option is chosen
+function preventClickNextButton () {
+  $('.next-button').attr('disabled', true);
+  $('.options').children('input').on('click', function () {
+     if ($(this).prop("checked") === true) {
+      $('.next-button').attr('disabled', false);
+      }
+    });
+}
+
+//Click on Next button to go to next question
+function nextQuestionButton () {
+  preventClickNextButton();
+  $('.next-button').click(function(event) {
+    console.log('next button clicked');
+    counter += 1;
+    generateQuestions(counter);
+    answerFeedback(counter);
+    preventClickNextButton();
+    console.log(counter);
+  });
+}
+
+//Display final results page
+// hide the quiz-questions section
+// hide the quiz nav section
+function finalFeedback() {
+  $('.next-button').on('click', function() {
+    if (counter === 10) {
+      $('#quiz-questions').addClass('no-display');
+      $('#quiz-nav').addClass("no-display");
+      $('.feedback-page').removeClass('no-display');
+      $('.final-score').append(`You got ${scoreCount}/10 questions right!`)
+    }
+  });
+}
+
+//Click on Try Again button to reset the quiz
+function tryAgain() {
+  $('.try-again-button').on('click', function() {
+    document.location.reload();
+  });
+}
 
 //Click on Start Button to set display of .start-page to none,
 //and set .quiz-questions display:none to visible
@@ -155,10 +220,10 @@ function startQuiz() {
 function start() {
   startQuiz();
   generateQuestions(counter);
-//  answerFeedback(counter);
-//  nextQuestionButton();
-//  finalFeedback();
-//  tryAgain();
+  answerFeedback(counter);
+  nextQuestionButton();
+  finalFeedback();
+  tryAgain();
 }
 
 $(start);
