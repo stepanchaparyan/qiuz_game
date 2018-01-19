@@ -22,9 +22,16 @@ topics
 Technical side
 1. app in Javascript
 2. app in AngularJS
-3. app in Angular2 CLI
+3. app in Angular2 
 4. app in Ionic 
 
 
 1. app who allaw you to create your personal questions and answers by filling them in base
 https://www.youtube.com/watch?v=u6dRHXqinYY
+
+
+1. we see list-cards - capitals, flags, maps
+2. we choose capital
+3. we receive questions or list of regions
+4. we choose region ans auto get to another page
+5. there we see info about difficult steps
