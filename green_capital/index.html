@@ -8,15 +8,11 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--internal CSS file-->
   <link rel="stylesheet" href="css/custom.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <!--internal JS file-->
   <script type="text/javascript" src="js/index.js"></script>
 
 </head>
@@ -41,35 +37,35 @@
 
 <!-- Start_card -->
     <div class="row">
-      <div class="col-sm-2 left-part">
+      <div class="col-lg-2 col-md-2 hidden-sm hidden-xs left-part">
       </div>
-    <div class="col-sm-8 center-part">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 center-part">
 
-      <div id="quiz-image" class="no-display">
+      <div id="quiz-image" class="hide-display">
         <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
       </div>
 
       <div>
 
-        <div class="card-center" id="start">
+        <div class="card-center" id="start-page">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
             <div class="card-body" >
               <h4 class="card-title">Capitals</h4>
               <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
-              <button class="button-style" onclick="renderQuiz()">Start this game</button>
+              <button class="button-start">Start this game</button>
             </div>
           </div>
         </div>
 
-        <div id="quiz-questions" class="no-display">
+        <div id="quiz-questions" class="hide-display">
         </div>
 
-        <div role="navigation" class="quiz-nav no-display" id="quiz-nav">
+        <div role="navigation" class="quiz-nav hide-display" id="quiz-nav">
           <button class="next-button nav-button" role="button" id="btn-next">Next</button>
         </div>
 
-        <div class="feedback-page no-display" id="feedback-page">
+        <div class="feedback-page hide-display" id="feedback-page">
           <h1>Your results!</h1>
           <p class="final-score"></p>
           <button id="btn-try-again" class="try-again-button" role="button">Try Again</button>
@@ -78,7 +74,7 @@
       </div>
 
     </div>
-      <div class="col-sm-2 right-part"></div>
+      <div class="col-lg-2 col-md-2 hidden-sm hidden-xs right-part"></div>
     </div>
 
 <footer>

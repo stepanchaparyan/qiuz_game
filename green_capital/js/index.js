@@ -113,9 +113,10 @@ const QUIZ = [
 //Click on Start Button to set display of .start-page to none,
 //and set .quiz-questions display:none to visible
 function startQuiz() {
-  $('.button-style').on('click', function(event) {
+  $('.button-start').on('click', function(event) {
     console.log('Hide start page and display questions');
     $('#quiz-questions').removeClass("hide-display");
+    $('#quiz-image').removeClass("hide-display");
     $('#start-page').addClass("hide-display");
    $('#quiz-nav').removeClass("hide-display");
   });
@@ -131,7 +132,7 @@ function generateQuestions(counter) {
     let quizHTML = `
       <form>
       <h1 class="question-one">${currentQuestion.question}</h1>
-      <fieldset class="options">
+      <div class="options">
         <input type="radio" name="question-option" id="question-option-one" value="${currentQuestion.answers[0]}">
         <label for="question-option-one">${currentQuestion.answers[0]}</label>
         <br><br>
@@ -143,7 +144,7 @@ function generateQuestions(counter) {
         <br><br>
         <input type="radio" name="question-option" id="question-option-four" value="${currentQuestion.answers[3]}">
         <label for="question-option-four">${currentQuestion.answers[3]}</label>
-      </fieldset>
+      </div>
       </form>
       <p>Question: ${counter + 1}/10</p>
       <p>Score: ${scoreCount}/10</p>`;
@@ -164,7 +165,7 @@ function answerFeedback (counter) {
         $('input[type=radio]:checked').next('label').addClass('correct-answer');
         $('#quiz-questions').append(`<p class='correct-answer'>Correct!</p>`);
       } else {
-        $('#quiz-questions').append(`<p class='correct-answer'>Wrong! The correct answer is: ${correctAnswer}</p>`)
+        $('#quiz-questions').append(`<p class='wrong-answer-long'>Wrong! The correct answer is: ${correctAnswer}</p>`)
         $('input[type=radio]:checked').next('label').addClass('wrong-answer');
       }
     });
