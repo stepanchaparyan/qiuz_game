@@ -61,7 +61,6 @@ function answerFeedback (counter) {
   }
 }
 
-
 //prevents Next Button from being clicked on if no option is chosen
 function preventClickNextButton () {
   $('.next-button').attr('disabled', true);

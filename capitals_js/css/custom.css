@@ -290,12 +290,24 @@ label {
   background-color: lightgreen;
 }
 
-#quiz-result {
-  background-color: orange;
-  border: red solid 2px;
+#result-message {
+  background-color: #659781;
+  border: #21523c solid 2px;
   border-radius: 5px;
   width: 65%;
   outline:0;
+  height: 40px;
+  font-weight: bold;
+  margin: 1%;
+  margin-left: 4%;
+}
+
+#result-step, #result-score {
+  background-color: #3d986f;
+  border: #21523c solid 2px;
+  border-radius: 5px;
+  width: 45%;
+  display: inline-flex;
   height: 40px;
   font-weight: bold;
   margin: 1%;

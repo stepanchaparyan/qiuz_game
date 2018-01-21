@@ -1,12 +1,13 @@
-var countries = [
-			
+const COUNTRIES = [
+
 {
 "name":"Afghanistan",
 "capital": "Kabul",
 "region": "Asia",
 "subregion": "Southern Asia",
 "language": ["Pashto", "Dari"],
-"borders": ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"]
+"borders": ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"],
+"answer":"right"
 },
 {
 "name": "Albania",
@@ -15,6 +16,7 @@ var countries = [
 "subregion": "Southern Europe",
 "language": ["Albanian"],
 "borders": ["MNE", "GRC", "MKD", "KOS"],
+"answer":"right"
 },
 {
 "name": "Algeria",
@@ -23,6 +25,7 @@ var countries = [
 "subregion": "Northern Africa",
 "language": ["Arabic"],
 "borders": ["TUN", "LDY", "NER", "ESH", "MRT", "MLI", "MAR"],
+"answer":"right"
 },
 {
 "name": "American Samoa",
@@ -31,6 +34,7 @@ var countries = [
 "subregion": "Polynesia",
 "language": ["English", "Samoan"],
 "borders": [],
+"answer":"right"
 },
 {
 "name": "Andorra",
@@ -39,6 +43,7 @@ var countries = [
 "subregion": "Southern Europe",
 "language": ["Catalan"],
 "borders": ["FRA", "ESP"],
+"answer":"right"
 },
 {
 "name": "Angola",
@@ -47,6 +52,7 @@ var countries = [
 "subregion": "Middle Africa",
 "language": ["Portuguese"],
 "borders": ["COG", "COD", "ZMB", "NAM"],
+"answer":"right"
 },
 {
 "name": "Anguilla",
@@ -55,6 +61,7 @@ var countries = [
 "subregion": "Caribbean",
 "language": ["English"],
 "borders": [],
+"answer":"right"
 },
 {
 "name": "Antigua and Barbuda",
@@ -63,6 +70,7 @@ var countries = [
 "subregion": "Caribbean",
 "language": ["English"],
 "borders": [],
+"answer":"right"
 },
 {
 "name": "Argentina",
@@ -916,5 +924,3 @@ var countries = [
 
 
 ]
-	
-
