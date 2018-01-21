@@ -1,120 +1,11 @@
-//array of objects with questions and answers
+// neccessory variables
 let scoreCount = 0;
 let counter = 0;
 let displayCounter = counter + 1;
 
-const QUIZ = [
-// question one
-{
-  question: "What is the capital city of the United States?",
-  answers: [
-  "New York, NY",
-  "Washington, D.C.",
-  "Los Angeles, CA",
-  "Chicago, IL"
-  ],
-  correctAnswerString: "Washington, D.C.",
-},
-// question two
-{
-  question: "What is the capital city of Spain?",
-  answers: [
-  "Madrid",
-  "Barcelona",
-  "San Sebasti&#225;n",
-  "Pamplona"
-  ],
-  correctAnswerString: "Madrid",
-},
-//question three
-{
-  question: "What is the capital city of France?",
-  answers: [
-  "Marseille",
-  "Nice",
-  "Avignon",
-  "Paris"
-  ],
-  correctAnswerString: "Paris",
-},
-//question four
-{ question: "What is the capital city of Japan?",
-  answers: [
-  "Kyoto",
-  "Tokyo",
-  "Osaka",
-  "Hiroshima"
-  ],
-  correctAnswerString: "Tokyo",
-},
-// question five
-{ question: "What is the capital city of China?",
-  answers: [
-  "Sichuan",
-  "Shanghai",
-  "Beijing",
-  "Hainan"
-  ],
-  correctAnswerString: "Beijing",
-},
-//question six
-{ question: "What is the capital city of Australia?",
-  answers: [
-  "Canberra",
-  "Melbourne",
-  "Sydney",
-  "Perth"
-  ],
-  correctAnswerString: "Canberra",
-},
-//question seven
-{ question: "What is the capital city of Uganda?",
-  answers: [
-  "Lira",
-  "Masaka",
-  "Kampala",
-  "Soroti"
-  ],
-  correctAnswerString: "Kampala",
-},
-//question eight
-{ question: "What is the capital city of Germany?",
-  answers: [
-  "Munich",
-  "Hamburg",
-  "Berlin",
-  "Nuremburg"
-  ],
-  correctAnswerString: "Berlin",
-},
-//question nine
-{ question: "What is the capital city of Chile?",
-  answers: [
-  "Santa Cruz",
-  "Santiago",
-  "Puc&#243;n",
-  "Limache"
-  ],
-  correctAnswerString: "Santiago",
-},
-//question ten
-{ question: "What is the capital city of Switzerland?",
-  answers: [
-  "Bern",
-  "Lauterbrunnen",
-  "Davos",
-  "Burgdorf"
-  ],
-  correctAnswerString: "Bern",
- }
-];
-
-
-//Click on Start Button to set display of .start-page to none,
-//and set .quiz-questions display:none to visible
+//Click on Start Button to set hide start-card and set display the quiz page
 function startQuiz() {
   $('.button-start').on('click', function(event) {
-    console.log('Hide start page and display questions');
     $('#quiz-questions').removeClass("hide-display");
     $('#quiz-image').removeClass("hide-display");
     $('#start-page').addClass("hide-display");
@@ -122,10 +13,8 @@ function startQuiz() {
   });
 }
 
-//Generate questions in a form
+//Generate questions in a form and display
 // pass in the counter variable
-// retrieve the question with the index of the counter variable
-// display the question
 function generateQuestions(counter) {
   if (counter < 10) {
     let currentQuestion = QUIZ[counter];
@@ -187,18 +76,15 @@ function preventClickNextButton () {
 function nextQuestionButton () {
   preventClickNextButton();
   $('.next-button').click(function(event) {
-    console.log('next button clicked');
     counter += 1;
     generateQuestions(counter);
     answerFeedback(counter);
     preventClickNextButton();
-    console.log(counter);
   });
 }
 
 //Display final results page
-// hide the quiz-questions section
-// hide the quiz nav section
+// hide other sections
 function finalFeedback() {
   $('.next-button').on('click', function() {
     if (counter === 10) {

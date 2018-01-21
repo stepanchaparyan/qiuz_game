@@ -1,17 +1,3 @@
-/*
-<title>The Ultimate State Capital Quiz</title>
-
-This application quizzes players on their state capital knowledge.
-The player is asked a set of 5 questions and are prompted for an answer.
-When an answer is given it tests the response to see if it is correct.
-The application then lets the player know whether or not they answered correctly.
-After the game is over the player's score is tabulated and it determines how they rank.
-
-Author: Josiah Bennett
-Website: www.josiahbennett.com
-Date: 6/2/2015
-*/
-
 //creates variable for counter and sets it to zero to start.
 var quizScore = 0;
 
@@ -22,6 +8,7 @@ var questionThreeAnswer = 'ALBANY';
 var questionFourAnswer = 'PROVIDENCE';
 var questionFiveAnswer = 'BOSTON';
 
+function quiz () {
 //Creates variable for holding what the person guesses as the answer.
 //Also changes their guess to uppercase to avoid any capitalization errors.
 //Tests the guess against the answer and increases score if they get it right.
@@ -65,6 +52,9 @@ alert('That is correct!');
 alert('Sorry that is incorrect.');
 }
 
+}
+
+function results () {
 //Determines the player's score by testing how many they got correct.
 if (quizScore === 5) {
 document.write('<p>You win the gold crown with a score of ' + quizScore + ' correct answers.</p>');
@@ -75,3 +65,11 @@ document.write('<p>You win the bronze crown with a score of ' + quizScore + ' co
 } else {
 document.write("<p>You haven't won any crown. You answered " + quizScore + " questions correctly.</p>");
 }
+}
+
+function start () {
+  quiz();
+  rresults();
+}
+
+$(start);

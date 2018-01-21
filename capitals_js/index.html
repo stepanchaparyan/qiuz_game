@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="css/custom.css">
   <!--internal JS file-->
   <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/countries.js"></script>
+
 
 </head>
 <body>
@@ -54,13 +55,23 @@
             <div class="card-body" >
               <h4 class="card-title">Capitals</h4>
               <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
-              <button class="button-start">Start this game</button>
+              <button class="button-start" onclick="start()">Start this game</button>
             </div>
           </div>
         </div>
 
         <div id="quiz-questions" class="hide-display">
         </div>
+
+        <div id="quiz-answers" class="hide-display">
+          <button id="right" onclick="testRight()">Right</button>
+          <button id="wrong" onclick="testWrong()">Wrong</button>
+        </div>
+
+        <div id="quiz-result" class="hide-display">
+          <div id=""></div>
+        </div>
+
 
         <div role="navigation" class="quiz-nav hide-display" id="quiz-nav">
           <button class="next-button nav-button" role="button" id="btn-next">Next</button>
