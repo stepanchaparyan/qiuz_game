@@ -35,3 +35,20 @@ https://www.youtube.com/watch?v=u6dRHXqinYY
 3. we receive questions or list of regions
 4. we choose region ans auto get to another page
 5. there we see info about difficult steps
+
+comments
+when we press button (write or wrong) border of button will become green or red, and no need extra div for typing <Correct> .... 
+Also after pressing wrong button, wrong button border will become red, and right button will become green
+
+after game when we see result, we can alos see map where countries with right answers will be green, and wrong answers red
+
+for high levels we can provide game with time
+how many right answers we can get in a minute
+
+only capitals in map without any word and need to guess the capitals
+
+quiz with city - we have image of city and question - what is the city
+
+!!! start question 
+1. new game ? (one simple game with 10 question) (sign in is not important)
+2. challange with many levels (sign in - important)
