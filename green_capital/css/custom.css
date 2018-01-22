@@ -218,7 +218,7 @@ label {
   height: 40px;
 }
 
-#btn-next:hover {
+#btn-next:active {
   background-color: #79b9e1;
 }
 
