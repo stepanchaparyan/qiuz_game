@@ -2,8 +2,8 @@
 let questionNumber = 0;
 let score = 0;
 let randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-let randomNumber1 = Math.floor(Math.random() * 5) + 1;
-let randomNumber2 = Math.floor(Math.random() * 10) + 7;
+let randomNumber1 = Math.floor(Math.random() * 15) + 1;
+let randomNumber2 = Math.floor(Math.random() * 19) + 17;
 
 //function for hide first card and show question cards
 function hideAndShow() {
@@ -49,6 +49,10 @@ function testRight () {
   }
     document.getElementById('result-message').style.display='block';
     document.getElementById('btn-next').disabled = false;
+    document.getElementById('wrong').disabled = true;
+    document.getElementById('right').disabled = true;
+    document.getElementById('wrong').style.backgroundColor = "#cee1e2";
+    document.getElementById('right').style.backgroundColor = "#cee1e2";
 }
 
 function testWrong () {
@@ -59,11 +63,16 @@ function testWrong () {
   } else {
     document.getElementById("result-message").innerHTML = "You are right, " + COUNTRIES[randomNumber1].capital + "is not the capital of " + COUNTRIES[randomNumber2].name;
     document.getElementById('wrong').style.borderColor = "#48b484";
+    document.getElementById('result-message').style.borderColor = "#48b484";
     score += 1;
     result();
   }
     document.getElementById('result-message').style.display='block';
     document.getElementById('btn-next').disabled = false;
+    document.getElementById('wrong').disabled = true;
+    document.getElementById('right').disabled = true;
+    document.getElementById('wrong').style.backgroundColor = "#cee1e2";
+    document.getElementById('right').style.backgroundColor = "#cee1e2";
 }
 
 function result () {
@@ -73,12 +82,14 @@ function result () {
 
 function next () {
   questionNumber += 1;
-  randomNumber1 = Math.floor(Math.random() * 5) + 1;
-  randomNumber2 = Math.floor(Math.random() * 10) + 6;
+  randomNumber1 = Math.floor(Math.random() * 15) + 1;
+  randomNumber2 = Math.floor(Math.random() * 19) + 17;
   document.getElementById('right').style.borderColor = "#b5d2d3";
   document.getElementById('wrong').style.borderColor = "#b5d2d3";
   document.getElementById('result-message').style.display='none';
   document.getElementById('btn-next').disabled = true;
+  document.getElementById('wrong').disabled = false;
+  document.getElementById('right').disabled = false;
   start();
 }
 

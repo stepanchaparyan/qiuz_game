@@ -271,3 +271,6 @@ label {
   height: 40px;
   font-weight: bold;
 }
+#logo {
+  cursor: pointer;
+}
