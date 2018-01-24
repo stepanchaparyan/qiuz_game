@@ -311,9 +311,7 @@ const COUNTRIES = [
 	"region": "Americas",
 	"subregion": "Northern America",
 	"language": ["English", "French"],
-
-  		"borders": ["USA"],
-
+	"borders": ["USA"],
 },
 {
 	"name": "Cape Verde",

@@ -1,7 +1,5 @@
 body {
-    line-height: 1.4;
     font-family: 'Roboto', sans-serif;
-    color: #67696c;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -14,7 +12,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section-padding {
     padding: 60px 0px;
+    background-color: #f9f9fb;
 }
+
 #loader {
   position: absolute;
   left: 50%;
@@ -40,25 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
 }
 
 /************* HEADER ****************/
@@ -146,10 +127,8 @@ h2.bnr-sub-title {
     padding: 20px 0px;
     font-weight: 700;
 }
-.bnr-para {
-    font-weight: 300;
-}
-.btn-download, .btn-more, .btn-download:hover, .btn-download:focus, .btn-more:focus {
+
+.btn-start, .btn-more, .btn-start:hover, .btn-start:focus, .btn-more:focus {
     text-transform: uppercase;
     margin-top: 50px;
     color: #fff;
@@ -166,7 +145,7 @@ h2.bnr-sub-title {
     transition: all 0.3s;
 }
 
-.btn-download {
+.btn-start {
     background-color: #be9e21;
 }
 .btn-more, .btn-more:focus {
@@ -213,11 +192,12 @@ h2.bnr-sub-title {
     color: #be9e21;
 }
 
-contact
-/*****************/
-#contact {
-    background-color: rgb(73, 84, 105);
+#games {
+  background-color: #f5f6f9;
 }
+
+contact
+//*****************//
 .btn-submit, .btn-submit:hover, .btn-submit:focus {
     background-color: transparent;
     border-radius: 60px;
@@ -275,12 +255,10 @@ contact
     display:block;
 }
 
-.loction-info p
-{
+.loction-info p {
     margin-bottom: 25px;
 }
-.loction-info p i
-{
+.loction-info p i {
     color: #be9e21;
 }
 /********* contact ***********/
@@ -300,13 +278,13 @@ contact
 
 /*** Responsive media queries ************/
 @media (min-width: 768px) and (max-width: 980px) {
-    .service-item, .blog-sec, .wrap-item, .loction-info{
+    .service-item, .wrap-item {
     margin-bottom: 15px;
 }
 
 }
 @media (min-width: 451px) and (max-width: 767px) {
-    .service-item, .blog-sec, .wrap-item, .loction-info{
+    .service-item, .wrap-item {
     margin-bottom: 15px;
 }
 }
@@ -327,7 +305,7 @@ h2.bnr-sub-title {
 body{
     font-size: 14px;
 }
-.btn-download, .btn-more, .btn-download:hover, .btn-more:hover, .btn-download:focus, .btn-more:focus {
+.btn-start, .btn-more, .btn-start:hover, .btn-more:hover, .btn-start:focus, .btn-more:focus {
     font-size: 12px;
     padding: 7px 18px;
 }
@@ -368,7 +346,8 @@ body{
 	text-align: center;
 	color: black;
 	border: 2px groove;
-	border-radius: 5px
+	border-radius: 5px;
+  padding: 1px;
 }
 
 .button-style {

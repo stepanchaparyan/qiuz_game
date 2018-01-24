@@ -2,17 +2,17 @@
 let questionNumber = 0;
 let score = 0;
 let randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-let randomNumber1 = Math.floor(Math.random() * 15) + 1;
-let randomNumber2 = Math.floor(Math.random() * 19) + 17;
+let randomNumber1 = Math.floor(Math.random() * 40) + 1;
+let randomNumber2 = Math.floor(Math.random() * 38) + 42;
 
 //function for hide first card and show question cards
 function hideAndShow() {
-  document.getElementById('start-page').style.display='none';
-  document.getElementById('quiz-questions').style.display='block';
-  document.getElementById('quiz-image').style.display='block';
-  document.getElementById('quiz-nav').style.display='block';
-  document.getElementById('quiz-answers').style.display='block';
-  document.getElementById('result-step-score').style.display='block';
+  document.getElementById('start-page').style.display = 'none';
+  document.getElementById('quiz-questions').style.display = 'block';
+  document.getElementById('quiz-image').style.display = 'block';
+  document.getElementById('quiz-nav').style.display = 'block';
+  document.getElementById('quiz-answers').style.display = 'block';
+  document.getElementById('result-step-score').style.display = 'block';
 }
 
 function questionsMain () {
