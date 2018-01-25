@@ -48,7 +48,6 @@ nav {
   border-radius: 50%;
   margin: 10px 10px 10px 10px;
 }
-/**********/
 
 /****** Footer *******/
 footer {
@@ -75,7 +74,6 @@ footer {
   width: 50%;
   padding: 2px;
   padding-right: 3%;
-
 }
 
 .footer-left {
@@ -88,7 +86,6 @@ footer {
   padding: 2px;
   padding-left: 3%;
 }
-/*****************/
 
 /****** Main part and 1-st cart ******/
 .row {
@@ -271,4 +268,11 @@ footer {
 
 #logo {
   cursor: pointer;
+}
+
+.greenBorder {
+  border-color: #48B484 !important;
+}
+.redBorder {
+  border-color: red !important;
 }
