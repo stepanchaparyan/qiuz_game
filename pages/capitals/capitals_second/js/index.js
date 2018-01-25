@@ -2,8 +2,8 @@
 let questionNumber = 0;
 let score = 0;
 let randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-let randomNumber1 = Math.floor(Math.random() * 40) + 1;
-let randomNumber2 = Math.floor(Math.random() * 38) + 42;
+let randomNumber1 = Math.floor(Math.random() * 122) + 1;
+let randomNumber2 = Math.floor(Math.random() * 120) + 124;
 
 //function for hide first card and show question cards
 function hideAndShow() {
@@ -82,8 +82,8 @@ function result () {
 
 function next () {
   questionNumber += 1;
-  randomNumber1 = Math.floor(Math.random() * 15) + 1;
-  randomNumber2 = Math.floor(Math.random() * 19) + 17;
+  randomNumber1 = Math.floor(Math.random() * 122) + 1;
+  randomNumber2 = Math.floor(Math.random() * 120) + 124;
   document.getElementById('right').style.borderColor = "#b5d2d3";
   document.getElementById('wrong').style.borderColor = "#b5d2d3";
   document.getElementById('result-message').style.display='none';
