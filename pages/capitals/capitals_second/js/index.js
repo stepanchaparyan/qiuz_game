@@ -37,17 +37,26 @@ function questionsRight() {
   document.getElementById("quiz-questions").innerHTML = "The capital city of " + COUNTRIES[randomNumber].name + " is " + COUNTRIES[randomNumber].capital;
 }
 
+function setNewCSS(id, color) {
+  if (color == "green") {
+    document.getElementById(id).setAttribute("class", "greenBorder");
+    document.getElementById('result-message').setAttribute("class", "greenBorder");
+    document.getElementById("result-message").innerHTML = "You are right";
+  } else if (color == "red") {
+    document.getElementById(id).setAttribute("class", "redBorder");
+    document.getElementById('result-message').setAttribute("class", "redBorder");
+    document.getElementById("result-message").innerHTML = "Sorry, but the question was right";
+  }
+}
+
 function testRight () {
   if (randomNumberMain == 1) {
-    document.getElementById("result-message").innerHTML = "You are right";
-    document.getElementById('right').setAttribute("class", "greenBorder");
-    document.getElementById('result-message').setAttribute("class", "greenBorder");
+    setNewCSS("right", "green");
     score += 1;
     result();
   } else {
-    document.getElementById("result-message").innerHTML = "You are wrong";
-    document.getElementById('result-message').setAttribute("class", "redBorder");
-    document.getElementById('right').setAttribute("class", "redBorder");
+    setNewCSS("right", "red");
+    document.getElementById("result-message").innerHTML = "Right answer: the " + COUNTRIES[randomNumber1].capital + " is the capital of " + COUNTRIES[randomNumber1].name;
   }
     document.getElementById('btn-next').disabled = false;
     document.getElementById('wrong').disabled = true;
@@ -56,13 +65,10 @@ function testRight () {
 
 function testWrong () {
   if (randomNumberMain == 1) {
-    document.getElementById("result-message").innerHTML = "Sorry, but " + COUNTRIES[randomNumber].capital + " is the capital of " + COUNTRIES[randomNumber].name;
-    document.getElementById('wrong').setAttribute("class", "redBorder");
-    document.getElementById('result-message').setAttribute("class", "redBorder");
+    setNewCSS("wrong", "red");
   } else {
-    document.getElementById("result-message").innerHTML = "You are right, the capital of " + COUNTRIES[randomNumber1].name + " is " + COUNTRIES[randomNumber1].capital;
-    document.getElementById('result-message').setAttribute("class", "greenBorder");
-    document.getElementById('wrong').setAttribute("class", "greenBorder");
+    setNewCSS("wrong", "green");
+    document.getElementById("result-message").innerHTML = "Right answer: the " + COUNTRIES[randomNumber1].capital + " is the capital of " + COUNTRIES[randomNumber1].name;
     score += 1;
     result();
   }
