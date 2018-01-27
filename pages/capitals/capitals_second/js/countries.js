@@ -714,14 +714,6 @@ const COUNTRIES = [
 	"borders": ["BLZ", "SLV", "HND", "MEX"],
 },
 {
-	"name": "Guernsey",
-	"capital": "St. Peter Port",
-	"region": "Europe",
-	"subregion": "Northern Europe",
-	"language": ["English", "French"],
-	"borders": [],
-},
-{
 	"name": "Guinea",
 	"capital": "Conakry",
 	"region": "Africa",
@@ -878,14 +870,6 @@ const COUNTRIES = [
 	"region": "Asia",
 	"subregion": "Eastern Asia",
 	"language": ["Japanese"],
-	"borders": [],
-},
-{
-	"name": "Jersey",
-	"capital": "Saint Helier",
-  "region": "Europe",
-  "subregion": "Northern Europe",
-  "language": ["English", "French"],
 	"borders": [],
 },
 {
@@ -1682,14 +1666,6 @@ const COUNTRIES = [
 	"subregion": "South America",
 	"language": ["Dutch"],
 	"borders": ["BRA", "GUF", "FRA", "GUY"],
-},
-{
-	"name": "Svalbard and Jan Mayen",
-	"capital": "Longyearbyen",
-	"region": "Europe",
-	"subregion": "Northern Europe",
-	"language": ["Norwegian"],
-	"borders": [],
 },
 {
 	"name": "Swaziland",
