@@ -3,8 +3,7 @@ let questionNumber = 0;
 let score = 0;
 let randomNumberMain;
 let randomNumber;
-let randomNumber1;
-let randomNumber2;
+let randomNumberExcluded;
 
 //function for hide first card and show question cards
 function hideAndShow() {
@@ -25,12 +24,11 @@ function questionsMain () {
   }
   console.log(randomNumberMain);
   console.log(randomNumber);
-  console.log(randomNumber1);
-  console.log(randomNumber2);
+  console.log(randomNumberExcluded);
 }
 
 function questionsWrong() {
-  document.getElementById("quiz-questions").innerHTML = "The capital city of " + COUNTRIES[randomNumber1].name + " is " + COUNTRIES[randomNumber2].capital;
+  document.getElementById("quiz-questions").innerHTML = "The capital city of " + COUNTRIES[randomNumber].name + " is " + COUNTRIES[randomNumberExcluded].capital;
 }
 
 function questionsRight() {
@@ -49,6 +47,22 @@ function setNewCSS(id, color) {
   }
 }
 
+function addRightAnswer() {
+  document.getElementById("result-message").innerHTML = "Right answer: " + COUNTRIES[randomNumber].capital + " is the capital of " + COUNTRIES[randomNumber].name;
+}
+
+function changeDisabled() {
+  document.getElementById('btn-next').disabled = false;
+  document.getElementById('wrong').disabled = true;
+  document.getElementById('right').disabled = true;
+}
+
+function changeDisabledTest() {
+  document.getElementById('btn-next').disabled = !document.getElementById('btn-next').disabled;
+  document.getElementById('wrong').disabled = !document.getElementById('wrong').disabled;
+  document.getElementById('right').disabled = !document.getElementById('right').disabled;
+}
+
 function testRight () {
   if (randomNumberMain == 1) {
     setNewCSS("right", "green");
@@ -56,11 +70,9 @@ function testRight () {
     result();
   } else {
     setNewCSS("right", "red");
-    document.getElementById("result-message").innerHTML = "Right answer: the " + COUNTRIES[randomNumber1].capital + " is the capital of " + COUNTRIES[randomNumber1].name;
+    addRightAnswer();
   }
-    document.getElementById('btn-next').disabled = false;
-    document.getElementById('wrong').disabled = true;
-    document.getElementById('right').disabled = true;
+  changeDisabled();
 }
 
 function testWrong () {
@@ -68,13 +80,11 @@ function testWrong () {
     setNewCSS("wrong", "red");
   } else {
     setNewCSS("wrong", "green");
-    document.getElementById("result-message").innerHTML = "Right answer: the " + COUNTRIES[randomNumber1].capital + " is the capital of " + COUNTRIES[randomNumber1].name;
+    addRightAnswer();
     score += 1;
     result();
   }
-    document.getElementById('btn-next').disabled = false;
-    document.getElementById('wrong').disabled = true;
-    document.getElementById('right').disabled = true;
+  changeDisabled();
 }
 
 function result () {
@@ -82,10 +92,15 @@ function result () {
   document.getElementById("result-score").innerHTML = " Score: " + score + " /10";
 }
 
-function setNumbers() {
-  randomNumber1 = Math.floor(Math.random() * 122) + 1;
-  randomNumber2 = Math.floor(Math.random() * 120) + 124;
-  randomNumber = Math.floor(Math.random() * 243) + 1;
+function setRandomNumbers() {
+  randomNumber = Math.floor(Math.random() * 244) + 0;
+  randomNumberExcluded = randomExcluded(0, 244, randomNumber);
+}
+
+function randomExcluded(min, max, excluded) {
+  let n = Math.floor(Math.random() * (max-min) + min);
+  if (n >= excluded) n++;
+  return n;
 }
 
 function next () {
@@ -97,13 +112,13 @@ function next () {
   document.getElementById('btn-next').disabled = true;
   document.getElementById('wrong').disabled = false;
   document.getElementById('right').disabled = false;
-  setNumbers();
+  setRandomNumbers();
   start();
 }
 
 function start () {
   hideAndShow();
-  setNumbers();
+  setRandomNumbers();
   questionsMain();
   result();
 }
