@@ -562,14 +562,6 @@ const COUNTRIES = [
 	"borders": [],
 },
 {
-	"name": "Faroe Islands",
-  "capital": "T\u00f3rshavn",
-  "region": "Europe",
-  "subregion": "Northern Europe",
-  "language": ["Faroese", "Danish"],
-  "borders": [],
-},
-{
 	"name": "Fiji",
   "capital": "Suva",
   "region": "Oceania",
@@ -606,14 +598,6 @@ const COUNTRIES = [
 	"capital": "Papeet\u0113",
 	"region": "Oceania",
 	"subregion": "Polynesia",
-	"language": ["French"],
-	"borders": [],
-},
-{
-	"name": "French Southern and Antarctic Lands",
-	"capital": "Port-aux-Fran\u00e7ais",
-	"region": "",
-	"subregion": "",
 	"language": ["French"],
 	"borders": [],
 },
@@ -672,14 +656,6 @@ const COUNTRIES = [
 	"subregion": "Southern Europe",
 	"language": ["Greek"],
 	"borders": ["ALB", "BGR", "TUR", "MKD"],
-},
-{
-	"name": "Greenland",
-	"capital": "Nuuk",
-	"region": "Americas",
-	"subregion": "Northern America",
-	"language": ["Greenlandic"],
-	"borders": [],
 },
 {
 	"name": "Grenada",
@@ -790,6 +766,7 @@ const COUNTRIES = [
 	"capital": "New Delhi",
 	"region": "Asia",
   "subregion": "Southern Asia",
+  "language": ["Hindi", "English"],
 	"borders": ["AFG", "BGD", "BTN", "MMR", "CHN", "NPL", "PAK", "LKA"],
 },
 {
@@ -831,14 +808,6 @@ const COUNTRIES = [
   "subregion": "Northern Europe",
   "language": ["Irish", "English"],
   "borders": ["GBR"],
-},
-{
-	"name": "Isle of Man",
-	"capital": "Douglas",
-	"region": "Europe",
-	"subregion": "Northern Europe",
-	"language": ["English", "Manx"],
-	"borders": [],
 },
 {
 	"name": "Israel",
@@ -886,7 +855,7 @@ const COUNTRIES = [
 	"region": "Asia",
 	"subregion": "Central Asia",
 	"language": ["Kazakh", "Russian"],
-	  		"borders": ["CHN", "KGZ", "RUS", "TKM", "UZB"],
+	"borders": ["CHN", "KGZ", "RUS", "TKM", "UZB"],
 },
 {
   "name": "Kenya",

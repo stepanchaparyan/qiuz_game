@@ -117,7 +117,25 @@ footer {
 	text-align: center;
 	color: black;
 	border: 2px groove;
-	border-radius: 5px
+	border-radius: 5px;
+  width: auto;
+  height: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-continent {
+  font-weight: bold;
+  font-size: 26px;
+  color: #2935e2;
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
 .button-start {
@@ -141,8 +159,8 @@ footer {
 }
 
 .card-center {
-  width: 50%;
-  margin: 25%;
+  width: 40%;
+  margin: 5%;
   margin-top: 10%;
 }
 

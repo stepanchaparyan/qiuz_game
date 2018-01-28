@@ -8,6 +8,8 @@ let randomNumberExcluded;
 //function for hide first card and show question cards
 function hideAndShow() {
   document.getElementById('start-page').setAttribute("class", "hide-display");
+  document.getElementById('start-page-europe').setAttribute("class", "hide-display");
+
   document.getElementById('quiz-questions').removeAttribute("class");
   document.getElementById('quiz-image').removeAttribute("class");
   document.getElementById('quiz-nav').removeAttribute("class");
@@ -94,16 +96,29 @@ function result () {
 //generateRandum numbers for question
 function setRandomNumbers() {
   randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  while (COUNTRIES[randomNumber].region != "Europe") {
-//    console.log("random in while " + COUNTRIES[randomNumber].name);
-    randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  }
-  console.log("random out while " + COUNTRIES[randomNumber].name);
   randomNumberExcluded = randomExcluded(0, COUNTRIES.length-1, randomNumber);
 }
 
 //generate randum number Excluded question number
 function randomExcluded(min, max, excluded) {
+  let n = Math.floor(Math.random() * (max-min) + min);
+  if (n >= excluded) n++;
+  return n;
+}
+
+//generateRandum numbers for question
+function setRandomNumbersEurope() {
+  randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
+  while (COUNTRIES[randomNumber].region != "Europe") {
+ console.log("random in while " + COUNTRIES[randomNumber].name);
+    randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
+  }
+  console.log("random out while " + COUNTRIES[randomNumber].name);
+  randomNumberExcluded = randomExcludedEurope(0, COUNTRIES.length-1, randomNumber);
+}
+
+//generate randum number Excluded question number
+function randomExcludedEurope(min, max, excluded) {
   let n = Math.floor(Math.random() * (max-min) + min);
   if (n >= excluded) n++;
   console.log("n " + COUNTRIES[n].name);
@@ -112,14 +127,14 @@ function randomExcluded(min, max, excluded) {
     n = Math.floor(Math.random() * (max-min) + min);
     if (n >= excluded) n++;
   }
-//  console.log("n while out " + COUNTRIES[n].name);
+  console.log("n while out " + COUNTRIES[n].name);
 
-  console.log("n - if " + COUNTRIES[n].name);
   return n;
 }
 
+
 //list of functions/action for next button
-function next () {
+function next() {
   questionNumber += 1;
   document.getElementById('right').removeAttribute("class");
   document.getElementById('wrong').removeAttribute("class");
@@ -129,9 +144,27 @@ function next () {
   start();
 }
 
-function start () {
+//list of functions/action for next button
+function next() {
+  questionNumber += 1;
+  document.getElementById('right').removeAttribute("class");
+  document.getElementById('wrong').removeAttribute("class");
+  document.getElementById('result-message').removeAttribute("class");
+  document.getElementById('result-message').setAttribute("class", "hide-display");
+  changeDisabled();
+  startEurope();
+}
+
+function start() {
   hideAndShow();
   setRandomNumbers();
+  questionsMain();
+  result();
+}
+
+function startEurope() {
+  hideAndShow();
+  setRandomNumbersEurope();
   questionsMain();
   result();
 }
