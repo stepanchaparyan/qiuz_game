@@ -5,6 +5,9 @@ let randomNumberMain;
 let randomNumber;
 let randomNumberExcluded;
 
+let europe;
+let asia;
+
 //function for hide first card and show question cards
 function hideAndShow() {
   document.getElementById('start-page').setAttribute("class", "hide-display");
@@ -107,6 +110,31 @@ function randomExcluded(min, max, excluded) {
 }
 
 //generateRandum numbers for question
+function setRandomNumbersAsia() {
+  randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
+  while (COUNTRIES[randomNumber].region != "Asia") {
+ console.log("random in while " + COUNTRIES[randomNumber].name);
+    randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
+  }
+  console.log("random out while " + COUNTRIES[randomNumber].name);
+  randomNumberExcluded = randomExcludedAsia(0, COUNTRIES.length-1, randomNumber);
+}
+
+//generate randum number Excluded question number
+function randomExcludedAsia(min, max, excluded) {
+  let n = Math.floor(Math.random() * (max-min) + min);
+  if (n >= excluded) n++;
+  console.log("n " + COUNTRIES[n].name);
+  while (COUNTRIES[n].region != "Asia") {
+    console.log("n while " + COUNTRIES[n].name);
+    n = Math.floor(Math.random() * (max-min) + min);
+    if (n >= excluded) n++;
+  }
+  console.log("n while out " + COUNTRIES[n].name);
+  return n;
+}
+
+//generateRandum numbers for question
 function setRandomNumbersEurope() {
   randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
   while (COUNTRIES[randomNumber].region != "Europe") {
@@ -128,11 +156,9 @@ function randomExcludedEurope(min, max, excluded) {
     if (n >= excluded) n++;
   }
   console.log("n while out " + COUNTRIES[n].name);
-
   return n;
 }
 
-
 //list of functions/action for next button
 function next() {
   questionNumber += 1;
@@ -141,30 +167,31 @@ function next() {
   document.getElementById('result-message').removeAttribute("class");
   document.getElementById('result-message').setAttribute("class", "hide-display");
   changeDisabled();
-  start();
+  chooseContinent();
 }
 
-//list of functions/action for next button
-function next() {
-  questionNumber += 1;
-  document.getElementById('right').removeAttribute("class");
-  document.getElementById('wrong').removeAttribute("class");
-  document.getElementById('result-message').removeAttribute("class");
-  document.getElementById('result-message').setAttribute("class", "hide-display");
-  changeDisabled();
-  startEurope();
+function chooseContinent() {
+  if(COUNTRIES[randomNumber].region == "Europe") {
+    startEurope();
+  } else if (COUNTRIES[randomNumber].region == "Asia") {
+    startAsia();
+  } else {
+    console.log("not asia/evropa");
+  }
 }
 
-function start() {
-  hideAndShow();
-  setRandomNumbers();
-  questionsMain();
-  result();
+function startAsia() {
+  setRandomNumbersAsia();
+  startAll();
 }
 
 function startEurope() {
-  hideAndShow();
   setRandomNumbersEurope();
+  startAll();
+}
+
+function startAll() {
+  hideAndShow();
   questionsMain();
   result();
 }
