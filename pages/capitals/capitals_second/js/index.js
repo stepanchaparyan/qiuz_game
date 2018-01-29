@@ -110,47 +110,22 @@ function randomExcluded(min, max, excluded) {
 }
 
 //generateRandum numbers for question
-function setRandomNumbersAsia() {
+function setRandomNumbers2(continent) {
   randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  while (COUNTRIES[randomNumber].region != "Asia") {
+  while (COUNTRIES[randomNumber].region !== continent) {
  console.log("random in while " + COUNTRIES[randomNumber].name);
     randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
   }
   console.log("random out while " + COUNTRIES[randomNumber].name);
-  randomNumberExcluded = randomExcludedAsia(0, COUNTRIES.length-1, randomNumber);
+  randomNumberExcluded = randomExcluded2(continent,0, COUNTRIES.length-1, randomNumber);
 }
 
 //generate randum number Excluded question number
-function randomExcludedAsia(min, max, excluded) {
+function randomExcluded2(continent, min, max, excluded) {
   let n = Math.floor(Math.random() * (max-min) + min);
   if (n >= excluded) n++;
   console.log("n " + COUNTRIES[n].name);
-  while (COUNTRIES[n].region != "Asia") {
-    console.log("n while " + COUNTRIES[n].name);
-    n = Math.floor(Math.random() * (max-min) + min);
-    if (n >= excluded) n++;
-  }
-  console.log("n while out " + COUNTRIES[n].name);
-  return n;
-}
-
-//generateRandum numbers for question
-function setRandomNumbersEurope() {
-  randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  while (COUNTRIES[randomNumber].region != "Europe") {
- console.log("random in while " + COUNTRIES[randomNumber].name);
-    randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  }
-  console.log("random out while " + COUNTRIES[randomNumber].name);
-  randomNumberExcluded = randomExcludedEurope(0, COUNTRIES.length-1, randomNumber);
-}
-
-//generate randum number Excluded question number
-function randomExcludedEurope(min, max, excluded) {
-  let n = Math.floor(Math.random() * (max-min) + min);
-  if (n >= excluded) n++;
-  console.log("n " + COUNTRIES[n].name);
-  while (COUNTRIES[n].region != "Europe") {
+  while (COUNTRIES[n].region !== continent) {
     console.log("n while " + COUNTRIES[n].name);
     n = Math.floor(Math.random() * (max-min) + min);
     if (n >= excluded) n++;
@@ -172,21 +147,16 @@ function next() {
 
 function chooseContinent() {
   if(COUNTRIES[randomNumber].region == "Europe") {
-    startEurope();
+    start("Europe");
   } else if (COUNTRIES[randomNumber].region == "Asia") {
-    startAsia();
+    start("Asia");
   } else {
     console.log("not asia/evropa");
   }
 }
 
-function startAsia() {
-  setRandomNumbersAsia();
-  startAll();
-}
-
-function startEurope() {
-  setRandomNumbersEurope();
+function start(continent) {
+  setRandomNumbers2(continent);
   startAll();
 }
 
