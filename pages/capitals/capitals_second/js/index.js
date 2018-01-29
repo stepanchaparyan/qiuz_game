@@ -4,15 +4,13 @@ let score = 0;
 let randomNumberMain;
 let randomNumber;
 let randomNumberExcluded;
+let countries_list;
 
-let europe;
-let asia;
 
 //function for hide first card and show question cards
 function hideAndShow() {
   document.getElementById('start-page').setAttribute("class", "hide-display");
   document.getElementById('start-page-europe').setAttribute("class", "hide-display");
-
   document.getElementById('quiz-questions').removeAttribute("class");
   document.getElementById('quiz-image').removeAttribute("class");
   document.getElementById('quiz-nav').removeAttribute("class");
@@ -33,12 +31,12 @@ function questionsMain () {
 
 //print Wrong question
 function questionsWrong() {
-  document.getElementById("quiz-questions").innerHTML = "The capital city of " + COUNTRIES[randomNumber].name + " is " + COUNTRIES[randomNumberExcluded].capital;
+  document.getElementById("quiz-questions").innerHTML = "The capital city of " + countries_list[randomNumber].name + " is " + countries_list[randomNumberExcluded].capital;
 }
 
 //print Right question
 function questionsRight() {
-  document.getElementById("quiz-questions").innerHTML = "The capital city of " + COUNTRIES[randomNumber].name + " is " + COUNTRIES[randomNumber].capital;
+  document.getElementById("quiz-questions").innerHTML = "The capital city of " + countries_list[randomNumber].name + " is " + countries_list[randomNumber].capital;
 }
 
 //generate CSS for right or wrong answer
@@ -56,7 +54,7 @@ function setNewCSS(id, color) {
 
 //print Right answer
 function addRightAnswer() {
-  document.getElementById("result-message").innerHTML = "Right answer: " + COUNTRIES[randomNumber].capital + " is the capital of " + COUNTRIES[randomNumber].name;
+  document.getElementById("result-message").innerHTML = "Right answer: " + countries_list[randomNumber].capital + " is the capital of " + countries_list[randomNumber].name;
 }
 
 //change element from disabled to abled and vice versa
@@ -64,6 +62,10 @@ function changeDisabled() {
   document.getElementById('btn-next').disabled = !document.getElementById('btn-next').disabled;
   document.getElementById('wrong').disabled = !document.getElementById('wrong').disabled;
   document.getElementById('right').disabled = !document.getElementById('right').disabled;
+}
+
+function getFocus() {
+  document.getElementById("btn-next").focus();
 }
 
 function testRight () {
@@ -76,6 +78,7 @@ function testRight () {
     addRightAnswer();
   }
   changeDisabled();
+  getFocus();
 }
 
 function testWrong () {
@@ -88,6 +91,7 @@ function testWrong () {
     result();
   }
   changeDisabled();
+  getFocus();
 }
 
 //print score and question number
@@ -97,40 +101,26 @@ function result () {
 }
 
 //generateRandum numbers for question
-function setRandomNumbers() {
-  randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  randomNumberExcluded = randomExcluded(0, COUNTRIES.length-1, randomNumber);
+function setRandomNumbers(continent) {
+  if(continent == "Asia") {
+    countries_list = COUNTRIES_ASIA;
+  } else if (continent == "Europe") {
+    countries_list = COUNTRIES_EUROPE;
+  } else if (continent == "Africa") {
+    countries_list = COUNTRIES_AFRICA;
+  } else if (continent == "Americas") {
+    countries_list = COUNTRIES_AMERICAS;
+  } else if (continent == "Oceania") {
+    countries_list = COUNTRIES_OCEANIA;
+  }
+  randomNumber = Math.floor(Math.random() * countries_list.length-1) + 0;
+  randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
 }
 
 //generate randum number Excluded question number
 function randomExcluded(min, max, excluded) {
   let n = Math.floor(Math.random() * (max-min) + min);
   if (n >= excluded) n++;
-  return n;
-}
-
-//generateRandum numbers for question
-function setRandomNumbers2(continent) {
-  randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  while (COUNTRIES[randomNumber].region !== continent) {
- console.log("random in while " + COUNTRIES[randomNumber].name);
-    randomNumber = Math.floor(Math.random() * COUNTRIES.length-1) + 0;
-  }
-  console.log("random out while " + COUNTRIES[randomNumber].name);
-  randomNumberExcluded = randomExcluded2(continent,0, COUNTRIES.length-1, randomNumber);
-}
-
-//generate randum number Excluded question number
-function randomExcluded2(continent, min, max, excluded) {
-  let n = Math.floor(Math.random() * (max-min) + min);
-  if (n >= excluded) n++;
-  console.log("n " + COUNTRIES[n].name);
-  while (COUNTRIES[n].region !== continent) {
-    console.log("n while " + COUNTRIES[n].name);
-    n = Math.floor(Math.random() * (max-min) + min);
-    if (n >= excluded) n++;
-  }
-  console.log("n while out " + COUNTRIES[n].name);
   return n;
 }
 
@@ -146,17 +136,38 @@ function next() {
 }
 
 function chooseContinent() {
-  if(COUNTRIES[randomNumber].region == "Europe") {
+  if(countries_list == COUNTRIES_EUROPE) {
     start("Europe");
-  } else if (COUNTRIES[randomNumber].region == "Asia") {
+  } else if (countries_list == COUNTRIES_ASIA) {
     start("Asia");
-  } else {
-    console.log("not asia/evropa");
+  } else if (countries_list == COUNTRIES_AFRICA) {
+    start("Africa");
+  } else if (countries_list == COUNTRIES_AMERICAS) {
+    start("Americas");
+  } else if (countries_list == COUNTRIES_OCEANIA) {
+    start("Oceania");
   }
 }
 
+function test() {
+  let i = 0;
+  for (0; i < COUNTRIES.length; i++) {
+    if (COUNTRIES[i].subregion == "Caribbean") {
+      console.log(COUNTRIES[i].subregion);
+    }
+  }
+  console.log(i);
+  console.log(COUNTRIES.length);
+}
+
+// evropa 47
+// asia 49
+// africa 59
+// americas 56 (28)
+// oceania 27
+
 function start(continent) {
-  setRandomNumbers2(continent);
+  setRandomNumbers(continent);
   startAll();
 }
 
