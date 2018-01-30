@@ -9,8 +9,13 @@ let countries_list;
 
 //function for hide first card and show question cards
 function hideAndShow() {
-  document.getElementById('start-page').setAttribute("class", "hide-display");
+  document.getElementById('start-page-world').setAttribute("class", "hide-display");
   document.getElementById('start-page-europe').setAttribute("class", "hide-display");
+  document.getElementById('start-page-asia').setAttribute("class", "hide-display");
+  document.getElementById('start-page-africa').setAttribute("class", "hide-display");
+  document.getElementById('start-page-americas').setAttribute("class", "hide-display");
+  document.getElementById('start-page-oceania').setAttribute("class", "hide-display");
+
   document.getElementById('quiz-questions').removeAttribute("class");
   document.getElementById('quiz-image').removeAttribute("class");
   document.getElementById('quiz-nav').removeAttribute("class");
@@ -112,8 +117,10 @@ function setRandomNumbers(continent) {
     countries_list = COUNTRIES_AMERICAS;
   } else if (continent == "Oceania") {
     countries_list = COUNTRIES_OCEANIA;
+  } else if (continent == "World") {
+    countries_list = COUNTRIES;
   }
-  randomNumber = Math.floor(Math.random() * countries_list.length-1) + 0;
+    randomNumber = Math.floor(Math.random() * countries_list.length-1) + 0;
   randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
 }
 
@@ -146,6 +153,8 @@ function chooseContinent() {
     start("Americas");
   } else if (countries_list == COUNTRIES_OCEANIA) {
     start("Oceania");
+  } else if (countries_list == COUNTRIES) {
+    start("World");
   }
 }
 
@@ -159,12 +168,7 @@ function test() {
   console.log(i);
   console.log(COUNTRIES.length);
 }
-
-// evropa 47
-// asia 49
-// africa 59
-// americas 56 (28)
-// oceania 27
+// evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27
 
 function start(continent) {
   setRandomNumbers(continent);
