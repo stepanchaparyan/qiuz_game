@@ -31,7 +31,7 @@ function questionsMain () {
   } else {
     questionsWrong();
   }
-  console.log(randomNumber);
+  console.log(randomNumberMain);
 }
 
 //print Wrong question
@@ -100,9 +100,21 @@ function testWrong () {
 }
 
 //print score and question number
-function result () {
+function result() {
   document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /10";
   document.getElementById("result-score").innerHTML = " Score: " + score + " /10";
+}
+
+function finalResult() {
+  if (questionNumber == 1) {
+  document.getElementById("final-score").innerHTML = "You win " + score + " points";
+  document.getElementById('main').setAttribute("class", "hide-display");
+  document.getElementById('feedback-page').removeAttribute("class");
+  }
+}
+
+function tryAgain() {
+  document.location.reload();
 }
 
 //generateRandum numbers for question
@@ -121,7 +133,7 @@ function setRandomNumbers(continent) {
     countries_list = COUNTRIES;
   }
     randomNumber = Math.floor(Math.random() * countries_list.length-1) + 0;
-  randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
+    randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
 }
 
 //generate randum number Excluded question number
@@ -157,7 +169,7 @@ function chooseContinent() {
     start("World");
   }
 }
-
+/***
 function test() {
   let i = 0;
   for (0; i < COUNTRIES.length; i++) {
@@ -169,6 +181,7 @@ function test() {
   console.log(COUNTRIES.length);
 }
 // evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27
+***/
 
 function start(continent) {
   setRandomNumbers(continent);
@@ -179,4 +192,5 @@ function startAll() {
   hideAndShow();
   questionsMain();
   result();
+  finalResult();
 }
