@@ -15,7 +15,7 @@ function hideAndShow() {
   document.getElementById('start-page-africa').setAttribute("class", "hide-display");
   document.getElementById('start-page-americas').setAttribute("class", "hide-display");
   document.getElementById('start-page-oceania').setAttribute("class", "hide-display");
-
+  document.getElementById('center-part-title').setAttribute("class", "hide-display");
   document.getElementById('quiz-questions').removeAttribute("class");
   document.getElementById('quiz-image').removeAttribute("class");
   document.getElementById('quiz-nav').removeAttribute("class");
@@ -31,7 +31,7 @@ function questionsMain () {
   } else {
     questionsWrong();
   }
-  console.log(randomNumberMain);
+  console.log(randomNumber);
 }
 
 //print Wrong question
