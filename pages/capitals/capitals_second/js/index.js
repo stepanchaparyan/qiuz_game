@@ -1,3 +1,5 @@
+"use strict"
+
 // variables for question number and score
 let questionNumber = 0;
 let score = 0;
@@ -26,11 +28,7 @@ function hideAndShow() {
 //generate and print right or wrong question
 function questionsMain () {
   randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-  if (randomNumberMain == 1) {
-    questionsRight();
-  } else {
-    questionsWrong();
-  }
+  randomNumberMain == 1 ? questionsRight() : questionsWrong();
   console.log(randomNumberMain);
 }
 
@@ -74,27 +72,13 @@ function getFocus() {
 }
 
 function testRight () {
-  if (randomNumberMain == 1) {
-    setNewCSS("right", "green");
-    score += 1;
-    result();
-  } else {
-    setNewCSS("right", "red");
-    addRightAnswer();
-  }
+  randomNumberMain == 1 ? (setNewCSS("right", "green"), score += 1, result()) : (setNewCSS("right", "red"), addRightAnswer());
   changeDisabled();
   getFocus();
 }
 
 function testWrong () {
-  if (randomNumberMain == 1) {
-    setNewCSS("wrong", "red");
-  } else {
-    setNewCSS("wrong", "green");
-    addRightAnswer();
-    score += 1;
-    result();
-  }
+  randomNumberMain == 1 ? (setNewCSS("wrong", "red")) : (setNewCSS("wrong", "green"), addRightAnswer(), score += 1, result());
   changeDisabled();
   getFocus();
 }
@@ -106,7 +90,7 @@ function result() {
 }
 
 function finalResult() {
-  if (questionNumber == 1) {
+  if (questionNumber == 100) {
   document.getElementById("final-score").innerHTML = "You win " + score + " points";
   document.getElementById('main').setAttribute("class", "hide-display");
   document.getElementById('feedback-page').removeAttribute("class");
@@ -129,10 +113,10 @@ function setRandomNumbers(continent) {
     countries_list = COUNTRIES_AMERICAS;
   } else if (continent == "Oceania") {
     countries_list = COUNTRIES_OCEANIA;
-  } else if (continent == "World") {
+  } else {
     countries_list = COUNTRIES;
   }
-    randomNumber = Math.floor(Math.random() * countries_list.length-1) + 0;
+    randomNumber = Math.floor(Math.random() * countries_list.length-1) + 1;
     randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
 }
 
@@ -165,23 +149,12 @@ function chooseContinent() {
     start("Americas");
   } else if (countries_list == COUNTRIES_OCEANIA) {
     start("Oceania");
-  } else if (countries_list == COUNTRIES) {
+  } else {
     start("World");
   }
 }
-/***
-function test() {
-  let i = 0;
-  for (0; i < COUNTRIES.length; i++) {
-    if (COUNTRIES[i].subregion == "Caribbean") {
-      console.log(COUNTRIES[i].subregion);
-    }
-  }
-  console.log(i);
-  console.log(COUNTRIES.length);
-}
+
 // evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27
-***/
 
 function start(continent) {
   setRandomNumbers(continent);
