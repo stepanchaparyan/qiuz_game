@@ -375,5 +375,5 @@ button:disabled {
 
 button:disabled:hover {
     cursor: not-allowed;
-		background: #dddddd;
+    background: #dddddd;
 }

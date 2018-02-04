@@ -14,7 +14,16 @@
   <link rel="stylesheet" href="css/custom.css">
   <!--internal JS file-->
   <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/taffy.js"></script>
+  <script type="text/javascript" src="src/lokijs.js"></script>
+  <script type="text/javascript" src="js/loki.js"></script>
+  <script type="text/javascript" src="src/taffydb.js"></script>
+  <script type="text/javascript" src="src/countries.js"></script>
+  <script type="text/javascript" src="src/countries_asia.js"></script>
+  <script type="text/javascript" src="src/countries_europe.js"></script>
+  <script type="text/javascript" src="src/countries_africa.js"></script>
+  <script type="text/javascript" src="src/countries_americas.js"></script>
+  <script type="text/javascript" src="src/countries_oceania.js"></script>
 
 </head>
 <body>
@@ -28,7 +37,6 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Your title</a></li>
-            <li><a href="#">Your points</a></li>
             <img id="user_picture" src="images/stepan.jpg" alt="Avatar" class="avatar">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
           </ul>
@@ -38,23 +46,99 @@
 
 <!-- Start_card -->
     <div class="row">
+
       <div class="col-lg-2 col-md-2 hidden-sm hidden-xs left-part">
+        <div class="left-card">
+          <div class="info">Want to play<br> other game? <br>Click</div>
+
+            <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+              <img class="card-img-top" src="images/europe.png" alt="Card image" >
+              <h4 class="card-title">Flags</h4>
+              <p class="card-text">Get 20 points</p>
+              <button class="button-start" disabled="disabled" id="europe" onclick="start('Europe')">Start</button>
+            </div>
+
+        </div>
       </div>
-    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 center-part">
+
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 center-part">
 
       <div id="quiz-image" class="hide-display">
         <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
       </div>
 
-      <div>
+      <div id="main">
 
-        <div class="card-center" id="start-page">
+        <div class="center-part-title col-lg-12 col-md-12 hidden-sm hidden-xs" id="center-part-title">You can choose the continent and get more points</div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-asia">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
-            <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="images/asia.jpg" alt="Card image" >
             <div class="card-body" >
               <h4 class="card-title">Capitals</h4>
-              <p class="card-text">In Green level you must choose weither answer is right or wrong</p>
-              <button class="button-start">Start this game</button>
+              <div class="card-continent">Asia</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="asia" onclick="start('Asia')">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-europe">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/europe.png" alt="Card image" >
+            <div class="card-body" >
+              <h4 class="card-title">Capitals</h4>
+              <div class="card-continent">Europe</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="europe" onclick="start('Europe')">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-africa">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/africa.jpg" alt="Card image" >
+            <div class="card-body" >
+              <h4 class="card-title">Capitals</h4>
+              <div class="card-continent">Africa</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="africa" onclick="start('Africa')">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-americas">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/americas.jpg" alt="Card image" >
+            <div class="card-body" >
+              <h4 class="card-title">Capitals</h4>
+              <div class="card-continent">Americas</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="americas" onclick="start('Americas')">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-oceania">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/oceania.jpg" alt="Card image" >
+            <div class="card-body" >
+              <h4 class="card-title">Capitals</h4>
+              <div class="card-continent">Oceania</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="oceania" onclick="start('Oceania')">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-world">
+          <div class="card-style" style="border-color:green; background-color:#a0e2a0">
+            <img class="card-img-top" src="images/world.jpg" alt="Card image" >
+            <div class="card-body" >
+              <h4 class="card-title">Capitals</h4>
+              <div class="card-continent">World</div>
+              <p class="card-text">Here you can get 20 points</p>
+              <button class="button-start" id="world" onclick="start('World')">Start</button>
             </div>
           </div>
         </div>
@@ -62,20 +146,34 @@
         <div id="quiz-questions" class="hide-display">
         </div>
 
-        <div role="navigation" class="quiz-nav hide-display" id="quiz-nav">
-          <button class="next-button nav-button" role="button" id="btn-next">Next</button>
+        <div id="quiz-answers" class="hide-display">
+          <button id="right" onclick="testRight()">Right</button>
+          <button id="wrong" onclick="testWrong()">Wrong</button>
         </div>
 
-        <div class="feedback-page hide-display" id="feedback-page">
-          <h1>Your results!</h1>
-          <p class="final-score"></p>
-          <button id="btn-try-again" class="try-again-button" role="button">Try Again</button>
+        <div id="result-message" class="hide-display"></div>
+        <div id="result-step-score" class="hide-display">
+          <div id="result-step" class="hide-display"></div>
+          <div id="result-score" class="hide-display"></div>
+        </div>
+        <div role="navigation" class="quiz-nav hide-display" id="quiz-nav">
+          <button class="next-button nav-button" disabled role="button" id="btn-next" onclick="next()">Next</button>
         </div>
 
       </div>
 
+        <div class="feedback-page hide-display" id="feedback-page">
+          <h1>Your results!</h1>
+          <p class="final-score" id="final-score"></p>
+          <button id="btn-try-again" class="try-again-button" role="button" onclick="tryAgain()">Try Again</button>
+        </div>
+
     </div>
-    <div class="col-lg-2 col-md-2 hidden-sm hidden-xs right-part"></div>
+      <div class="col-lg-1 col-md-1 hidden-sm hidden-xs right-part">
+        <div id="point"> Your points 0 </div>
+        <div id="result"></div>
+
+      </div>
     </div>
 
 <footer>

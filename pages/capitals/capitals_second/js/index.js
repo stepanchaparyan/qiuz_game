@@ -1,169 +1,115 @@
-"use strict"
+// neccessory variables
+let scoreCount = 0;
+let counter = 0;
+let displayCounter = counter + 1;
 
-// variables for question number and score
-let questionNumber = 0;
-let score = 0;
-let randomNumberMain;
-let randomNumber;
-let randomNumberExcluded;
-let countries_list;
-
-
-//function for hide first card and show question cards
-function hideAndShow() {
-  document.getElementById('start-page-world').setAttribute("class", "hide-display");
-  document.getElementById('start-page-europe').setAttribute("class", "hide-display");
-  document.getElementById('start-page-asia').setAttribute("class", "hide-display");
-  document.getElementById('start-page-africa').setAttribute("class", "hide-display");
-  document.getElementById('start-page-americas').setAttribute("class", "hide-display");
-  document.getElementById('start-page-oceania').setAttribute("class", "hide-display");
-  document.getElementById('center-part-title').setAttribute("class", "hide-display");
-  document.getElementById('quiz-questions').removeAttribute("class");
-  document.getElementById('quiz-image').removeAttribute("class");
-  document.getElementById('quiz-nav').removeAttribute("class");
-  document.getElementById('quiz-answers').removeAttribute("class");
-  document.getElementById('result-step-score').removeAttribute("class");
+//Click on Start Button to set hide start-card and set display the quiz page
+function startQuiz() {
+  $('.button-start').on('click', function(event) {
+    $('#quiz-questions').removeClass("hide-display");
+    $('#quiz-image').removeClass("hide-display");
+    $('#start-page').addClass("hide-display");
+   $('#quiz-nav').removeClass("hide-display");
+  });
 }
 
-//generate and print right or wrong question
-function questionsMain () {
-  randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-  randomNumberMain == 1 ? questionsRight() : questionsWrong();
-  console.log(randomNumberMain);
+//Generate questions in a form and display
+// pass in the counter variable
+function generateQuestions(counter) {
+  if (counter < 10) {
+    let currentQuestion = QUIZ[counter];
+    let quizHTML = `
+      <form>
+      <h1 class="question-one">${currentQuestion.question}</h1>
+      <div class="options">
+        <input type="radio" name="question-option" id="question-option-one" value="${currentQuestion.answers[0]}">
+        <label for="question-option-one">${currentQuestion.answers[0]}</label>
+        <br><br>
+        <input type="radio" name="question-option" id="question-option-two" value="${currentQuestion.answers[1]}">
+        <label for="question-option-two">${currentQuestion.answers[1]}</label>
+        <br><br>
+        <input type="radio" name="question-option" id="question-option-three" value="${currentQuestion.answers[2]}">
+        <label for="question-option-three">${currentQuestion.answers[2]}</label>
+        <br><br>
+        <input type="radio" name="question-option" id="question-option-four" value="${currentQuestion.answers[3]}">
+        <label for="question-option-four">${currentQuestion.answers[3]}</label>
+      </div>
+      </form>
+      <p>Question: ${counter + 1}/10</p>
+      <p>Score: ${scoreCount}/10</p>`;
+    $('#quiz-questions').html(quizHTML);
+  };
 }
 
-//print Wrong question
-function questionsWrong() {
-  document.getElementById("quiz-questions").innerHTML = "The capital city of " + countries_list[randomNumber].name + " is " + countries_list[randomNumberExcluded].capital;
-}
 
-//print Right question
-function questionsRight() {
-  document.getElementById("quiz-questions").innerHTML = "The capital city of " + countries_list[randomNumber].name + " is " + countries_list[randomNumber].capital;
-}
-
-//generate CSS for right or wrong answer
-function setNewCSS(id, color) {
-  if (color == "green") {
-    document.getElementById(id).setAttribute("class", "greenBorder");
-    document.getElementById('result-message').setAttribute("class", "greenBorder");
-    document.getElementById("result-message").innerHTML = "You are right";
-  } else if (color == "red") {
-    document.getElementById(id).setAttribute("class", "redBorder");
-    document.getElementById('result-message').setAttribute("class", "redBorder");
-    document.getElementById("result-message").innerHTML = "Sorry, but the question was right";
+//press on answer and receive a correct or wrong message
+function answerFeedback (counter) {
+  if (counter < 10) {
+    let correctAnswer = QUIZ[counter].correctAnswerString;
+    $('input[type=radio]').click(function(event) {
+      $('.options').children('input').attr('disabled', true);
+      let userAnswer = $(this).val();
+      if (userAnswer === correctAnswer) {
+        scoreCount += 1;
+        $('input[type=radio]:checked').next('label').addClass('correct-answer');
+        $('#quiz-questions').append(`<p class='correct-answer'>Correct!</p>`);
+      } else {
+        $('#quiz-questions').append(`<p class='wrong-answer-long'>Wrong! The correct answer is: ${correctAnswer}</p>`)
+        $('input[type=radio]:checked').next('label').addClass('wrong-answer');
+      }
+    });
   }
 }
 
-//print Right answer
-function addRightAnswer() {
-  document.getElementById("result-message").innerHTML = "Right answer: " + countries_list[randomNumber].capital + " is the capital of " + countries_list[randomNumber].name;
+//prevents Next Button from being clicked on if no option is chosen
+function preventClickNextButton () {
+  $('.next-button').attr('disabled', true);
+  $('.options').children('input').on('click', function () {
+     if ($(this).prop("checked") === true) {
+      $('.next-button').attr('disabled', false);
+      }
+    });
 }
 
-//change element from disabled to abled and vice versa
-function changeDisabled() {
-  document.getElementById('btn-next').disabled = !document.getElementById('btn-next').disabled;
-  document.getElementById('wrong').disabled = !document.getElementById('wrong').disabled;
-  document.getElementById('right').disabled = !document.getElementById('right').disabled;
+//Click on Next button to go to next question
+function nextQuestionButton () {
+  preventClickNextButton();
+  $('.next-button').click(function(event) {
+    counter += 1;
+    generateQuestions(counter);
+    answerFeedback(counter);
+    preventClickNextButton();
+  });
 }
 
-function getFocus() {
-  document.getElementById("btn-next").focus();
+//Display final results page
+// hide other sections
+function finalFeedback() {
+  $('.next-button').on('click', function() {
+    if (counter === 10) {
+      $('#quiz-questions').addClass('hide-display');
+      $('#quiz-nav').addClass("hide-display");
+      $('.feedback-page').removeClass('hide-display');
+      $('.final-score').append(`You got ${scoreCount}/10 questions right!`)
+    }
+  });
 }
 
-function testRight () {
-  randomNumberMain == 1 ? (setNewCSS("right", "green"), score += 1, result()) : (setNewCSS("right", "red"), addRightAnswer());
-  changeDisabled();
-  getFocus();
-}
-
-function testWrong () {
-  randomNumberMain == 1 ? (setNewCSS("wrong", "red")) : (setNewCSS("wrong", "green"), addRightAnswer(), score += 1, result());
-  changeDisabled();
-  getFocus();
-}
-
-//print score and question number
-function result() {
-  document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /10";
-  document.getElementById("result-score").innerHTML = " Score: " + score + " /10";
-}
-
-function finalResult() {
-  if (questionNumber == 100) {
-  document.getElementById("final-score").innerHTML = "You win " + score + " points";
-  document.getElementById('main').setAttribute("class", "hide-display");
-  document.getElementById('feedback-page').removeAttribute("class");
-  }
-}
-
+//Click on Try Again button to reset the quiz
 function tryAgain() {
-  document.location.reload();
+  $('.try-again-button').on('click', function() {
+    document.location.reload();
+  });
 }
 
-//generateRandum numbers for question
-function setRandomNumbers(continent) {
-  if(continent == "Asia") {
-    countries_list = COUNTRIES_ASIA;
-  } else if (continent == "Europe") {
-    countries_list = COUNTRIES_EUROPE;
-  } else if (continent == "Africa") {
-    countries_list = COUNTRIES_AFRICA;
-  } else if (continent == "Americas") {
-    countries_list = COUNTRIES_AMERICAS;
-  } else if (continent == "Oceania") {
-    countries_list = COUNTRIES_OCEANIA;
-  } else {
-    countries_list = COUNTRIES;
-  }
-    randomNumber = Math.floor(Math.random() * countries_list.length-1) + 1;
-    randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
+
+function renderQuiz() {
+  startQuiz();
+  generateQuestions(counter);
+  answerFeedback(counter);
+  nextQuestionButton();
+  finalFeedback();
+  tryAgain();
 }
 
-//generate randum number Excluded question number
-function randomExcluded(min, max, excluded) {
-  let n = Math.floor(Math.random() * (max-min) + min);
-  if (n >= excluded) n++;
-  return n;
-}
-
-//list of functions/action for next button
-function next() {
-  questionNumber += 1;
-  document.getElementById('right').removeAttribute("class");
-  document.getElementById('wrong').removeAttribute("class");
-  document.getElementById('result-message').removeAttribute("class");
-  document.getElementById('result-message').setAttribute("class", "hide-display");
-  changeDisabled();
-  chooseContinent();
-}
-
-function chooseContinent() {
-  if(countries_list == COUNTRIES_EUROPE) {
-    start("Europe");
-  } else if (countries_list == COUNTRIES_ASIA) {
-    start("Asia");
-  } else if (countries_list == COUNTRIES_AFRICA) {
-    start("Africa");
-  } else if (countries_list == COUNTRIES_AMERICAS) {
-    start("Americas");
-  } else if (countries_list == COUNTRIES_OCEANIA) {
-    start("Oceania");
-  } else {
-    start("World");
-  }
-}
-
-// evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27
-
-function start(continent) {
-  setRandomNumbers(continent);
-  startAll();
-}
-
-function startAll() {
-  hideAndShow();
-  questionsMain();
-  result();
-  finalResult();
-}
+$(renderQuiz);

@@ -40,7 +40,7 @@ comments
 when we press button (write or wrong) border of button will become green or red, and no need extra div for typing <Correct> .... 
 Also after pressing wrong button, wrong button border will become red, and right button will become green
 
-after game when we see result, we can alos see map where countries with right answers will be green, and wrong answers red
+after game when we see result, we can see map where countries with right answers will be green, and wrong answers red
 
 for high levels we can provide game with time
 how many right answers we can get in a minute
