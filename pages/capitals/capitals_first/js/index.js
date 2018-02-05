@@ -115,14 +115,9 @@ function testStorage() {
   }
 }
 
-function taffydb() {
-  if (points == undefined) {
-  } else {
-  startTaffy();
-  }
-}
 
 function tryAgain() {
+  addPoints();
   document.location.reload();
 }
 
@@ -184,8 +179,6 @@ function chooseContinent() {
 function start(continent) {
   setRandomNumbers(continent);
   startAll();
-  console.log("loki in js " + products.data[0].Cost);
-
 }
 
 function startAll() {
@@ -193,4 +186,8 @@ function startAll() {
   questionsMain();
   result();
   finalResult();
+}
+
+function loadFunction() {
+  document.getElementById('point').innerHTML = points.data[0].CapitalPoints;
 }
