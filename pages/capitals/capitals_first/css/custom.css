@@ -344,5 +344,10 @@ button:disabled:hover {
   font-size: 30px;
   font-weight: bold;
   color: orangered;
-  margin-top: 20px;
+}
+
+#pointText {
+  margin-top: 15px;
+  font-weight: bold;
+  color: blue;
 }
