@@ -15,23 +15,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f9f9fb;
 }
 
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -44,14 +27,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /************* HEADER ****************/
 .header{
-    background: url('../img/bg-banner02.jpg') no-repeat fixed;
+    background: url('../img/map3.png') no-repeat fixed;
     background-size: cover;
-    min-height: 650px;
     position: relative;
+    background-color: lightblue;
+    min-height: 810px;
 }
-.bg-color {
-    background-color: rgba(0, 0, 0, 0.5);
-    min-height: 650px;
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 810px;
 }
 
 .navbar-default {
@@ -376,4 +360,8 @@ button:disabled {
 button:disabled:hover {
     cursor: not-allowed;
     background: #dddddd;
+}
+
+.hide-display {
+    display: none;
 }
