@@ -6,18 +6,18 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-}
 .section-padding {
     padding: 60px 0px;
     background-color: #f9f9fb;
 }
 
+.hide-display {
+    display: none;
+}
+
 /************* HEADER ****************/
 .header{
-    background: url('../img/map3.png') no-repeat fixed;
+    background: url('../img/map.png') no-repeat fixed;
     background-size: cover;
     position: relative;
     background-color: lightblue;
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-nav-collapse {
     padding: 0;
-    background: rgba(64,75,97, 0.9);
+    background: rgba(0,0,0,0.5);
 }
 
 .logo-dec {
@@ -88,14 +88,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 .bnr-title {
-    font-size: 30px;
-    font-family: 'Fira Sans', sans-serif;
+  margin-top: 2%;
+  font-size: 25px;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .bnr-sub-title {
-    font-size: 45px;
+    font-size: 37px;
     text-transform: uppercase;
     padding: 20px 0px;
+}
+
+.bonus-line {
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .btn-start, .btn-more, .btn-start:focus, .btn-more:focus {
@@ -117,11 +124,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn-start {
     background-color: #be9e21;
 }
+
 .btn-more, .btn-more:focus {
     margin-left: 15px;
     border: 1px solid #be9e21;
     color: #be9e21;
 }
+
 .btn-more:hover {
     background: #be9e21;
     color: #fff;
@@ -135,39 +144,112 @@ h1, h2, h3, h4, h5, h6 {
    color: #fff;
    width: 100%;
 }
-/*********************/
+
+/*******Service**********/
 
 #service {
-    background-color: #F3F4F8;
+  background-color: #F3F4F8;
 }
 
-.service-item h3 span {
-    opacity: 0.7;
-    font-size: 75px;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: -5px;
-    font-weight: 900;
-    padding-right: 6px;
+.service-item {
+  margin: 30px;
 }
-.service-item h3 {
-    font-weight: 700;
+
+.service-item div span {
+  color: #be9e21;
+  opacity: 0.7;
+  font-size: 65px;
+  line-height: 1;
+  font-weight: bold;
+  padding-right: 7px;
 }
+
+.service-item div {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .service-item p {
     opacity: 0.6;
     color: inherit;
     padding: 10px 0px;
 }
+
 .service-item a {
     color: #be9e21;
 }
+
+.service-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.service-sub-title {
+    font-size: 16px;
+    margin: 40px;
+}
+
+//*******Games**********//
 
 #games {
   background-color: #f5f6f9;
 }
 
-contact
-//*****************//
+.game-title {
+   font-size: 40px;
+   font-weight: bold;
+   color: #659781;
+   text-align: center;
+}
+
+.game-text {
+   font-size: 20px;
+   font-weight: bold;
+   margin-bottom: 20px;
+   color: #be9e21;
+   text-align: center;
+}
+
+.card-style {
+	text-align: center;
+	color: black;
+	border: 2px groove;
+	border-radius: 5px;
+  padding: 1px;
+  margin:10px;
+}
+
+.button-style {
+  display: inline-block;
+  border-radius: 16px;
+  background-color: #be9e21;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 170px;
+  cursor: pointer;
+  margin: 5px;
+	font-weight: bold;
+}
+
+.button-style:hover {
+  background-color: #ab8e1d;
+}
+
+button:disabled {
+    background: #dddddd;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+    background: #dddddd;
+}
+
+/********* contact ***********/
+
 .btn-submit, .btn-submit:hover, .btn-submit:focus {
     background-color: transparent;
     border-radius: 60px;
@@ -231,14 +313,12 @@ contact
 .loction-info p i {
     color: #be9e21;
 }
-/********* contact ***********/
-#footer
-{
+
+#footer {
     padding: 20px 0px;
 }
 
-.white-bg
-{
+.white-bg {
     background-color: #fff;
 }
 #footer a{
@@ -246,34 +326,58 @@ contact
     font-weight: 400;
 }
 
-/*** Responsive media queries ************/
+/********* Responsive media queries ************/
+
 @media (min-width: 768px) and (max-width: 980px) {
-    .service-item, .wrap-item {
-    margin-bottom: 15px;
+.login-box {
+    left: 76%;
+}
+#titleText {
+  padding-left: 0;
+  padding-right: 0;
+}
 }
 
-}
 @media (min-width: 451px) and (max-width: 767px) {
-    .service-item, .wrap-item {
+.navbar-default .navbar-brand {
+    margin-top: 0px;
+}
+.service-item, .wrap-item {
     margin-bottom: 15px;
+}
+.bnr-title {
+    font-size: 20px;
+    margin-top: 10%;
+}
+.bnr-sub-title {
+    font-size: 25px;
+}
+.bonus-word, .logo-dec {
+    font-size: 20px;
+}
+.login {
+  visibility: hidden;
+}
+.navbar-default .navbar-nav > li > a {
+    line-height: 30px;
 }
 }
 @media (min-width: 20px) and (max-width: 450px) {
-.navbar-default .navbar-brand {
+.navbar-brand {
     padding-left: 16px;
-    margin-top: 0px;
 }
 .banner-info {
     padding-top: 40px;
 }
-h1.bnr-title {
-    font-size: 16px;
+.login {
+  visibility: hidden;
 }
-h2.bnr-sub-title {
-    font-size: 33px;
+.bnr-title {
+    font-size: 18px;
+    margin-top: 50%;
 }
-body{
-    font-size: 14px;
+.bnr-sub-title {
+    font-size: 26px;
 }
 .btn-start, .btn-more, .btn-start:hover, .btn-more:hover, .btn-start:focus, .btn-more:focus {
     font-size: 12px;
@@ -282,19 +386,9 @@ body{
 .wrap-item h3 {
     font-size: 18px;
 }
-.title, .service-title {
-    font-size: 28px;
-}
-.sub-title {
-    font-size: 15px;
-}
-.service-item, .blog-sec, .wrap-item, .loction-info{
-    margin-bottom: 15px;
-}
 .loction-info{
     padding: 0px 15px;
 }
-
 .padding-right-zero{
     padding-right: 15px !important;
 }
@@ -302,52 +396,4 @@ body{
     line-height: 22px;
     text-align: center;
 }
-}
-
-/**********bonus*************/
-.bonus-line {
-	color: red;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-/******card**********/
-.card-style {
-	text-align: center;
-	color: black;
-	border: 2px groove;
-	border-radius: 5px;
-  padding: 1px;
-}
-
-.button-style {
-  display: inline-block;
-  border-radius: 16px;
-  background-color: #be9e21;
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-  width: 170px;
-  cursor: pointer;
-  margin: 5px;
-	font-weight: bold;
-}
-
-.button-style:hover {
-  background-color: #ab8e1d;
-}
-
-button:disabled {
-    background: #dddddd;
-}
-
-button:disabled:hover {
-    cursor: not-allowed;
-    background: #dddddd;
-}
-
-.hide-display {
-    display: none;
 }

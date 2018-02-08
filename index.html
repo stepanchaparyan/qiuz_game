@@ -23,7 +23,14 @@
 
         <nav class="navbar-default navbar-fixed-top">
           <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#">Geo<span class="logo-dec">graphy</span></a>
+          </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
@@ -31,8 +38,8 @@
                 <li class=""><a href="#games">Games</a></li>
                 <li class=""><a href="#contact">Contact Us</a></li>
                 <li class=""><a href="#contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li onclick="login()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li class="login" ><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="login" onclick="login()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
             </div>
           </div>
@@ -82,33 +89,33 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h2 class="service-title pad-bt15">What We Do?</h2>
-            <p class="sub-title pad-bt15">We learn geography to Everyone. We have games for Everyone<br> Game questions about counties, capitals, flags, county borders, rivers, seas ...</p>
+            <p class="service-sub-title pad-bt15">We learn geography to Everyone. We have games for Everyone<br> Game questions about counties, capitals, flags, county borders, rivers, seas ...</p>
             <hr class="bottom-line">
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="service-item">
-              <h3><span>C</span>ountries and capitals</h3>
+              <div><span>C</span>ountries and capitals</div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="">learn more...</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="service-item">
-              <h3><span>F</span>lags and countries</h3>
+              <div><span>F</span>lags and countries</div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="">learn more...</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="service-item">
-              <h3><span>G</span>eograpy about each continent</h3>
+              <div><span>G</span>eograpy about each continent</div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="">learn more...</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="service-item">
-              <h3><span>A</span>rmenian Geography</h3>
+              <div><span>A</span>rmenian Geography</div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="">Learn more...</a>
             </div>
@@ -123,6 +130,9 @@
       <hr>
       <div class="container">
         <div class="row">
+
+          <div class="game-title">Games</div>
+          <div class="game-text">We have many types of games <br> Everey game has four level wich you can reach after winning some points</div>
 
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="card-style" style="border-color:green; background-color:#b7e2cf">
@@ -285,14 +295,8 @@
         <div class="row text-center">
           <p>&copy; Chaparyan Team. All Rights Reserved.</p>
           <div class="credits">
-            <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Baker
-            -->
             Designed  by <a href="https://chaparyan.com/">Chaparyan</a>
-        </div>
+          </div>
         </div>
       </div>
     </footer>
