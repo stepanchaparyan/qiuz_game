@@ -15,27 +15,17 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f9f9fb;
 }
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 /************* HEADER ****************/
 .header{
     background: url('../img/map3.png') no-repeat fixed;
     background-size: cover;
     position: relative;
     background-color: lightblue;
-    min-height: 810px;
+    min-height: 700px;
 }
 .wrapper {
     background-color: rgba(0, 0, 0, 0.3);
-    min-height: 810px;
+    min-height: 700px;
 }
 
 .navbar-default {
@@ -83,42 +73,37 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
     color: #be9e21;
     background-color: transparent;
 }
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-    background-color: transparent;
-    color: #be9e21;
-}
-.banner-info
-{
-    padding-top: 140px;
+
+.banner-info {
+    padding-top: 17%;
     color: #fff;
+    font-weight: bold;
 }
-.bnr-title, .bnr-sub-title
-{
+.bnr-title {
+    font-size: 30px;
     font-family: 'Fira Sans', sans-serif;
 }
-h1.bnr-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-h2.bnr-sub-title {
+
+.bnr-sub-title {
     font-size: 45px;
     text-transform: uppercase;
     padding: 20px 0px;
-    font-weight: 700;
 }
 
-.btn-start, .btn-more, .btn-start:hover, .btn-start:focus, .btn-more:focus {
+.btn-start, .btn-more, .btn-start:focus, .btn-more:focus {
     text-transform: uppercase;
     margin-top: 50px;
     color: #fff;
     border: 0;
     font-size: 14px;
-    font-weight: 300;
     line-height: 24px;
     padding: 10px 30px;
     border-radius: 60px;
@@ -148,6 +133,7 @@ h2.bnr-sub-title {
    bottom: 25px;
    font-size: 38px;
    color: #fff;
+   width: 100%;
 }
 /*********************/
 
