@@ -1,7 +1,16 @@
 function login() {
-  document.getElementById('titleText').setAttribute("class", " banner-info text-center wow fadeIn delay-05s col-md-9 col-sm-6 col-xs-4");
-  document.getElementById('loginPage').removeAttribute("class");
+    let loginPage = document.getElementById("loginPage");
+    let titleText = document.getElementById("titleText");
+    if (loginPage.classList.contains("hide-display")) {
+      loginPage.removeAttribute("class");
+      titleText.setAttribute("class", " banner-info text-center wow fadeIn delay-05s col-md-9 col-sm-6 col-xs-4");
+    } else {
+      loginPage.setAttribute("class", "hide-display");
+      titleText.removeAttribute("class", "col-md-9 col-sm-6 col-xs-4");
+      titleText.setAttribute("class", " banner-info text-center wow fadeIn delay-05s");
+    }
 }
+
 
 $(function() {
 

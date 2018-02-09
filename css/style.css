@@ -212,6 +212,7 @@ body {
 }
 
 .card-style {
+  font-size: 14px;
 	text-align: center;
 	color: black;
 	border: 2px groove;
@@ -318,14 +319,15 @@ button:disabled:hover {
     padding: 20px 0px;
 }
 
-.white-bg {
-    background-color: #fff;
-}
+
 #footer a{
     color: #be9e21;
     font-weight: 400;
 }
 
+.white-bg {
+    background-color: #fff;
+}
 /********* Responsive media queries ************/
 
 @media (min-width: 768px) and (max-width: 980px) {

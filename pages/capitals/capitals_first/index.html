@@ -12,8 +12,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--internal CSS file-->
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/rightLeftColumn.css">
   <!--internal JS file-->
   <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/rightLeftColumn.js"></script>
   <script type="text/javascript" src="src/lokijs.js"></script>
   <script type="text/javascript" src="js/loki.js"></script>
   <script type="text/javascript" src="src/countries.js"></script>
@@ -22,6 +24,10 @@
   <script type="text/javascript" src="src/countries_africa.js"></script>
   <script type="text/javascript" src="src/countries_americas.js"></script>
   <script type="text/javascript" src="src/countries_oceania.js"></script>
+  <!--scripts for bxbuilder -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
 </head>
 <body onload="loadFunction()">
@@ -45,8 +51,7 @@
 <!-- Start_card -->
     <div class="row">
 
-      <div class="col-lg-2 col-md-2 hidden-sm hidden-xs left-part">
-        <div class="left-card">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 left-part">
           <div class="info">Want to play<br> other game? <br>Click</div>
 
             <div class="card-style" style="border-color:green; background-color:#a0e2a0">
@@ -55,11 +60,15 @@
               <p class="card-text">Get 20 points</p>
               <button class="button-start" disabled="disabled" id="europe" onclick="start('Europe')">Start</button>
             </div>
+	           <div class="bxslider">
+  	            <div><img src="images/europe.png"></div>
+  	            <div><img src="images/americas.jpg"></div>
+  	            <div><img src="images/asia.jpg"></div>
+	          </div>
 
-        </div>
       </div>
 
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 center-part">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 center-part">
 
       <div id="quiz-image" class="hide-display">
         <img class="card-img-top" src="images/berlin.jpg" alt="Card image" style="width:100%">
@@ -69,7 +78,7 @@
 
         <div class="center-part-title col-lg-12 col-md-12 hidden-sm hidden-xs" id="center-part-title">You can choose the continent and get more points</div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-asia">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-asia">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/asia.jpg" alt="Card image" >
             <div class="card-body" >
@@ -81,7 +90,7 @@
           </div>
         </div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-europe">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-europe">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/europe.png" alt="Card image" >
             <div class="card-body" >
@@ -93,7 +102,7 @@
           </div>
         </div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-africa">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-africa">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/africa.jpg" alt="Card image" >
             <div class="card-body" >
@@ -105,7 +114,7 @@
           </div>
         </div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-americas">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-americas">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/americas.jpg" alt="Card image" >
             <div class="card-body" >
@@ -117,7 +126,7 @@
           </div>
         </div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-oceania">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-oceania">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/oceania.jpg" alt="Card image" >
             <div class="card-body" >
@@ -129,7 +138,7 @@
           </div>
         </div>
 
-        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-12" id="start-page-world">
+        <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-world">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
             <img class="card-img-top" src="images/world.jpg" alt="Card image" >
             <div class="card-body" >
@@ -167,7 +176,7 @@
         </div>
 
     </div>
-      <div class="col-lg-1 col-md-1 hidden-sm hidden-xs right-part">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 right-part">
         <div id="pointText">Points</div>
         <div id="point"></div>
         <div id="result"></div>

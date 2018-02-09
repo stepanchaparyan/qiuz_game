@@ -159,7 +159,3 @@ let startAll = () => {
   result();
   finalResult();
 }
-
-let loadFunction = () => {
-  document.getElementById('point').innerHTML = points.data[0].CapitalPoints;
-}
