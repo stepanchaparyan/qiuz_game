@@ -338,9 +338,24 @@ button:disabled:hover {
   padding-left: 0;
   padding-right: 0;
 }
+.navbar-brand {
+    padding-left: 16px;
+}
+.navbar-collapse.in {
+    overflow-y: visible;
+}
 }
 
-@media (min-width: 451px) and (max-width: 767px) {
+@media (min-width: 551px) and (max-width: 767px) {
+.navbar-collapse.in {
+   overflow-y: visible;
+}
+#services, #games, #contact {
+  display: none !important;
+}
+#signup {
+  margin-top: -40px;
+}
 .navbar-default .navbar-brand {
     margin-top: 0px;
 }
@@ -349,7 +364,7 @@ button:disabled:hover {
 }
 .bnr-title {
     font-size: 20px;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 .bnr-sub-title {
     font-size: 25px;
@@ -357,22 +372,32 @@ button:disabled:hover {
 .bonus-word, .logo-dec {
     font-size: 20px;
 }
-.login {
-  visibility: hidden;
-}
 .navbar-default .navbar-nav > li > a {
     line-height: 30px;
 }
+.navbar-brand {
+    padding-left: 16px;
 }
-@media (min-width: 20px) and (max-width: 450px) {
+
+}
+@media (min-width: 20px) and (max-width: 550px) {
+.navbar-collapse.in {
+   overflow-y: visible !important;
+}
+#services, #games, #contact {
+  display: none !important;
+}
+#signup {
+  margin-top: -40px;
+}
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
+}
 .navbar-brand {
     padding-left: 16px;
 }
 .banner-info {
     padding-top: 40px;
-}
-.login {
-  visibility: hidden;
 }
 .bnr-title {
     font-size: 18px;

@@ -1,14 +1,28 @@
 function login() {
     let loginPage = document.getElementById("loginPage");
     let titleText = document.getElementById("titleText");
+    let innerWidth = window.innerWidth;
+
     if (loginPage.classList.contains("hide-display")) {
       loginPage.removeAttribute("class");
       titleText.setAttribute("class", " banner-info text-center wow fadeIn delay-05s col-md-9 col-sm-6 col-xs-4");
+
+      if (innerWidth < 767) {
+        document.getElementById("login-box").setAttribute("style", "left: 50%");
+        document.getElementById("titleText").setAttribute("style", "display: none");
+        document.getElementById("active").setAttribute("style", "display: none");
+        document.getElementById("signup").setAttribute("style", "display: none");
+        document.getElementById("login").setAttribute("style", "left: -25%");
+      } else {
+        console.log("big");
+      }
     } else {
       loginPage.setAttribute("class", "hide-display");
       titleText.removeAttribute("class", "col-md-9 col-sm-6 col-xs-4");
       titleText.setAttribute("class", " banner-info text-center wow fadeIn delay-05s");
+      console.log("small");
     }
+
 }
 
 
