@@ -353,9 +353,6 @@ button:disabled:hover {
 #services, #games, #contact {
   display: none !important;
 }
-##signup {
-  margin-top: -40px;
-}
 .navbar-default .navbar-brand {
     margin-top: 0px;
 }
@@ -386,9 +383,6 @@ button:disabled:hover {
 }
 #services, #games, #contact {
   display: none !important;
-}
-##signup {
-  margin-top: -40px;
 }
 .navbar-fixed-top .navbar-collapse {
     max-height: 100%;
