@@ -9,10 +9,10 @@
 
     <link href="img/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/login_style.css">
+    <link rel="stylesheet" type="text/css" href="src/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/styleLoginSignup.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -37,7 +37,7 @@
                 <li id="games"><a href="#games">Games</a></li>
                 <li id="contact"><a href="#contact">Contact Us</a></li>
                 <li id=""><a href="#contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                <li id="signup" ><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li id="signup" onclick="signup()"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li id="login" onclick="login()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
             </div>
@@ -48,12 +48,37 @@
           <div id="login-box" class="login-box">
               <img src="img/avatar.png" class="avatar">
               <h1>LogIn</h1>
-              <form>
+              <form id="registration_form">
                 <p>Username</p>
-                <input type="text" name="username" placeholder="Enter Username" required="">
+                <input id="form_loginName" type="text" name="username" placeholder="Enter Username" required="">
+                <p id="loginName_error_message"></p>
                 <p>Password</p>
-                <input type="password" name="password" placeholder="Enter Password" required="">
+                <input id="form_loginPassword" type="password" name="password" placeholder="Enter Password" required="">
+                <p id="loginPassword_error_message"></p>
                 <input type="submit" value="Login" name="submit">
+                <a href="#">Forgot Password</a>
+              </form>
+          </div>
+        </div>
+
+        <div id="signupPage" class="hide-display">
+          <div id="signup-box" class="signup-box">
+              <img src="img/avatar.png" class="avatar">
+              <h1>Signup</h1>
+              <form id="signup_form">
+                <p>Name</p>
+                <input id="form_name" type="text" name="username" placeholder="Enter name" required="">
+                <p id="name_error_message"></p>
+                <p>Email</p>
+                <input id="form_email" type="text" name="email" placeholder="Enter Email" required="">
+                <p id="email_error_message"></p>
+                <p>Password</p>
+                <input id="form_password" type="password" name="password" placeholder="Enter Password" required="">
+                <p id="password_error_message"></p>
+                <p>Retype_password</p>
+                <input id="form_retype_password" type="password" name="retype_password" placeholder="Retype your password" required="">
+                <p id="retype_password_error_message"></p>
+                <input type="submit" value="Signup" name="submit">
                 <a href="#">Forgot Password</a>
               </form>
           </div>
@@ -139,7 +164,7 @@
               <div class="card-body">
                 <h4 class="card-title">Capitals</h4>
                 <p class="card-text">In the First level you are the Knight and can become the <b>Baron</b></p>
-                <button class="button-style" onclick="window.location='pages/capitals/capitals_first/index.html';">Start this game</button>
+                <button class="button-style" onclick="window.location='indexCapital1.html';">Start this game</button>
               </div>
             </div>
           </div>
@@ -301,12 +326,15 @@
     </footer>
     <!---->
   </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/index.js"></script>
+    <script src="src/jquery.min.js"></script>
+    <script src="src/jquery.easing.min.js"></script>
+    <script src="src/bootstrap.min.js"></script>
+    <script src="src/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/login.js"></script>
+
+
 
   </body>
 </html>

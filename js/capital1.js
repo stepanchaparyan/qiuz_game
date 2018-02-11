@@ -90,6 +90,7 @@ let finalResult = () => {
 
 let tryAgain = () => {
   addPoints();
+  addData();
   document.location.reload();
 }
 

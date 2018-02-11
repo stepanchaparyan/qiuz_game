@@ -9,7 +9,8 @@
    console.log("points.data.length =  " + points.data.length);
    points.insert({
         Name: "",
-        Surname: "",
+        Email: "",
+        Password: "",
         MainPoints: 0,
         CapitalPoints: 0,
         FlagPoints: 0
@@ -22,9 +23,17 @@
  });
 
  let addPoints = () => {
- db.loadDatabase({}, function () {
- points = db.getCollection('Points');
- points.data[0].CapitalPoints = points.data[0].CapitalPoints + score;
- db.saveDatabase();
- });
+   db.loadDatabase({}, function () {
+   points = db.getCollection('Points');
+   points.data[0].CapitalPoints = points.data[0].CapitalPoints + score;
+   db.saveDatabase();
+   });
+ }
+
+ let addData = () => {
+   db.loadDatabase({}, function () {
+   points = db.getCollection('Points');
+   points.data[0].Name = "Stepan";
+   db.saveDatabase();
+   });
  }

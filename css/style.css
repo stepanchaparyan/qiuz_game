@@ -331,7 +331,7 @@ button:disabled:hover {
 /********* Responsive media queries ************/
 
 @media (min-width: 768px) and (max-width: 980px) {
-.login-box {
+.login-box, .signup-box {
     left: 76%;
 }
 #titleText {
@@ -353,7 +353,7 @@ button:disabled:hover {
 #services, #games, #contact {
   display: none !important;
 }
-#signup {
+##signup {
   margin-top: -40px;
 }
 .navbar-default .navbar-brand {
@@ -387,7 +387,7 @@ button:disabled:hover {
 #services, #games, #contact {
   display: none !important;
 }
-#signup {
+##signup {
   margin-top: -40px;
 }
 .navbar-fixed-top .navbar-collapse {
@@ -421,6 +421,5 @@ button:disabled:hover {
 }
 .navbar-default .navbar-nav > li > a{
     line-height: 22px;
-    text-align: center;
 }
 }
