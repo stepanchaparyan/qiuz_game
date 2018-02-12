@@ -19,7 +19,6 @@ function login() {
     }
 }
 
-
 $(function() {
 
 $("#loginName_error_message").hide();
