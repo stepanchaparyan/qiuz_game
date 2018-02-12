@@ -55,7 +55,7 @@
                 <p>Password</p>
                 <input id="form_loginPassword" type="password" name="password" placeholder="Enter Password" required="">
                 <p id="loginPassword_error_message"></p>
-                <input type="submit" value="Login" name="submit">
+                <input onclick="getData()" type="submit" value="Login" name="submit">
                 <a href="#">Forgot Password</a>
               </form>
           </div>
@@ -69,6 +69,7 @@
                 <p>Name</p>
                 <input id="form_name" type="text" name="username" placeholder="Enter name" required="">
                 <p id="name_error_message"></p>
+                <p id="name_repeating_message"></p>
                 <p>Email</p>
                 <input id="form_email" type="text" name="email" placeholder="Enter Email" required="">
                 <p id="email_error_message"></p>
@@ -78,7 +79,7 @@
                 <p>Retype_password</p>
                 <input id="form_retype_password" type="password" name="retype_password" placeholder="Retype your password" required="">
                 <p id="retype_password_error_message"></p>
-                <input type="submit" value="Signup" name="submit">
+                <input onclick="addData()" type="submit" value="Signup" name="submit">
                 <a href="#">Forgot Password</a>
               </form>
           </div>
@@ -333,7 +334,8 @@
     <script src="js/main.js"></script>
     <script src="js/signup.js"></script>
     <script src="js/login.js"></script>
-
+    <script src="src/lokijs.js"></script>
+    <script src="js/loki.js"></script>
 
 
   </body>
