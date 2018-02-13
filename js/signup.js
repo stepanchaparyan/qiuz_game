@@ -116,7 +116,7 @@ $("#signup_form").submit(function() {
   if(error_name === false && error_email === false &&
      error_password === false && error_retype_password === false) {
        alert("Registration Successfull");
-       //return true;
+       return true;
      } else {
        alert("Please fill the form Correctly");
        return false;
