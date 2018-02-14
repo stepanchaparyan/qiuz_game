@@ -1,3 +1,12 @@
+function loginSweetAlert() {
+swal({
+  title: "Thank you!",
+  text: "You logged as User",
+  icon: "success",
+  button: "OK",
+});
+}
+
 function login() {
     let loginPage = document.getElementById("loginPage");
     let signupPage = document.getElementById("signupPage");

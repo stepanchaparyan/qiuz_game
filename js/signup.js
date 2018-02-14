@@ -1,4 +1,15 @@
-function signup() {
+let signupSweetAlert = () => {
+  console.log("swal");
+swal({
+  title: "Thank you!",
+  text: "You signup as User",
+  icon: "success",
+  button: "OK",
+});
+}
+
+
+let signup = () => {
     let signupPage = document.getElementById("signupPage");
     let loginPage = document.getElementById("loginPage");
     let titleText = document.getElementById("titleText");
@@ -19,21 +30,32 @@ function signup() {
     }
 }
 
-
 $(function() {
 
 $("#name_error_message").hide();
 $("#email_error_message").hide();
 $("#password_error_message").hide();
 $("#retype_password_error_message").hide();
+$('#signupButton').prop('disabled', true);
+
 
 var error_name = false;
 var error_email = false;
 var error_password = false;
 var error_retype_password = false;
+var user_exist = false;
+var name_disabled = true;
+var check_user_disabled = true;
+var password_disabled = true;
+var retype_password_disabled = true;
+var email_disabled = true;
 
 $("#form_name").focusout(function(){
     check_name();
+});
+
+$("#form_name").focusout(function(){
+    check_user_exist();
 });
 
 $("#form_email").focusout(function(){
@@ -48,15 +70,38 @@ $("#form_retype_password").focusout(function(){
 
 function check_name() {
   var pattern = /^[a-zA-Z]*$/;
-  var name = $("#form_name").val()
+  var name = $("#form_name").val();
   if (pattern.test(name) && name !== "") {
     $("#name_error_message").hide();
     $("#form_name").css("border-bottom","2px solid #34F458");
+    name_disabled = false;
   } else {
     $("#name_error_message").html("Should contain only Characters");
     $("#name_error_message").show();
     $("#form_name").css("border-bottom","2px solid #F90A0A");
+    $("#name_error_message").css("color","#F90A0A");
     error_fname = true;
+  }
+}
+
+function check_user_exist() {
+  for (var i = 0; i < info.data.length; i++) {
+    if (document.getElementById("form_name").value == info.data[i].Name) {
+      console.log(document.getElementById("form_name").value);
+      console.log(info.data[i].Name);
+      $("#name_error_message").html("Please, use other Username");
+      $("#name_error_message").show();
+      $("#form_name").css("border-bottom","2px solid #F90A0A");
+      $("#name_error_message").css("color","#F90A0A");
+      user_exist = true;
+        console.log("true" + user_exist);
+    } else {
+      $("#password_error_message").hide();
+      $("#form_password").css("border-bottom","2px solid #34F458");
+      check_user_disabled = false;
+      user_exist = false;
+      console.log("false" + user_exist);
+    }
   }
 }
 
@@ -67,10 +112,12 @@ function check_password() {
     $("#password_error_message").html("At least 8 Characters");
     $("#password_error_message").show();
     $("#form_password").css("border-bottom","2px solid #F90A0A");
+    $("#password_error_message").css("color","#F90A0A");
     error_password = true;
   } else {
     $("#password_error_message").hide();
     $("#form_password").css("border-bottom","2px solid #34F458");
+    password_disabled = false;
   }
 }
 
@@ -81,10 +128,12 @@ function check_retype_password() {
     $("#retype_password_error_message").html("Passwords did not matched");
     $("#retype_password_error_message").show();
     $("#form_retype_password").css("border-bottom","2px solid #F90A0A");
+    $("#retype_password_error_message").css("color","#F90A0A");
     error_retype_password = true;
   } else {
     $("#retype_password_error_message").hide();
     $("#form_retype_password").css("border-bottom","2px solid #34F458");
+    retype_password_disabled = false;
   }
 }
 
@@ -94,29 +143,60 @@ function check_email() {
   if (pattern.test(email) && email !== "") {
     $("#email_error_message").hide();
     $("#form_email").css("border-bottom","2px solid #34F458");
+    email_disabled = false;
   } else {
     $("#email_error_message").html("Invalid email");
     $("#email_error_message").show();
     $("#form_email").css("border-bottom","2px solid #F90A0A");
+    $("#email_error_message").css("color","#F90A0A");
     error_email = true;
   }
 }
+
+
+$("#form_name").focusout(function(){
+  console.log("oka" + email_disabled);
+
+  check_name();
+  check_email();
+  check_password();
+  check_retype_password();
+  check_user_exist();
+
+  console.log("ok22a" + email_disabled);
+  console.log("ok22a" + name_disabled);
+  console.log("ok22a" + password_disabled);
+  console.log("ok22a" + check_user_disabled);
+
+  if(email_disabled == false && name_disabled == false &&
+   password_disabled == false && retype_password_disabled == false && check_user_disabled == false) {
+     $('#signupButton').prop('disabled', false);
+     console.log("sssss");
+  }
+
+});
+
 
 $("#signup_form").submit(function() {
   error_name = false;
   error_email = false;
   error_password = false;
   error_retype_password = false;
+  user_exist = false;
 
   check_name();
   check_email();
   check_password();
   check_retype_password();
+  check_user_exist();
+
+  console.log(user_exist);
 
   if(error_name === false && error_email === false &&
-     error_password === false && error_retype_password === false) {
-       alert("Registration Successfull");
-       return true;
+     error_password === false && error_retype_password === false && user_exist === false) {
+       console.log("sssss");
+       //signupSweetAlert();
+       return false;
      } else {
        alert("Please fill the form Correctly");
        return false;

@@ -30,24 +30,16 @@
    });
  }
 
- var userExist = false;
+ var user_exist = false;
 
  let addData = () => {
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
-
-   for (var i = 0; i < info.data.length; i++) {
-     if (document.getElementById("form_name").value == info.data[i].Name) {
-      userExist = true;
-      }
-    }
-
-   if (userExist == true) {
-     document.getElementById("name_repeating_message").innerHTML = "Please, enter other name";
-     document.getElementById("name_repeating_message").setAttribute("style", "color: #F90A0A");
-     console.log("== ");
+   if (user_exist == true) {
+     console.log("same_user");
      db.saveDatabase();
    } else {
+            console.log("inserted");
      info.insert({
           Name: document.getElementById("form_name").value,
           Email: document.getElementById("form_email").value,
@@ -57,6 +49,7 @@
           FlagPoints: 0
         });
      db.saveDatabase();
+     signupSweetAlert();
    }
    });
  }
@@ -71,7 +64,3 @@
    };
 
   printUsers();
-
-  let loginuser = () => {
-
-  }
