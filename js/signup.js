@@ -1,5 +1,4 @@
 let signupSweetAlert = () => {
-  console.log("swal");
 swal({
   title: "Thank you!",
   text: "You signup as User",
@@ -7,7 +6,6 @@ swal({
   button: "OK",
 });
 }
-
 
 let signup = () => {
     let signupPage = document.getElementById("signupPage");
@@ -38,7 +36,6 @@ $("#password_error_message").hide();
 $("#retype_password_error_message").hide();
 $('#signupButton').prop('disabled', true);
 
-
 var error_name = false;
 var error_email = false;
 var error_password = false;
@@ -53,11 +50,9 @@ var email_disabled = true;
 $("#form_name").focusout(function(){
     check_name();
 });
-
 $("#form_name").focusout(function(){
     check_user_exist();
 });
-
 $("#form_email").focusout(function(){
     check_email();
 });
@@ -85,23 +80,20 @@ function check_name() {
 }
 
 function check_user_exist() {
-  for (var i = 0; i < info.data.length; i++) {
-    if (document.getElementById("form_name").value == info.data[i].Name) {
-      console.log(document.getElementById("form_name").value);
-      console.log(info.data[i].Name);
+  for (var i = 1; i < info.data.length; i++) {
+    if ($("#form_name").val() == info.data[i-1].Name) {
+      console.log("input " + document.getElementById("form_name").value);
+      console.log("info " + info.data[i-1].Name);
       $("#name_error_message").html("Please, use other Username");
       $("#name_error_message").show();
       $("#form_name").css("border-bottom","2px solid #F90A0A");
       $("#name_error_message").css("color","#F90A0A");
       user_exist = true;
-        console.log("true" + user_exist);
     } else {
       $("#password_error_message").hide();
       $("#form_password").css("border-bottom","2px solid #34F458");
       check_user_disabled = false;
-      user_exist = false;
-      console.log("false" + user_exist);
-    }
+      }
   }
 }
 
@@ -153,27 +145,17 @@ function check_email() {
   }
 }
 
-
-$("#form_name").focusout(function(){
-  console.log("oka" + email_disabled);
-
+$("#signup-box").hover(function(){
   check_name();
   check_email();
   check_password();
   check_retype_password();
   check_user_exist();
 
-  console.log("ok22a" + email_disabled);
-  console.log("ok22a" + name_disabled);
-  console.log("ok22a" + password_disabled);
-  console.log("ok22a" + check_user_disabled);
-
   if(email_disabled == false && name_disabled == false &&
    password_disabled == false && retype_password_disabled == false && check_user_disabled == false) {
      $('#signupButton').prop('disabled', false);
-     console.log("sssss");
   }
-
 });
 
 
@@ -190,7 +172,12 @@ $("#signup_form").submit(function() {
   check_retype_password();
   check_user_exist();
 
+  console.log(error_name);
+  console.log(error_email);
+  console.log(error_password);
+  console.log(error_retype_password);
   console.log(user_exist);
+
 
   if(error_name === false && error_email === false &&
      error_password === false && error_retype_password === false && user_exist === false) {

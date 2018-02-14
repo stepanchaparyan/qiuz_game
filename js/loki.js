@@ -30,30 +30,25 @@
    });
  }
 
- var user_exist = false;
-
  let addData = () => {
+   console.log("loki");
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
-   if (user_exist == true) {
-     console.log("same_user");
-     db.saveDatabase();
-   } else {
-            console.log("inserted");
-     info.insert({
-          Name: document.getElementById("form_name").value,
-          Email: document.getElementById("form_email").value,
-          Password: document.getElementById("form_password").value,
-          MainPoints: 0,
-          CapitalPoints: 0,
-          FlagPoints: 0
-        });
-     db.saveDatabase();
-     signupSweetAlert();
-   }
-   });
- }
-
+     console.log("value " + document.getElementById("form_name").value);
+     console.log("before " + info.data[info.data.length-1].Name);
+   info.insert({
+      Name: document.getElementById("form_name").value,
+      Email: document.getElementById("form_email").value,
+      Password: document.getElementById("form_password").value,
+      MainPoints: 0,
+      CapitalPoints: 0,
+      FlagPoints: 0
+    });
+         console.log("afte " + info.data[info.data.length-1].Name);
+  db.saveDatabase();
+  signupSweetAlert();
+  })
+  };
 
  let printUsers = () => {
    for (var i = 0; i < info.data.length; i++) {
