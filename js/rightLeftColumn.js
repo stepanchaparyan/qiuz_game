@@ -1,7 +1,6 @@
 let loadFunction = () => {
-  document.getElementById('point').innerHTML = info.data[0].CapitalPoints;
-  document.getElementById('name').innerHTML = info.data[0].Name;
-  console.log(info.data[0].Name);
+  document.getElementById('point').innerHTML = info.data[info.data.length-1].CapitalPoints;
+  document.getElementById('name').innerHTML = info.data[info.data.length-1].Name;
 }
 
 $(document).ready(function(){

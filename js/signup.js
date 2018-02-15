@@ -1,7 +1,7 @@
 let signupSweetAlert = () => {
 swal({
   title: "Thank you!",
-  text: "You signup as User",
+  text: `You signup as ${info.data[info.data.length-1].Name}`,
   icon: "success",
   button: "OK",
 });
@@ -80,19 +80,25 @@ function check_name() {
 }
 
 function check_user_exist() {
-  for (var i = 1; i < info.data.length; i++) {
-    if ($("#form_name").val() == info.data[i-1].Name) {
+  for (var i = 0; i < info.data.length; i++) {
+    console.log("list " + info.data[i].Name);
+
+    if ($("#form_name").val() == info.data[i].Name) {
       console.log("input " + document.getElementById("form_name").value);
-      console.log("info " + info.data[i-1].Name);
+      console.log("names__ " + info.data[i].Name);
+      console.log("number " + i);
+
       $("#name_error_message").html("Please, use other Username");
       $("#name_error_message").show();
       $("#form_name").css("border-bottom","2px solid #F90A0A");
       $("#name_error_message").css("color","#F90A0A");
       user_exist = true;
+      break;
     } else {
       $("#password_error_message").hide();
       $("#form_password").css("border-bottom","2px solid #34F458");
       check_user_disabled = false;
+      user_exist = false;
       }
   }
 }
@@ -159,34 +165,4 @@ $("#signup-box").hover(function(){
 });
 
 
-$("#signup_form").submit(function() {
-  error_name = false;
-  error_email = false;
-  error_password = false;
-  error_retype_password = false;
-  user_exist = false;
-
-  check_name();
-  check_email();
-  check_password();
-  check_retype_password();
-  check_user_exist();
-
-  console.log(error_name);
-  console.log(error_email);
-  console.log(error_password);
-  console.log(error_retype_password);
-  console.log(user_exist);
-
-
-  if(error_name === false && error_email === false &&
-     error_password === false && error_retype_password === false && user_exist === false) {
-       console.log("sssss");
-       //signupSweetAlert();
-       return false;
-     } else {
-       alert("Please fill the form Correctly");
-       return false;
-     }
-   });
 });

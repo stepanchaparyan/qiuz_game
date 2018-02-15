@@ -16,8 +16,8 @@
         FlagPoints: 0
       });
    db.saveDatabase();
- } else if (info.data[0].CapitalPoints > 5) {
-   info.data[0].CapitalPoints = 0;
+ } else if (info.data[info.data.length-1].CapitalPoints > 5) {
+   info.data[info.data.length-1].CapitalPoints = 0;
  db.saveDatabase();
  };
  });
@@ -25,17 +25,17 @@
  let addPoints = () => {
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
-   info.data[0].CapitalPoints = info.data[0].CapitalPoints + score;
+   console.log("uu " + info.data[info.data.length-1].CapitalPoints);
+   info.data[info.data.length-1].CapitalPoints = info.data[info.data.length-1].CapitalPoints + score;
    db.saveDatabase();
    });
  }
 
- let addData = () => {
+ let addUser = () => {
    console.log("loki");
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
-     console.log("value " + document.getElementById("form_name").value);
-     console.log("before " + info.data[info.data.length-1].Name);
+
    info.insert({
       Name: document.getElementById("form_name").value,
       Email: document.getElementById("form_email").value,
@@ -44,10 +44,12 @@
       CapitalPoints: 0,
       FlagPoints: 0
     });
-         console.log("afte " + info.data[info.data.length-1].Name);
   db.saveDatabase();
-  signupSweetAlert();
   })
+  setTimeout(signupSweetAlert, 8000);
+  setTimeout(function() {alert("alert"); }, 8000);
+  signupSweetAlert();
+  window.location.href = '/indexCapital1.html';
   };
 
  let printUsers = () => {
