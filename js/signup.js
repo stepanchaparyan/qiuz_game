@@ -50,7 +50,7 @@ var email_disabled = true;
 $("#form_name").focusout(function(){
     check_name();
 });
-$("#form_name").focusout(function(){
+$("#name_repeating_message").focusout(function(){
     check_user_exist();
 });
 $("#form_email").focusout(function(){
@@ -81,13 +81,7 @@ function check_name() {
 
 function check_user_exist() {
   for (var i = 0; i < info.data.length; i++) {
-    console.log("list " + info.data[i].Name);
-
     if ($("#form_name").val() == info.data[i].Name) {
-      console.log("input " + document.getElementById("form_name").value);
-      console.log("names__ " + info.data[i].Name);
-      console.log("number " + i);
-
       $("#name_error_message").html("Please, use other Username");
       $("#name_error_message").show();
       $("#form_name").css("border-bottom","2px solid #F90A0A");
@@ -95,8 +89,7 @@ function check_user_exist() {
       user_exist = true;
       break;
     } else {
-      $("#password_error_message").hide();
-      $("#form_password").css("border-bottom","2px solid #34F458");
+      $("#name_error_message").hide();
       check_user_disabled = false;
       user_exist = false;
       }
@@ -158,7 +151,7 @@ $("#signup-box").hover(function(){
   check_retype_password();
   check_user_exist();
 
-  if(email_disabled == false && name_disabled == false &&
+  if(user_exist == false && email_disabled == false && name_disabled == false &&
    password_disabled == false && retype_password_disabled == false && check_user_disabled == false) {
      $('#signupButton').prop('disabled', false);
   }

@@ -30,60 +30,38 @@ function login() {
 
 $(function() {
 
-$("#loginName_error_message").hide();
-$("#loginPassword_error_message").hide();
+$("#login_name_error_message").hide();
+$("#login_password_error_message").hide();
+$('#loginButton').prop('disabled', true);
 
-var error_loginName = false;
-var error_loginPassword = false;
-
-$("#form_loginName").focusout(function(){
-    check_loginName();
-});
-
-$("#form_loginPassword").focusout(function(){
-    check_loginPassword();
-});
-
-function check_loginName() {
-  var pattern = /^[a-zA-Z]*$/;
-  var name = $("#form_loginName").val()
-  if (pattern.test(name) && name !== "") {
-    $("#loginName_error_message").hide();
-    $("#form_loginName").css("border-bottom","2px solid #34F458");
-  } else {
-    $("#loginName_error_message").html("Should contain only Characters");
-    $("#loginName_error_message").show();
-    $("#form_loginName").css("border-bottom","2px solid #F90A0A");
-    error_loginName = true;
+function check_login_user_exist() {
+  for (var i = 0; i < info.data.length; i++) {
+    if ($("#form_login_name").val() == info.data[i].Name && $("#form_login_password").val() == info.data[i].Password) {
+      $("#login_name_error_message").hide();
+      $("#login_password_error_message").hide();
+      $("#form_login_name").css("border-bottom","2px solid #34F458");
+      $("#form_login_password").css("border-bottom","2px solid #34F458");
+      $('#loginButton').prop('disabled', false);
+    } else {
+      $("#login_name_error_message").css("color","#F90A0A");
+      $("#login_name_error_message").html("Please, write valid Username");
+      $("#login_password_error_message").html("Please, write valid Password");
+      $("#login_name_error_message").show();
+      $("#login_password_error_message").show();
+      $("#form_login_name").css("border-bottom","2px solid #F90A0A");
+      $("#login_password_error_message").css("color","#F90A0A");
+      $("#form_login_password").css("border-bottom","2px solid #F90A0A");
+    }
   }
 }
-
-function check_loginPassword() {
-  var password_length = $("#form_loginPassword").val().length;
-  if (password_length < 8) {
-    $("#loginPassword_error_message").html("At least 8 Characters");
-    $("#loginPassword_error_message").show();
-    $("#form_loginPassword").css("border-bottom","2px solid #F90A0A");
-    error_loginPassword = true;
-  } else {
-    $("#loginPassword_error_message").hide();
-    $("#form_loginPassword").css("border-bottom","2px solid #34F458");
-  }
-}
-
-$("#registration_form").submit(function() {
-  error_loginName = false;
-  error_loginPassword = false;
-
-  check_loginName();
-  check_loginPassword();
-
-  if(error_loginName === false && error_loginPassword === false) {
-       alert("Registration Successfull");
-       return true;
-     } else {
-       alert("Please fill the form Correctly");
-       return false;
-     }
-   });
+$("#login-box").hover(function(){
+  check_login_user_exist();
 });
+});
+
+
+let userLogIn = () => {
+  signupSweetAlert();
+  //put setTimeout for seeing sweetalert
+  window.open('indexCapital1.html');
+ };

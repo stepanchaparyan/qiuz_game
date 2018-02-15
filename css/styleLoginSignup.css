@@ -72,7 +72,7 @@
   font-size: 16px;
 }
 
-.login-box input[type="submit"], #signupButton {
+#loginButton, #signupButton {
   width: 100%;
   margin-bottom: 20px;
   border: none;
@@ -85,7 +85,7 @@
   font-weight: bold;
 }
 
-.login-box input[type="submit"]:hover, #signupButton:hover {
+#loginButton:hover, #signupButton:hover {
   width: 100%;
   margin-bottom: 20px;
   cursor: pointer;
@@ -93,11 +93,11 @@
   color: #000;
 }
 
-#signupButton:disabled {
+#signupButton:disabled, #loginButton:disabled {
     background: #dddddd;
 }
 
-#signupButton:disabled:hover {
+#signupButton:disabled:hover, #loginButton:disabled:hover {
     cursor: not-allowed;
     background: #dddddd;
 }

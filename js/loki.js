@@ -32,10 +32,8 @@
  }
 
  let addUser = () => {
-   console.log("loki");
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
-
    info.insert({
       Name: document.getElementById("form_name").value,
       Email: document.getElementById("form_email").value,
@@ -46,10 +44,8 @@
     });
   db.saveDatabase();
   })
-  setTimeout(signupSweetAlert, 8000);
-  setTimeout(function() {alert("alert"); }, 8000);
   signupSweetAlert();
-  window.location.href = '/indexCapital1.html';
+  window.open('indexCapital1.html')
   };
 
  let printUsers = () => {

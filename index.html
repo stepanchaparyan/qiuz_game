@@ -51,12 +51,13 @@
               <h1>LogIn</h1>
               <form id="registration_form">
                 <p>Username</p>
-                <input id="form_loginName" type="text" name="username" placeholder="Enter Username" required="">
-                <p id="loginName_error_message"></p>
+                <input id="form_login_name" type="text" name="username" placeholder="Enter Username" required="">
+                <p id="login_name_error_message"></p>
+                <p id="login_repeating_message"></p>
                 <p>Password</p>
-                <input id="form_loginPassword" type="password" name="password" placeholder="Enter Password" required="">
-                <p id="loginPassword_error_message"></p>
-                <input onclick="loginSweetAlert()" type="submit" value="Login" name="submit">
+                <input id="form_login_password" type="password" name="password" placeholder="Enter Password" required="">
+                <p id="login_password_error_message"></p>
+                <button id="loginButton" onclick="userLogIn()" type="submit" value="Login" name="submit">Log In</button>
                 <a href="#">Forgot Password</a>
               </form>
           </div>
