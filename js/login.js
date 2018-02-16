@@ -1,12 +1,3 @@
-function loginSweetAlert() {
-swal({
-  title: "Thank you!",
-  text: "You logged as User",
-  icon: "success",
-  button: "OK",
-});
-}
-
 function login() {
     let loginPage = document.getElementById("loginPage");
     let signupPage = document.getElementById("signupPage");
@@ -42,6 +33,7 @@ function check_login_user_exist() {
       $("#form_login_name").css("border-bottom","2px solid #34F458");
       $("#form_login_password").css("border-bottom","2px solid #34F458");
       $('#loginButton').prop('disabled', false);
+      break;
     } else {
       $("#login_name_error_message").css("color","#F90A0A");
       $("#login_name_error_message").html("Please, write valid Username");
@@ -54,14 +46,26 @@ function check_login_user_exist() {
     }
   }
 }
-$("#login-box").hover(function(){
+
+$("#loginbtn").hover(function(){
   check_login_user_exist();
 });
 });
 
 
+function loginSweetAlert() {
+  console.log("gv");
+swal({
+  title: "Thank you!",
+  text: `You logged as ${info.data[info.data.length-1].Name}`,
+  icon: "success",
+  button: "OK",
+}).then(function() {
+  //window.location = "indexCapital1.html";
+});
+};
+
 let userLogIn = () => {
-  signupSweetAlert();
-  //put setTimeout for seeing sweetalert
-  window.open('indexCapital1.html');
- };
+  console.log("set");
+  setTimeout(loginSweetAlert, 1000);
+};

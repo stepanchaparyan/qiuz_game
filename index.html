@@ -53,11 +53,12 @@
                 <p>Username</p>
                 <input id="form_login_name" type="text" name="username" placeholder="Enter Username" required="">
                 <p id="login_name_error_message"></p>
-                <p id="login_repeating_message"></p>
                 <p>Password</p>
                 <input id="form_login_password" type="password" name="password" placeholder="Enter Password" required="">
                 <p id="login_password_error_message"></p>
+                <div id="loginbtn">
                 <button id="loginButton" onclick="userLogIn()" type="submit" value="Login" name="submit">Log In</button>
+                </div>
                 <a href="#">Forgot Password</a>
               </form>
           </div>
@@ -81,7 +82,9 @@
                 <p>Retype_password</p>
                 <input id="form_retype_password" type="password" name="retype_password" placeholder="Retype your password" required="">
                 <p id="retype_password_error_message"></p>
+                <div id="divButton">
                 <button id="signupButton" onclick="addUser()" type="submit" value="Signup" name="submit">Sign Up</button>
+                </div>
                 <a href="#">Forgot Password</a>
               </form>
           </div>

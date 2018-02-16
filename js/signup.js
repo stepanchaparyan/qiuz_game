@@ -50,7 +50,7 @@ var email_disabled = true;
 $("#form_name").focusout(function(){
     check_name();
 });
-$("#name_repeating_message").focusout(function(){
+$("#form_name").focusout(function(){
     check_user_exist();
 });
 $("#form_email").focusout(function(){
@@ -61,6 +61,9 @@ $("#form_password").focusout(function(){
 });
 $("#form_retype_password").focusout(function(){
     check_retype_password();
+});
+$("#divButton").hover(function(){
+    check_disabled();
 });
 
 function check_name() {
@@ -82,14 +85,14 @@ function check_name() {
 function check_user_exist() {
   for (var i = 0; i < info.data.length; i++) {
     if ($("#form_name").val() == info.data[i].Name) {
-      $("#name_error_message").html("Please, use other Username");
-      $("#name_error_message").show();
+      $("#name_repeating_message").html("Please, use other Username");
+      $("#name_repeating_message").show();
       $("#form_name").css("border-bottom","2px solid #F90A0A");
-      $("#name_error_message").css("color","#F90A0A");
+      $("#name_repeating_message").css("color","#F90A0A");
       user_exist = true;
       break;
     } else {
-      $("#name_error_message").hide();
+      $("#name_repeating_message").hide();
       check_user_disabled = false;
       user_exist = false;
       }
@@ -144,18 +147,11 @@ function check_email() {
   }
 }
 
-$("#signup-box").hover(function(){
-  check_name();
-  check_email();
-  check_password();
-  check_retype_password();
-  check_user_exist();
-
-  if(user_exist == false && email_disabled == false && name_disabled == false &&
-   password_disabled == false && retype_password_disabled == false && check_user_disabled == false) {
-     $('#signupButton').prop('disabled', false);
-  }
-});
-
+function check_disabled() {
+if(user_exist == false && email_disabled == false && name_disabled == false &&
+ password_disabled == false && retype_password_disabled == false && check_user_disabled == false) {
+   $('#signupButton').prop('disabled', false);
+}
+}
 
 });
