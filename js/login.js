@@ -54,18 +54,20 @@ $("#loginbtn").hover(function(){
 
 
 function loginSweetAlert() {
-  console.log("gv");
 swal({
   title: "Thank you!",
-  text: `You logged as ${info.data[info.data.length-1].Name}`,
+  text: `You logged as ${info.data[userNumber].Name}`,
   icon: "success",
   button: "OK",
-}).then(function() {
-  //window.location = "indexCapital1.html";
-});
+})
 };
 
+function move() {
+  window.location = "indexCapital1.html";
+}
+
 let userLogIn = () => {
-  console.log("set");
+  loginCurrentUser();
   setTimeout(loginSweetAlert, 1000);
+  setTimeout(move, 4000);
 };
