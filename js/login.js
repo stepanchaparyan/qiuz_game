@@ -47,7 +47,7 @@ function check_login_user_exist() {
   }
 }
 
-$("#loginbtn").hover(function(){
+$("#loginbtn").mouseover(function(){
   check_login_user_exist();
 });
 });

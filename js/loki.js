@@ -55,12 +55,10 @@
   };
 
   let findUserName = () => {
-    console.log(info.data.length + " userNum " + userNumber);
     userName = document.getElementById("form_login_name").value;
     for (var i = 0; i < info.data.length; i++) {
       if (userName == info.data[i].Name) {
         userNumber = i;
-        console.log(info.data.length + " user Num " + userNumber);
         break;
       }
     }

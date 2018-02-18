@@ -3,10 +3,8 @@ var userNumber = 0;
 
 let loadFunction = () => {
   document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
-  //document.getElementById('name').innerHTML = info.data[info.data.length-1].Name;
   console.log("name " + currentUser.data[currentUser.data.length-1].currentUserName);
   console.log("number " + currentUser.data[currentUser.data.length-1].currentUserNumber);
-
   document.getElementById('name').innerHTML = currentUser.data[currentUser.data.length-1].currentUserName;
 }
 
@@ -16,6 +14,8 @@ $('.bxslider').bxSlider({
   stopAutoOnClick: true,
   pager: true,
   slideWidth: 600,
+  speed: 800,
+  randomStart: true,
   responsive: true
 });
 });

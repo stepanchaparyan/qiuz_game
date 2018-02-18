@@ -1,0 +1,400 @@
+/**** Main page *******/
+
+body {
+  background-color: #48B484;
+}
+
+.hide-display {
+    display: none;
+}
+
+/***** Navbar *****/
+nav {
+  color: white;
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+li#point {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  display: block;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-nav>li>a {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
+  padding-bottom: 7% !important;
+}
+
+.navbar-brand:hover, .navbar-nav>li>a:hover {
+  background-color: #42a67a;
+}
+
+.navbar-header {
+  margin-left: 1.3% !important;
+}
+
+#user_picture {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 10px;
+}
+
+/****** Footer *******/
+footer {
+  padding: 1em;
+  color: white;
+  background-color: #262626;
+  clear: left;
+  text-align: center;
+  position:absolute;
+  bottom:0;
+  width:84%;
+  height:60px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.footer-right {
+  text-align: right;
+  font-size: 18px;
+  color: gray;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  padding: 2px;
+  padding-right: 3%;
+}
+
+.footer-left {
+  text-align: left;
+  font-size: 18px;
+  color: gray;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  padding: 2px;
+  padding-left: 3%;
+}
+
+/****** Main part and 1-st cart ******/
+
+.row {
+  text-align: center;
+  position: absolute;
+  width: 84%;
+  height: 90%;
+  margin-left: 8%;
+  margin-right: 8%;
+  background-color: white;
+  overflow: auto;
+}
+
+.center-part {
+  background-color: #FAF8F2;
+  height: 100%;
+  padding: 5%;
+  padding-top: 0%;
+}
+
+.center-part-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: purple;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.card-center {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.card-style {
+	text-align: center;
+	color: black;
+	border: 2px groove;
+	border-radius: 5px;
+  width: auto;
+  height: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-continent {
+  font-weight: bold;
+  font-size: 22px;
+  color: #2935e2;
+}
+
+.card-title {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+.button-start {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #be9e21;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 65%;
+  cursor: pointer;
+  margin: 5px;
+	font-weight: bold;
+  outline: none;
+}
+
+.button-start:hover {
+  background-color: #ab8e1d;
+}
+
+/***left-part***/
+.left-part {
+  background-color: #f5f0e4;
+  height: 100%;
+  padding: 5px;
+}
+
+.info {
+  margin: 20px 0 10px 0;
+}
+
+/***right-part***/
+.right-part {
+  background-color: #f5f0e4;
+  height: 100%;
+  padding: 10px 1px 10px 1px;
+}
+
+/***** quiz-questions *****/
+#quiz-questions {
+  width: 80%;
+  margin: 10%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #48B484;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+#quiz-image {
+  width: 40%;
+  margin-top: 2%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.quiz-nav {
+  width: 100%;
+  height: 100%;
+}
+
+#quiz-questions .correct-answer {
+  background: rgba(91, 140, 59, 0.3);
+  border: rgba(91, 140, 59, 0.3) solid 1px;
+  border-radius: 10px;
+}
+
+#btn-next {
+  background-color: lightblue;
+  border: lightblue solid 2px;
+  border-radius: 5px;
+  width: 80%;
+  outline:0;
+  height: 40px;
+  margin: 1%;
+}
+
+#btn-next:active {
+  background-color: #79b9e1;
+}
+
+#btn-next:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.feedback-page h1 {
+  font-size: 28px;
+  color: lightblue;
+}
+
+#feedback-page {
+  margin: 55px;
+  background: #f5f0e4;
+  padding: 15px;
+  border-radius: 40px;
+}
+
+.final-score {
+  background-color: #15b7a1;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 50%;
+  border-radius: 10px;
+  margin-left: 25%;
+}
+
+#btn-try-again {
+  background-color: #eae0c7;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  outline:0;
+  height: 40px;
+  font-weight: bold;
+}
+
+/************************/
+
+#answer1, #answer2, #answer3, #answer4 {
+  background-color:#cee1e2;
+  border: #b5d2d3 solid 2px;
+  border-radius: 5px;
+  width: 45%;
+  outline:0;
+  height: 50px;
+  font-weight: bold;
+  margin: 1%;
+}
+
+#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover {
+  background-color: #b5d2d3;
+  border: #b5d2d3 solid 2px;
+}
+
+#result-message {
+  background-color: #e0d0ab;
+  border: #dac89c solid 2px;
+  border-radius: 5px;
+  width: 93%;
+  outline:0;
+  font-weight: bold;
+  margin: 1%;
+  margin-left: 4%;
+  padding: 7px;
+}
+
+#result-step, #result-score {
+  background-color: #e5d8b9;
+  border: #e0d0ab solid 2px;
+  border-radius: 5px;
+  width: 45%;
+  display: inline-flex;
+  height: 40px;
+  font-weight: bold;
+  margin: 1%;
+  padding: 7px;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+.greenBorder {
+  border-color: #48B484 !important;
+}
+.redBorder {
+  border-color: red !important;
+}
+
+button:disabled {
+    background: #dddddd;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+    background: #dddddd;
+}
+
+#point {
+  font-size: 30px;
+  font-weight: bold;
+  color: orangered;
+}
+
+#pointText {
+  margin-top: 15px;
+  font-weight: bold;
+  color: blue;
+}
+
+/********* Responsive media queries ************/
+
+@media (min-width: 768px) and (max-width: 980px) {
+#pointText {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+}
+@media (min-width: 551px) and (max-width: 767px) {
+  #pointText {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+.navbar-nav>li {
+    float: left;
+  }
+.collapse {
+  display: block;
+}
+.navbar-header {
+  float: left;
+}
+.navbar-brand {
+  padding: 10px 0 0 0 !important;
+  margin: 10px 0 0 0 !important;
+}
+.collapse {
+  float: right;
+}
+.navbar-righ {
+  height: 60px;
+}
+#user_picture {
+  margin-top: 5px;
+}
+
+}
+@media (min-width: 20px) and (max-width: 550px) {
+.navbar-brand {
+    padding-left: 16px;
+}
+
+}

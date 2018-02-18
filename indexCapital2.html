@@ -10,15 +10,13 @@
   <!-- jQuery library -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!--internal CSS file-->
-  <link rel="stylesheet" href="css/styleCapital.css">
+  <link rel="stylesheet" href="css/styleCapital2.css">
   <link rel="stylesheet" href="css/styleRightLeftColumn.css">
-  <!--internal JS file-->
-  <script type="text/javascript" src="js/capital1.js"></script>
+  <script type="text/javascript" src="js/capital2.js"></script>
   <script type="text/javascript" src="js/rightLeftColumn.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
   <script type="text/javascript" src="src/lokijs.js"></script>
   <script type="text/javascript" src="js/loki.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
   <script type="text/javascript" src="src/countries.js"></script>
   <script type="text/javascript" src="src/countries_asia.js"></script>
   <script type="text/javascript" src="src/countries_europe.js"></script>
@@ -61,14 +59,14 @@
               <p class="card-text">Get 20 points</p>
               <button class="button-start" disabled="disabled" id="europe" onclick="start('Europe')">Start</button>
             </div>
-	           <div class="bxslider">
-  	            <div><img src="data/flags/4x3/am.svg"></div>
-                <div><img src="data/flags/4x3/ar.svg"></div>
-                <div><img src="data/flags/4x3/br.svg"></div>
-                <div><img src="data/flags/4x3/de.svg"></div>
-                <div><img src="data/flags/4x3/es.svg"></div>
-                <div><img src="data/flags/4x3/se.svg"></div>
-	          </div>
+            <div class="bxslider">
+               <div><img src="data/flags/4x3/ad.svg"></div>
+               <div><img src="data/flags/4x3/ar.svg"></div>
+               <div><img src="data/flags/4x3/br.svg"></div>
+               <div><img src="data/flags/4x3/de.svg"></div>
+               <div><img src="data/flags/4x3/es.svg"></div>
+               <div><img src="data/flags/4x3/se.svg"></div>
+           </div>
 
       </div>
 
@@ -158,8 +156,10 @@
         </div>
 
         <div id="quiz-answers" class="hide-display">
-          <button id="right" onclick="testRight()">Right</button>
-          <button id="wrong" onclick="testWrong()">Wrong</button>
+          <button class="answers" id="answer1" onclick="test1()"></button>
+          <button class="answers" id="answer2" onclick="test2()"></button>
+          <button class="answers" id="answer3" onclick="test3()"></button>
+          <button class="answers" id="answer4" onclick="test4()"></button>
         </div>
 
         <div id="result-message" class="hide-display"></div>
