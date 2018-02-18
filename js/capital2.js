@@ -26,83 +26,92 @@ let hideAndShow = () => {
 
 //generate and print right or wrong question
 let questionsMain = () => {
-  randomNumberMain = Math.floor(Math.random() * Math.floor(2));
-  randomNumberMain == 1 ? question() : question();
+  question();
+  setRandomNumbersBetween1_4();
+  setRandomNumbersCountriesLength();
+  console.log("jj" + document.querySelectorAll("button.answers")[2].innerHTML);
   rightAnswer();
   wrongAnswer1();
   wrongAnswer2();
   wrongAnswer3();
-  //setRandomNumbersBetween1_4();
 }
 
 //print question
 let question = () => document.getElementById("quiz-questions").innerHTML = "Which is the capital of " + countries_list[randomNumber].name;
 
 //print  1 right and 3 wrong answers
-let rightAnswer = () => document.getElementById("answer1").innerHTML = countries_list[randomNumber].capital;
-let wrongAnswer1 = () => document.getElementById("answer2").innerHTML = countries_list[randomNumberExcluded].capital;
-let wrongAnswer2 = () => document.getElementById("answer3").innerHTML = countries_list[randomNumberExcluded].capital;
-let wrongAnswer3 = () => document.getElementById("answer4").innerHTML = countries_list[randomNumberExcluded].capital;
+let rightAnswer = () => document.getElementsByClassName("answers")[randomNumberBetween1_4-1].innerHTML = countries_list[randomNumber].capital;
+let wrongAnswer1 = () => document.getElementsByClassName("answers")[randomNumberExcluded1-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded1].capital;
+let wrongAnswer2 = () => document.getElementsByClassName("answers")[randomNumberExcluded2-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded2].capital;
+let wrongAnswer3 = () => document.getElementsByClassName("answers")[randomNumberExcluded3-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded3].capital;
 
 var randomNumberBetween1_4;
 var randomNumberExcluded1;
 var randomNumberExcluded2;
 var randomNumberExcluded3;
+var randomNumberCountriesLengthExcluded1;
+var randomNumberCountriesLengthExcluded2;
+var randomNumberCountriesLengthExcluded3;
 
-randomNumberBetween1_4 = Math.floor(Math.random() * 4) + 1;
-console.log("1-4 " + randomNumberBetween1_4);
-
-function generateRandom1(min, max) {
+var setRandomNumbersBetween1_4 = () => {
+  function generateRandom1(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
     return (num === randomNumberBetween1_4) ? generateRandom1(min, max) : num;
-}
-
-randomNumberExcluded1 = generateRandom1(1, 4);
-console.log("-1 " + randomNumberExcluded1);
-
-function generateRandom2(min, max) {
+  }
+  function generateRandom2(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
     return (num === randomNumberBetween1_4 || num === randomNumberExcluded1) ? generateRandom2(min, max) : num;
-}
-
-randomNumberExcluded2 = generateRandom2(1, 4);
-console.log("-2 " + randomNumberExcluded2);
-
-function generateRandom3(min, max) {
+  }
+  function generateRandom3(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
     return (num === randomNumberBetween1_4 || num === randomNumberExcluded1 || num === randomNumberExcluded2) ? generateRandom3(min, max) : num;
-}
-randomNumberExcluded3 = generateRandom3(1, 4);
-console.log("-3 " + randomNumberExcluded3);
-
-
-let test1 = () => {
-  if (document.getElementById("answer1").innerHTML == countries_list[randomNumber].capital) {
-    console.log("ok");
-    setNewCSS("answer1", "green");
-    score += 1;
-    result();
-    changeDisabled();
-    getFocus();
-  } else {
-    console.log("no ");
-    setNewCSS("answer1", "red");
-    addRightAnswer();
   }
+  randomNumberBetween1_4 = Math.floor(Math.random() * 4) + 1;
+  randomNumberExcluded1 = generateRandom1(1, 4);
+  randomNumberExcluded2 = generateRandom2(1, 4);
+  randomNumberExcluded3 = generateRandom3(1, 4);
+  console.log(randomNumberBetween1_4);
+  console.log(randomNumberExcluded1);
+  console.log(randomNumberExcluded2);
+  console.log(randomNumberExcluded3);
 }
 
-let test2 = () => {
-  if (document.getElementById("answer2").innerHTML == countries_list[randomNumber].capital) {
-    console.log("ok");
-    setNewCSS("answer2", "green");
+var setRandomNumbersCountriesLength = () => {
+  function generateRandom1(min, max) {
+    var num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return (num === randomNumber) ? generateRandom1(min, max) : num;
+  }
+  function generateRandom2(min, max) {
+    var num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return (num === randomNumber || num === randomNumberCountriesLengthExcluded1) ? generateRandom2(min, max) : num;
+  }
+  function generateRandom3(min, max) {
+    var num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return (num === randomNumber || num === randomNumberCountriesLengthExcluded1 || num === randomNumberCountriesLengthExcluded2) ? generateRandom3(min, max) : num;
+  }
+  randomNumberCountriesLengthExcluded1 = generateRandom1(1, countries_list.length-1);
+  randomNumberCountriesLengthExcluded2 = generateRandom2(1, countries_list.length-1);
+  randomNumberCountriesLengthExcluded3 = generateRandom3(1, countries_list.length-1);
+  console.log(randomNumber);
+  console.log(randomNumberCountriesLengthExcluded1);
+  console.log(randomNumberCountriesLengthExcluded2);
+  console.log(randomNumberCountriesLengthExcluded3);
+}
+
+let test = () => {
+  console.log("event " + this.event.target.innerHTML);
+  if (this.event.target.innerHTML == countries_list[randomNumber].capital) {
+    setNewCSS(this.event.target.id, "green");
     score += 1;
     result();
     changeDisabled();
     getFocus();
   } else {
-    console.log("no ");
-    setNewCSS("answer2", "red");
+    setNewCSS(this.event.target.id, "red");
     addRightAnswer();
+    result();
+    changeDisabled();
+    getFocus();
   }
 }
 
@@ -114,6 +123,8 @@ let next = () => {
   questionNumber += 1;
   document.getElementById('answer1').removeAttribute("class");
   document.getElementById('answer2').removeAttribute("class");
+  document.getElementById('answer3').removeAttribute("class");
+  document.getElementById('answer4').removeAttribute("class");
   document.getElementById('result-message').removeAttribute("class");
   document.getElementById('result-message').setAttribute("class", "hide-display");
   changeDisabled();
@@ -177,15 +188,8 @@ let setRandomNumbers = (continent) => {
     countries_list = COUNTRIES;
   }
   randomNumber = Math.floor(Math.random() * countries_list.length-1) + 1;
-  randomNumberExcluded = randomExcluded(0, countries_list.length-1, randomNumber);
 }
 
-//generate randum number Excluded question number
-let randomExcluded = (min, max, excluded) => {
-  let n = Math.floor(Math.random() * (max-min) + min);
-  if (n >= excluded) n++;
-  return n;
-}
 
 let chooseContinent = () => {
   if(countries_list == COUNTRIES_EUROPE) {
