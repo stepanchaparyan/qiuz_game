@@ -29,21 +29,23 @@ let questionsMain = () => {
   question();
   setRandomNumbersBetween1_4();
   setRandomNumbersCountriesLength();
-  console.log("jj" + document.querySelectorAll("button.answers")[2].innerHTML);
-  rightAnswer();
-  wrongAnswer1();
-  wrongAnswer2();
-  wrongAnswer3();
+  getRandumAnswer();
 }
 
 //print question
 let question = () => document.getElementById("quiz-questions").innerHTML = "Which is the capital of " + countries_list[randomNumber].name;
 
-//print  1 right and 3 wrong answers
-let rightAnswer = () => document.getElementsByClassName("answers")[randomNumberBetween1_4-1].innerHTML = countries_list[randomNumber].capital;
-let wrongAnswer1 = () => document.getElementsByClassName("answers")[randomNumberExcluded1-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded1].capital;
-let wrongAnswer2 = () => document.getElementsByClassName("answers")[randomNumberExcluded2-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded2].capital;
-let wrongAnswer3 = () => document.getElementsByClassName("answers")[randomNumberExcluded3-1].innerHTML = countries_list[randomNumberCountriesLengthExcluded3].capital;
+let getRandumAnswer = () => {
+  var answer = [];
+  answer[0] = countries_list[randomNumber].capital;
+  answer[1] = countries_list[randomNumberCountriesLengthExcluded1].capital;
+  answer[2] = countries_list[randomNumberCountriesLengthExcluded2].capital;
+  answer[3] = countries_list[randomNumberCountriesLengthExcluded3].capital;
+  document.getElementById("answer1").innerHTML = answer[randomNumberBetween1_4-1];
+  document.getElementById("answer2").innerHTML = answer[randomNumberExcluded1-1];
+  document.getElementById("answer3").innerHTML = answer[randomNumberExcluded2-1];
+  document.getElementById("answer4").innerHTML = answer[randomNumberExcluded3-1];
+}
 
 var randomNumberBetween1_4;
 var randomNumberExcluded1;
@@ -151,6 +153,8 @@ let changeDisabled = () => {
   document.getElementById('btn-next').disabled = !document.getElementById('btn-next').disabled;
   document.getElementById('answer1').disabled = !document.getElementById('answer1').disabled;
   document.getElementById('answer2').disabled = !document.getElementById('answer2').disabled;
+  document.getElementById('answer3').disabled = !document.getElementById('answer3').disabled;
+  document.getElementById('answer4').disabled = !document.getElementById('answer4').disabled;
 }
 
 //print score and question number
