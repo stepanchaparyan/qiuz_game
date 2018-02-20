@@ -1,7 +1,7 @@
 let signupSweetAlert = () => {
 swal({
-  title: "Thank you!",
-  text: `You signup as ${info.data[info.data.length-1].Name}`,
+  title: `Thank you ${info.data[userNumber].Name}`,
+  text: "Please scroll down and choose the game you want",
   icon: "success",
   button: "OK",
 });

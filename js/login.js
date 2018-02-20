@@ -52,22 +52,16 @@ $("#loginbtn").mouseover(function(){
 });
 });
 
-
 function loginSweetAlert() {
-swal({
-  title: "Thank you!",
-  text: `You logged as ${info.data[userNumber].Name}`,
-  icon: "success",
-  button: "OK",
-})
+  swal({
+    title: `Thank you ${info.data[userNumber].Name}`,
+    text: "Please scroll down and choose the game you want",
+    icon: "success",
+    button: "OK",
+  })
 };
-
-function move() {
-  window.location = "indexCapital1.html";
-}
 
 let userLogIn = () => {
   loginCurrentUser();
-  setTimeout(loginSweetAlert, 1000);
-  setTimeout(move, 4000);
+  loginSweetAlert();
 };
