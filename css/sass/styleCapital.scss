@@ -16,10 +16,9 @@ $resultMessageLightGrey: #e0d0ab;
 $resultScoreLightGrey: #e5d8b9;
 $resultMessageBorderLightGrey: #dac89c;
 $buttonDisabled: #dddddd;
-
+$questionCorrectGreen: rgba(91, 140, 59, 0.3);
 
 /**** Main page *******/
-
 body {
   background-color: $backgroundGreen;
 }
@@ -104,14 +103,8 @@ footer {
 }
 
 .footer-left {
+  @extend .footer-right;
   text-align: left;
-  font-size: 18px;
-  color: gray;
-  position: absolute;
-  left: 0;
-  width: 50%;
-  padding: 2px;
-  padding-left: 3%;
 }
 
 /****** Main part and 1-st cart ******/
@@ -138,8 +131,7 @@ footer {
   font-size: 25px;
   font-weight: bold;
   color: purple;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  @extend .card-center;
 }
 
 .card-center {
@@ -242,8 +234,8 @@ p {
 }
 
 #quiz-questions .correct-answer {
-  background: rgba(91, 140, 59, 0.3);
-  border: rgba(91, 140, 59, 0.3) solid 1px;
+  background: $questionCorrectGreen;
+  border: $questionCorrectGreen solid 1px;
   border-radius: 10px;
 }
 
@@ -353,12 +345,12 @@ p {
 }
 
 button:disabled {
-    background: $buttonDisabled;
+  background: $buttonDisabled;
 }
 
 button:disabled:hover {
-    cursor: not-allowed;
-    background: $buttonDisabled;
+  cursor: not-allowed;
+  background: $buttonDisabled;
 }
 
 #point {

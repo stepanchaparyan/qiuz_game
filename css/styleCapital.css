@@ -60,7 +60,7 @@ footer {
   margin-left: 8%;
   margin-right: 8%; }
 
-.footer-right {
+.footer-right, .footer-left {
   text-align: right;
   font-size: 18px;
   color: gray;
@@ -72,14 +72,7 @@ footer {
   padding-right: 3%; }
 
 .footer-left {
-  text-align: left;
-  font-size: 18px;
-  color: gray;
-  position: absolute;
-  left: 0;
-  width: 50%;
-  padding: 2px;
-  padding-left: 3%; }
+  text-align: left; }
 
 /****** Main part and 1-st cart ******/
 .row {
@@ -101,11 +94,9 @@ footer {
 .center-part-title {
   font-size: 25px;
   font-weight: bold;
-  color: purple;
-  margin-top: 2%;
-  margin-bottom: 2%; }
+  color: purple; }
 
-.card-center {
+.card-center, .center-part-title {
   margin-top: 2%;
   margin-bottom: 2%; }
 

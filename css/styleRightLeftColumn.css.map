@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,UAAU,EAAE,eAAe;;AAG7B,KAAM;EACJ,SAAS,EAAE,UAAU",
+"sources": ["sass/styleRightLeftColumn.scss"],
+"names": [],
+"file": "styleRightLeftColumn.css"
+}

@@ -1,7 +1,27 @@
+/*variables*/
+$backgroundGreen: #48B484;
+$navbarHoverGreen: #42a67a;
+$footerLightBlack: #262626;
+$centerBackgroundLightGrey: #FAF8F2;
+$cardContinentElectricBlue: #2935e2;
+$cardButtonStartGold: #be9e21;
+$cardButtonStartHoverGold: #ab8e1d;
+$leftPartBackgroundLightGrey: #f5f0e4;
+$ButtonNextActiveBlue: #79b9e1;
+$finalScoreGreenBlue: #15b7a1;
+$tryAgainLightGrey: #eae0c7;
+$rightWrongLightGreenBlue: #cee1e2;
+$rightWrongHoverLightGreenBlue: #b5d2d3;
+$resultMessageLightGrey: #e0d0ab;
+$resultScoreLightGrey: #e5d8b9;
+$resultMessageBorderLightGrey: #dac89c;
+$buttonDisabled: #dddddd;
+$questionCorrectGreen: rgba(91, 140, 59, 0.3);
+
 /**** Main page *******/
 
 body {
-  background-color: #48B484;
+  background-color: $backgroundGreen;
 }
 
 .hide-display {
@@ -41,7 +61,7 @@ li#point {
 }
 
 .navbar-brand:hover, .navbar-nav>li>a:hover {
-  background-color: #42a67a;
+  background-color: $navbarHoverGreen;
 }
 
 .navbar-header {
@@ -60,7 +80,7 @@ li#point {
 footer {
   padding: 1em;
   color: white;
-  background-color: #262626;
+  background-color: $footerLightBlack;
   clear: left;
   text-align: center;
   position:absolute;
@@ -85,13 +105,7 @@ footer {
 
 .footer-left {
   text-align: left;
-  font-size: 18px;
-  color: gray;
-  position: absolute;
-  left: 0;
-  width: 50%;
-  padding: 2px;
-  padding-left: 3%;
+  @extend .footer-right;
 }
 
 /****** Main part and 1-st cart ******/
@@ -108,7 +122,7 @@ footer {
 }
 
 .center-part {
-  background-color: #FAF8F2;
+  background-color: $centerBackgroundLightGrey;
   height: 100%;
   padding: 5%;
   padding-top: 0%;
@@ -144,7 +158,7 @@ footer {
 .card-continent {
   font-weight: bold;
   font-size: 22px;
-  color: #2935e2;
+  color: $cardContinentElectricBlue;
 }
 
 .card-title {
@@ -160,7 +174,7 @@ p {
 .button-start {
   display: inline-block;
   border-radius: 10px;
-  background-color: #be9e21;
+  background-color: $cardButtonStartGold;
   border: none;
   color: black;
   text-align: center;
@@ -174,12 +188,12 @@ p {
 }
 
 .button-start:hover {
-  background-color: #ab8e1d;
+  background-color: $cardButtonStartHoverGold;
 }
 
 /***left-part***/
 .left-part {
-  background-color: #f5f0e4;
+  background-color: $leftPartBackgroundLightGrey;
   height: 100%;
   padding: 5px;
 }
@@ -190,7 +204,7 @@ p {
 
 /***right-part***/
 .right-part {
-  background-color: #f5f0e4;
+  background-color: $leftPartBackgroundLightGrey;
   height: 100%;
   padding: 10px 1px 10px 1px;
 }
@@ -204,7 +218,7 @@ p {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  background-color: #48B484;
+  background-color: $backgroundGreen;
   border-radius: 5px;
   padding: 2%;
 }
@@ -222,8 +236,8 @@ p {
 }
 
 #quiz-questions .correct-answer {
-  background: rgba(91, 140, 59, 0.3);
-  border: rgba(91, 140, 59, 0.3) solid 1px;
+  background: $questionCorrectGreen;
+  border: $questionCorrectGreen solid 1px;
   border-radius: 10px;
 }
 
@@ -238,7 +252,7 @@ p {
 }
 
 #btn-next:active {
-  background-color: #79b9e1;
+  background-color: $ButtonNextActiveBlue;
 }
 
 #btn-next:disabled {
@@ -253,13 +267,13 @@ p {
 
 #feedback-page {
   margin: 55px;
-  background: #f5f0e4;
+  background: $leftPartBackgroundLightGrey;
   padding: 15px;
   border-radius: 40px;
 }
 
 .final-score {
-  background-color: #15b7a1;
+  background-color: $finalScoreGreenBlue;
   padding: 10px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -270,7 +284,7 @@ p {
 }
 
 #btn-try-again {
-  background-color: #eae0c7;
+  background-color: $tryAgainLightGrey;
   border: none;
   border-radius: 5px;
   width: 50%;
@@ -282,8 +296,8 @@ p {
 /************************/
 
 #answer1, #answer2, #answer3, #answer4 {
-  background-color:#cee1e2;
-  border: #b5d2d3 solid 2px;
+  background-color: $rightWrongLightGreenBlue;
+  border: $rightWrongHoverLightGreenBlue solid 2px;
   border-radius: 5px;
   width: 45%;
   outline:0;
@@ -293,13 +307,13 @@ p {
 }
 
 #answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover {
-  background-color: #b5d2d3;
-  border: #b5d2d3 solid 2px;
+  background-color: $rightWrongHoverLightGreenBlue;
+  border: $rightWrongHoverLightGreenBlue solid 2px;
 }
 
 #result-message {
-  background-color: #e0d0ab;
-  border: #dac89c solid 2px;
+  background-color: $resultMessageLightGrey;
+  border: $resultMessageBorderLightGrey solid 2px;
   border-radius: 5px;
   width: 93%;
   outline:0;
@@ -310,8 +324,8 @@ p {
 }
 
 #result-step, #result-score {
-  background-color: #e5d8b9;
-  border: #e0d0ab solid 2px;
+  background-color: $resultScoreLightGrey;
+  border: $resultMessageLightGrey solid 2px;
   border-radius: 5px;
   width: 45%;
   display: inline-flex;
@@ -326,19 +340,19 @@ p {
 }
 
 .greenBorder {
-  border-color: #48B484 !important;
+  border-color: $backgroundGreen !important;
 }
 .redBorder {
   border-color: red !important;
 }
 
 button:disabled {
-    background: #dddddd;
+  background: $buttonDisabled;
 }
 
 button:disabled:hover {
-    cursor: not-allowed;
-    background: #dddddd;
+  cursor: not-allowed;
+  background: $buttonDisabled;
 }
 
 #point {
