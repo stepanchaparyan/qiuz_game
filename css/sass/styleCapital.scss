@@ -105,6 +105,8 @@ footer {
 .footer-left {
   @extend .footer-right;
   text-align: left;
+  left: 0;
+  padding-left: 3%;
 }
 
 /****** Main part and 1-st cart ******/
@@ -273,22 +275,21 @@ p {
 .final-score {
   background-color: $finalScoreGreenBlue;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   font-weight: bold;
   font-size: 20px;
-  width: 50%;
   border-radius: 10px;
-  margin-left: 25%;
 }
 
-#btn-try-again {
+#btn-try-again, #btn-next-game {
   background-color: $tryAgainLightGrey;
   border: none;
   border-radius: 5px;
-  width: 50%;
-  outline:0;
+  width: 45%;
+  outline: 0;
   height: 40px;
   font-weight: bold;
+  margin: 1%;
 }
 
 /************************/
@@ -298,7 +299,7 @@ p {
   border: $rightWrongHoverLightGreenBlue solid 2px;
   border-radius: 5px;
   width: 45%;
-  outline:0;
+  outline: 0;
   height: 50px;
   font-weight: bold;
   margin: 1%;

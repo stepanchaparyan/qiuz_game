@@ -10,18 +10,35 @@ let countries_list;
 
 //function for hide first card and show question cards
 let hideAndShow = () => {
-  document.getElementById('start-page-world').setAttribute("class", "hide-display");
-  document.getElementById('start-page-europe').setAttribute("class", "hide-display");
-  document.getElementById('start-page-asia').setAttribute("class", "hide-display");
-  document.getElementById('start-page-africa').setAttribute("class", "hide-display");
-  document.getElementById('start-page-americas').setAttribute("class", "hide-display");
-  document.getElementById('start-page-oceania').setAttribute("class", "hide-display");
-  document.getElementById('center-part-title').setAttribute("class", "hide-display");
-  document.getElementById('quiz-questions').removeAttribute("class");
-  document.getElementById('quiz-image').removeAttribute("class");
-  document.getElementById('quiz-nav').removeAttribute("class");
-  document.getElementById('quiz-answers').removeAttribute("class");
-  document.getElementById('result-step-score').removeAttribute("class");
+  document.getElementById('start-page-world').classList.add("hide-display");
+  document.getElementById('start-page-europe').classList.add("hide-display");
+  document.getElementById('start-page-asia').classList.add("hide-display");
+  document.getElementById('start-page-africa').classList.add("hide-display");
+  document.getElementById('start-page-americas').classList.add("hide-display");
+  document.getElementById('start-page-oceania').classList.add("hide-display");
+  document.getElementById('center-part-title').classList.add("hide-display");
+  document.getElementById('quiz-questions').classList.remove("hide-display");
+  document.getElementById('quiz-image').classList.remove("hide-display");
+  document.getElementById('quiz-nav').classList.remove("hide-display");
+  document.getElementById('quiz-answers').classList.remove("hide-display");
+  document.getElementById('result-step-score').classList.remove("hide-display");
+}
+
+let reload = () => {
+  document.getElementById('start-page-world').classList.remove("hide-display");
+  document.getElementById('start-page-europe').classList.remove("hide-display");
+  document.getElementById('start-page-asia').classList.remove("hide-display");
+  document.getElementById('start-page-africa').classList.remove("hide-display");
+  document.getElementById('start-page-americas').classList.remove("hide-display");
+  document.getElementById('start-page-oceania').classList.remove("hide-display");
+  document.getElementById('center-part-title').classList.remove("hide-display");
+  document.getElementById('main').classList.remove("hide-display");
+  document.getElementById('feedback-page').classList.add("hide-display");
+  document.getElementById('quiz-questions').classList.add("hide-display");
+  document.getElementById('quiz-image').classList.add("hide-display");
+  document.getElementById('quiz-nav').classList.add("hide-display");
+  document.getElementById('quiz-answers').classList.add("hide-display");
+  document.getElementById('result-step-score').classList.add("hide-display");
 }
 
 //generate and print right or wrong question
@@ -46,11 +63,11 @@ let getFocus = () => document.getElementById("btn-next").focus();
 let setNewCSS = (id, color) => {
   if (color == "green") {
     document.getElementById(id).setAttribute("class", "greenBorder");
-    document.getElementById('result-message').setAttribute("class", "greenBorder");
+    document.getElementById('result-message').classList.add("class", "greenBorder");
     document.getElementById("result-message").innerHTML = "You are right";
   } else if (color == "red") {
     document.getElementById(id).setAttribute("class", "redBorder");
-    document.getElementById('result-message').setAttribute("class", "redBorder");
+    document.getElementById('result-message').classList.add("class", "redBorder");
     document.getElementById("result-message").innerHTML = "Sorry, but the question was right";
   }
 }
@@ -76,21 +93,64 @@ let testWrong = () => {
 
 //print score and question number
 let result = () => {
-  document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /10";
-  document.getElementById("result-score").innerHTML = " Score: " + score + " /10";
+  document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /20";
+  document.getElementById("result-score").innerHTML = " Score: " + score + " /20";
 }
 
 let finalResult = () => {
-  if (questionNumber == 5) {
-  document.getElementById("final-score").innerHTML = "You win " + score + " points";
-  document.getElementById('main').setAttribute("class", "hide-display");
-  document.getElementById('feedback-page').removeAttribute("class");
+  let text;
+  if (questionNumber == 20) {
+    switch(true) {
+      case (score == 20):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 20 && score > 16):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 17 && score > 13):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 14 && score > 10):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 11 && score > 7):
+          text = "You win the game with " + score + " points";
+          break;
+      default:
+      text = "You lost the game and got only " + score + " points";
+}
+  document.getElementById("final-score").innerHTML = text;
+  document.getElementById('main').classList.add("hide-display");
+  document.getElementById('feedback-page').classList.remove("hide-display");
   }
 }
 
 let tryAgain = () => {
-  addPoints();
+  resetPoints();
   document.location.reload();
+}
+
+let nextGame = () => {
+  addPoints();
+  reload();
+  //document.location.reload();
+  setDisabledThisGame();
+}
+
+let setDisabledThisGame = () => {
+  if(countries_list == COUNTRIES_EUROPE) {
+    document.getElementById("europe").disabled = true;
+  } else if (countries_list == COUNTRIES_ASIA) {
+    //start("Asia");
+  } else if (countries_list == COUNTRIES_AFRICA) {
+    //start("Africa");
+  } else if (countries_list == COUNTRIES_AMERICAS) {
+    //start("Americas");
+  } else if (countries_list == COUNTRIES_OCEANIA) {
+    //start("Oceania");
+  } else {
+    //start("World");
+  }
 }
 
 //generateRandum numbers for question
@@ -122,10 +182,10 @@ let randomExcluded = (min, max, excluded) => {
 //list of functions/action for next button
 let next = () => {
   questionNumber += 1;
-  document.getElementById('right').removeAttribute("class");
-  document.getElementById('wrong').removeAttribute("class");
-  document.getElementById('result-message').removeAttribute("class");
-  document.getElementById('result-message').setAttribute("class", "hide-display");
+  document.getElementById('right').classList.remove("hide-display");
+  document.getElementById('wrong').classList.remove("hide-display");
+  document.getElementById('result-message').classList.remove("hide-display");
+  document.getElementById('result-message').classList.add("hide-display");
   changeDisabled();
   chooseContinent();
 }

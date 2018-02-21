@@ -105,6 +105,8 @@ footer {
 
 .footer-left {
   text-align: left;
+  left: 0;
+  padding-left: 3%;
   @extend .footer-right;
 }
 

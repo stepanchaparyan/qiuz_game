@@ -7,6 +7,13 @@ let randomNumberMain;
 let randomNumber;
 let randomNumberExcluded;
 let countries_list;
+var randomNumberBetween1_4;
+var randomNumberExcluded1;
+var randomNumberExcluded2;
+var randomNumberExcluded3;
+var randomNumberCountriesLengthExcluded1;
+var randomNumberCountriesLengthExcluded2;
+var randomNumberCountriesLengthExcluded3;
 
 //function for hide first card and show question cards
 let hideAndShow = () => {
@@ -47,14 +54,6 @@ let getRandumAnswer = () => {
   document.getElementById("answer4").innerHTML = answer[randomNumberExcluded3-1];
 }
 
-var randomNumberBetween1_4;
-var randomNumberExcluded1;
-var randomNumberExcluded2;
-var randomNumberExcluded3;
-var randomNumberCountriesLengthExcluded1;
-var randomNumberCountriesLengthExcluded2;
-var randomNumberCountriesLengthExcluded3;
-
 var setRandomNumbersBetween1_4 = () => {
   function generateRandom1(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -75,7 +74,7 @@ var setRandomNumbersBetween1_4 = () => {
   console.log(randomNumberBetween1_4);
   console.log(randomNumberExcluded1);
   console.log(randomNumberExcluded2);
-  console.log(randomNumberExcluded3);
+  console.log(randomNumberExcluded3); 
 }
 
 var setRandomNumbersCountriesLength = () => {

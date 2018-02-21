@@ -38,6 +38,14 @@
    });
  }
 
+ let resetPoints = () => {
+   db.loadDatabase({}, function () {
+   info = db.getCollection('Info');
+   info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints = 0;
+   db.saveDatabase();
+   });
+ }
+
  let addUser = () => {
    db.loadDatabase({}, function () {
    info = db.getCollection('Info');
