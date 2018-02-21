@@ -8,8 +8,8 @@ $cardButtonStartGold: #be9e21;
 $cardButtonStartHoverGold: #ab8e1d;
 $leftPartBackgroundLightGrey: #f5f0e4;
 $ButtonNextActiveBlue: #79b9e1;
-$finalScoreGreenBlue: #15b7a1;
-$tryAgainLightGrey: #eae0c7;
+$tryAgainLightGrey: #bfb291;
+$tryAgainHoverLightGrey: #a89c7e;
 $rightWrongLightGreenBlue: #cee1e2;
 $rightWrongHoverLightGreenBlue: #b5d2d3;
 $resultMessageLightGrey: #e0d0ab;
@@ -262,7 +262,9 @@ p {
 
 .feedback-page h1 {
   font-size: 28px;
-  color: lightblue;
+  color: black;
+  margin-bottom: 4%;
+  font-weight: bold;
 }
 
 #feedback-page {
@@ -273,7 +275,7 @@ p {
 }
 
 .final-score {
-  background-color: $finalScoreGreenBlue;
+  background-color: $backgroundGreen;
   padding: 10px;
   margin: 10px;
   font-weight: bold;
@@ -290,6 +292,10 @@ p {
   height: 40px;
   font-weight: bold;
   margin: 1%;
+}
+
+#btn-try-again:hover, #btn-next-game:hover {
+  background-color: $tryAgainHoverLightGrey;
 }
 
 /************************/

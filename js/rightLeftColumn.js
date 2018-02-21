@@ -6,6 +6,7 @@ let loadFunction = () => {
   console.log("name " + currentUser.data[currentUser.data.length-1].currentUserName);
   console.log("number " + currentUser.data[currentUser.data.length-1].currentUserNumber);
   document.getElementById('name').innerHTML = currentUser.data[currentUser.data.length-1].currentUserName;
+  checkDisabledInLoad();
 }
 
 $(document).ready(function(){

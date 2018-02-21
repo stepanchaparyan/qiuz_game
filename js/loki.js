@@ -1,5 +1,6 @@
  var info = [];
  var currentUser = [];
+ var button = [];
  var db = new loki('loki.db');
 
  db.loadDatabase({}, function() {
@@ -7,8 +8,11 @@
  currentUser = db.addCollection('currentUser');
  info = db.getCollection('Info');
  currentUser = db.getCollection('currentUser');
+ button = db.addCollection('Button');
+ button = db.getCollection('Button');
  //info.removeDataOnly()
  //currentUser.removeDataOnly()
+ //button.removeDataOnly()
  if (info.data.length === 0 || info.data.length === null) {
    console.log("info.data.length =  " + info.data.length);
    info.insert({
@@ -22,6 +26,14 @@
    currentUser.insert({
       currentUserName: "currentUserName",
       currentUserNumber: 0
+   });
+   button.insert({
+      europe: "",
+      asia: "",
+      africa: "",
+      americas: "",
+      oceania: "",
+      world: ""
    });
    db.saveDatabase();
  } else if (info.data[info.data.length-1].CapitalPoints > 5) {
@@ -83,6 +95,40 @@
   db.saveDatabase();
   })
  }
+
+ let addDisabled = (continent) => {
+  db.loadDatabase({}, function () {
+  button = db.getCollection('Button');
+  if (continent == "asia") {
+     button.insert({
+       asia: "disabled"
+     });
+  } else if (continent == "africa") {
+     button.insert({
+       africa: "disabled"
+     });
+  } else if (continent == "europe") {
+     button.insert({
+       europe: "disabled"
+     });
+  } else if (continent == "oceania") {
+     button.insert({
+       oceania: "disabled"
+     });
+  } else if (continent == "world") {
+     button.insert({
+       world: "disabled"
+     });
+  } else if (continent == "americas") {
+     button.insert({
+       americas: "disabled"
+     });
+  }
+  db.saveDatabase();
+  })
+ }
+
+
 
  let printUsers = () => {
    for (var i = 0; i < info.data.length; i++) {

@@ -206,7 +206,9 @@ p {
 
 .feedback-page h1 {
   font-size: 28px;
-  color: lightblue; }
+  color: black;
+  margin-bottom: 4%;
+  font-weight: bold; }
 
 #feedback-page {
   margin: 55px;
@@ -215,7 +217,7 @@ p {
   border-radius: 40px; }
 
 .final-score {
-  background-color: #15b7a1;
+  background-color: #48B484;
   padding: 10px;
   margin: 10px;
   font-weight: bold;
@@ -223,7 +225,7 @@ p {
   border-radius: 10px; }
 
 #btn-try-again, #btn-next-game {
-  background-color: #eae0c7;
+  background-color: #bfb291;
   border: none;
   border-radius: 5px;
   width: 45%;
@@ -231,6 +233,9 @@ p {
   height: 40px;
   font-weight: bold;
   margin: 1%; }
+
+#btn-try-again:hover, #btn-next-game:hover {
+  background-color: #a89c7e; }
 
 /************************/
 #right, #wrong {

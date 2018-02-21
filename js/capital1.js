@@ -133,23 +133,45 @@ let tryAgain = () => {
 let nextGame = () => {
   addPoints();
   reload();
-  //document.location.reload();
+  document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
   setDisabledThisGame();
 }
 
 let setDisabledThisGame = () => {
   if(countries_list == COUNTRIES_EUROPE) {
-    document.getElementById("europe").disabled = true;
+    addDisabled("europe");
+    document.getElementById("europe").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_ASIA) {
-    //start("Asia");
+    addDisabled("asia");
+    document.getElementById("asia").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_AFRICA) {
-    //start("Africa");
+    addDisabled("africa");
+    document.getElementById("africa").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_AMERICAS) {
-    //start("Americas");
+    addDisabled("americas");
+    document.getElementById("americas").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_OCEANIA) {
-    //start("Oceania");
+    addDisabled("oceania");
+    document.getElementById("oceania").setAttribute("disabled", "disabled");
   } else {
-    //start("World");
+    addDisabled("world");
+    document.getElementById("world").setAttribute("disabled", "disabled");
+  }
+}
+
+let checkDisabledInLoad = () => {
+  if (button.data[button.data.length-1].asia == "disabled") {
+    document.getElementById("asia").setAttribute("disabled", "disabled");
+  } else if (button.data[button.data.length-1].europe == "disabled") {
+    document.getElementById("europe").setAttribute("disabled", "disabled");
+  } else if (button.data[button.data.length-1].africa == "disabled") {
+    document.getElementById("africa").setAttribute("disabled", "disabled");
+  } else if (button.data[button.data.length-1].americas == "disabled") {
+    document.getElementById("americas").setAttribute("disabled", "disabled");
+  } else if (button.data[button.data.length-1].oceania == "disabled") {
+    document.getElementById("oceania").setAttribute("disabled", "disabled");
+  } else if (button.data[button.data.length-1].world == "disabled") {
+    document.getElementById("world").setAttribute("disabled", "disabled");
   }
 }
 
