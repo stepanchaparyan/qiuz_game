@@ -59,7 +59,7 @@
               <img class="card-img-top" src="img/europe.png" alt="Card image" >
               <h4 class="card-title">Flags</h4>
               <p class="card-text">Get 20 points</p>
-              <button class="button-start" disabled="disabled" id="europe" onclick="start('Europe')">Start</button>
+              <button class="button-start" disabled="disabled" id="europemini" onclick="start('Europe')">Start</button>
             </div>
 	           <div class="bxslider">
   	            <div><img src="data/flags/4x3/am.svg"></div>
@@ -74,11 +74,8 @@
 
     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 center-part">
 
-      <div id="quiz-image" class="hide-display">
-        <img class="card-img-top" src="img/berlin.jpg" alt="Card image" style="width:100%">
-      </div>
-
       <div id="main">
+      <div id="mainCards">
 
         <div class="center-part-title col-lg-12 col-md-12 hidden-sm hidden-xs" id="center-part-title">You can choose the continent and get more points</div>
 
@@ -154,26 +151,37 @@
           </div>
         </div>
 
-        <div id="quiz-questions" class="hide-display">
+      </div>
+      <div id="quizResults" class="hide-display">
+
+        <div id="quiz-image">
+          <img class="card-img-top" src="img/berlin.jpg" alt="Card image" style="width:100%">
         </div>
 
-        <div id="quiz-answers" class="hide-display">
+        <div id="quiz-questions" >
+        </div>
+
+        <div id="quiz-answers" >
           <button id="right" onclick="testRight()">Right</button>
           <button id="wrong" onclick="testWrong()">Wrong</button>
         </div>
 
-        <div id="result-message" class="hide-display"></div>
-        <div id="result-step-score" class="hide-display">
-          <div id="result-step" class="hide-display"></div>
-          <div id="result-score" class="hide-display"></div>
+        <div id="result-message"></div>
+        <div id="result-step-score">
+          <div id="result-step"></div>
+          <div id="result-score"></div>
         </div>
-        <div role="navigation" class="quiz-nav hide-display" id="quiz-nav">
+        <div role="navigation" class="quiz-nav" id="quiz-nav">
           <button class="next-button nav-button" disabled role="button" id="btn-next" onclick="next()">Next</button>
         </div>
 
       </div>
+      </div>
 
         <div class="feedback-page hide-display" id="feedback-page">
+          <div id="feedback-image">
+            <img class="card-img-top" src="img/moscow.jpg" alt="Card image" style="width:100%">
+          </div>
           <h1>Congratulation!</h1>
           <p class="final-score" id="final-score"></p>
           <button id="btn-next-game" class="try-again-button" role="button" onclick="nextGame()">Next game</button>

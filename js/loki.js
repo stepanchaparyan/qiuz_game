@@ -21,25 +21,18 @@
       Password: "Password",
       MainPoints: 0,
       CapitalPoints: 0,
-      FlagPoints: 0
+      FlagPoints: 0,
+      Disabled: ""
    });
    currentUser.insert({
       currentUserName: "currentUserName",
       currentUserNumber: 0
    });
    button.insert({
-      europe: "",
-      asia: "",
-      africa: "",
-      americas: "",
-      oceania: "",
-      world: ""
+      disabled: "",
    });
    db.saveDatabase();
- } else if (info.data[info.data.length-1].CapitalPoints > 5) {
-   info.data[info.data.length-1].CapitalPoints = 0;
- db.saveDatabase();
- };
+ }
  });
 
  let addPoints = () => {
@@ -47,6 +40,7 @@
    info = db.getCollection('Info');
    info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints += score;
    db.saveDatabase();
+   console.log("points " + info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints);
    });
  }
 
@@ -96,7 +90,7 @@
   })
  }
 
- let addDisabled = (continent) => {
+ let aaaddDisabled = (continent) => {
   db.loadDatabase({}, function () {
   button = db.getCollection('Button');
   if (continent == "asia") {
@@ -128,7 +122,37 @@
   })
  }
 
-
+ let addDisabled = (continent) => {
+  db.loadDatabase({}, function () {
+  button = db.getCollection('Button');
+  if (continent == "asia") {
+     button.insert({
+       disabled: "asia"
+     });
+  } else if (continent == "africa") {
+     button.insert({
+       disabled: "africa"
+     });
+  } else if (continent == "europe") {
+     button.insert({
+      disabled: "europe"
+     });
+  } else if (continent == "oceania") {
+     button.insert({
+       disabled: "oceania"
+     });
+  } else if (continent == "world") {
+     button.insert({
+       disabled: "world"
+     });
+  } else if (continent == "americas") {
+     button.insert({
+       disabled: "americas"
+     });
+  }
+  db.saveDatabase();
+  })
+ }
 
  let printUsers = () => {
    for (var i = 0; i < info.data.length; i++) {

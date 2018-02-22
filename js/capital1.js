@@ -10,35 +10,16 @@ let countries_list;
 
 //function for hide first card and show question cards
 let hideAndShow = () => {
-  document.getElementById('start-page-world').classList.add("hide-display");
-  document.getElementById('start-page-europe').classList.add("hide-display");
-  document.getElementById('start-page-asia').classList.add("hide-display");
-  document.getElementById('start-page-africa').classList.add("hide-display");
-  document.getElementById('start-page-americas').classList.add("hide-display");
-  document.getElementById('start-page-oceania').classList.add("hide-display");
-  document.getElementById('center-part-title').classList.add("hide-display");
-  document.getElementById('quiz-questions').classList.remove("hide-display");
-  document.getElementById('quiz-image').classList.remove("hide-display");
-  document.getElementById('quiz-nav').classList.remove("hide-display");
-  document.getElementById('quiz-answers').classList.remove("hide-display");
-  document.getElementById('result-step-score').classList.remove("hide-display");
+  document.getElementById('mainCards').classList.add("hide-display");
+  document.getElementById('quizResults').classList.remove("hide-display");
+  document.getElementById('result-message').classList.add("hide-display");
 }
 
 let reload = () => {
-  document.getElementById('start-page-world').classList.remove("hide-display");
-  document.getElementById('start-page-europe').classList.remove("hide-display");
-  document.getElementById('start-page-asia').classList.remove("hide-display");
-  document.getElementById('start-page-africa').classList.remove("hide-display");
-  document.getElementById('start-page-americas').classList.remove("hide-display");
-  document.getElementById('start-page-oceania').classList.remove("hide-display");
-  document.getElementById('center-part-title').classList.remove("hide-display");
+  document.getElementById('mainCards').removeAttribute("class");
   document.getElementById('main').classList.remove("hide-display");
+  document.getElementById('quizResults').classList.add("hide-display");
   document.getElementById('feedback-page').classList.add("hide-display");
-  document.getElementById('quiz-questions').classList.add("hide-display");
-  document.getElementById('quiz-image').classList.add("hide-display");
-  document.getElementById('quiz-nav').classList.add("hide-display");
-  document.getElementById('quiz-answers').classList.add("hide-display");
-  document.getElementById('result-step-score').classList.add("hide-display");
 }
 
 //generate and print right or wrong question
@@ -63,11 +44,11 @@ let getFocus = () => document.getElementById("btn-next").focus();
 let setNewCSS = (id, color) => {
   if (color == "green") {
     document.getElementById(id).setAttribute("class", "greenBorder");
-    document.getElementById('result-message').classList.add("class", "greenBorder");
+    document.getElementById('result-message').setAttribute("class", "greenBorder");
     document.getElementById("result-message").innerHTML = "You are right";
   } else if (color == "red") {
     document.getElementById(id).setAttribute("class", "redBorder");
-    document.getElementById('result-message').classList.add("class", "redBorder");
+    document.getElementById('result-message').setAttribute("class", "redBorder");
     document.getElementById("result-message").innerHTML = "Sorry, but the question was right";
   }
 }
@@ -121,7 +102,7 @@ let finalResult = () => {
 }
   document.getElementById("final-score").innerHTML = text;
   document.getElementById('main').classList.add("hide-display");
-  document.getElementById('feedback-page').classList.remove("hide-display");
+  document.getElementById('feedback-page').removeAttribute("class");
   }
 }
 
@@ -138,12 +119,12 @@ let nextGame = () => {
 }
 
 let setDisabledThisGame = () => {
-  if(countries_list == COUNTRIES_EUROPE) {
-    addDisabled("europe");
-    document.getElementById("europe").setAttribute("disabled", "disabled");
-  } else if (countries_list == COUNTRIES_ASIA) {
+  if (countries_list == COUNTRIES_ASIA) {
     addDisabled("asia");
     document.getElementById("asia").setAttribute("disabled", "disabled");
+  } else if (countries_list == COUNTRIES_EUROPE) {
+    addDisabled("europe");
+    document.getElementById("europe").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_AFRICA) {
     addDisabled("africa");
     document.getElementById("africa").setAttribute("disabled", "disabled");
@@ -160,18 +141,29 @@ let setDisabledThisGame = () => {
 }
 
 let checkDisabledInLoad = () => {
-  if (button.data[button.data.length-1].asia == "disabled") {
-    document.getElementById("asia").setAttribute("disabled", "disabled");
-  } else if (button.data[button.data.length-1].europe == "disabled") {
-    document.getElementById("europe").setAttribute("disabled", "disabled");
-  } else if (button.data[button.data.length-1].africa == "disabled") {
-    document.getElementById("africa").setAttribute("disabled", "disabled");
-  } else if (button.data[button.data.length-1].americas == "disabled") {
-    document.getElementById("americas").setAttribute("disabled", "disabled");
-  } else if (button.data[button.data.length-1].oceania == "disabled") {
-    document.getElementById("oceania").setAttribute("disabled", "disabled");
-  } else if (button.data[button.data.length-1].world == "disabled") {
-    document.getElementById("world").setAttribute("disabled", "disabled");
+  for (var i = 0; i < currentUser.data.length; i++) {
+    console.log("len " + currentUser.data.length);
+    switch(true) {
+      case (currentUser.data[i].disabled  == "asia" && currentUser.data[currentUser.data[currentUser.data.length-1].currentUserNumber].currentUserName == "aram"):
+      document.getElementById("asia").setAttribute("disabled", "disabled");
+      console.log("asia " + currentUser.data.length);
+      break;
+      case (currentUser.data[i].disabled  == "europe"):
+      document.getElementById("europe").setAttribute("disabled", "disabled");
+      break;
+      case (currentUser.data[i].disabled  == "africa"):
+      document.getElementById("africa").setAttribute("disabled", "disabled");
+      break;
+      case (currentUser.data[i].disabled  == "americas"):
+      document.getElementById("americas").setAttribute("disabled", "disabled");
+      break;
+      case (currentUser.data[i].disabled  == "oceania"):
+      document.getElementById("oceania").setAttribute("disabled", "disabled");
+      break;
+      case (currentUser.data[i].disabled  == "world"):
+      document.getElementById("world").setAttribute("disabled", "disabled");
+      break;
+    }
   }
 }
 
@@ -204,9 +196,9 @@ let randomExcluded = (min, max, excluded) => {
 //list of functions/action for next button
 let next = () => {
   questionNumber += 1;
-  document.getElementById('right').classList.remove("hide-display");
-  document.getElementById('wrong').classList.remove("hide-display");
-  document.getElementById('result-message').classList.remove("hide-display");
+  document.getElementById('right').removeAttribute("class");
+  document.getElementById('wrong').removeAttribute("class");
+  document.getElementById('result-message').removeAttribute("class");
   document.getElementById('result-message').classList.add("hide-display");
   changeDisabled();
   chooseContinent();
