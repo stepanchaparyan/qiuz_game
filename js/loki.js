@@ -10,6 +10,8 @@
  currentUser = db.getCollection('currentUser');
  button = db.addCollection('Button');
  button = db.getCollection('Button');
+ set = db.addCollection('Set');
+ set = db.getCollection('Set');
  //info.removeDataOnly()
  //currentUser.removeDataOnly()
  //button.removeDataOnly()
@@ -22,7 +24,6 @@
       MainPoints: 0,
       CapitalPoints: 0,
       FlagPoints: 0,
-      Disabled: ""
    });
    currentUser.insert({
       currentUserName: "currentUserName",
@@ -30,6 +31,7 @@
    });
    button.insert({
       disabled: "",
+      user: ""
    });
    db.saveDatabase();
  }
@@ -90,64 +92,41 @@
   })
  }
 
- let aaaddDisabled = (continent) => {
-  db.loadDatabase({}, function () {
-  button = db.getCollection('Button');
-  if (continent == "asia") {
-     button.insert({
-       asia: "disabled"
-     });
-  } else if (continent == "africa") {
-     button.insert({
-       africa: "disabled"
-     });
-  } else if (continent == "europe") {
-     button.insert({
-       europe: "disabled"
-     });
-  } else if (continent == "oceania") {
-     button.insert({
-       oceania: "disabled"
-     });
-  } else if (continent == "world") {
-     button.insert({
-       world: "disabled"
-     });
-  } else if (continent == "americas") {
-     button.insert({
-       americas: "disabled"
-     });
-  }
-  db.saveDatabase();
-  })
- }
 
  let addDisabled = (continent) => {
   db.loadDatabase({}, function () {
   button = db.getCollection('Button');
+  var user = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].Name;
+  console.log(user);
   if (continent == "asia") {
      button.insert({
-       disabled: "asia"
+       disabled: "asia",
+       currentUser: user
      });
   } else if (continent == "africa") {
      button.insert({
-       disabled: "africa"
+       disabled: "africa",
+       currentUser: user
      });
   } else if (continent == "europe") {
      button.insert({
-      disabled: "europe"
+      disabled: "europe",
+      currentUser: user
      });
   } else if (continent == "oceania") {
      button.insert({
-       disabled: "oceania"
+       disabled: "oceania",
+       currentUser: user
      });
   } else if (continent == "world") {
      button.insert({
-       disabled: "world"
+       disabled: "world",
+       currentUser: user
      });
   } else if (continent == "americas") {
      button.insert({
-       disabled: "americas"
+       disabled: "americas",
+       currentUser: user
      });
   }
   db.saveDatabase();

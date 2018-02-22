@@ -26,7 +26,7 @@ let reload = () => {
 let questionsMain = () => {
   randomNumberMain = Math.floor(Math.random() * Math.floor(2));
   randomNumberMain == 1 ? questionsRight() : questionsWrong();
-  console.log(randomNumberMain);
+  //console.log(randomNumberMain);
 }
 
 //print Wrong question
@@ -141,26 +141,25 @@ let setDisabledThisGame = () => {
 }
 
 let checkDisabledInLoad = () => {
-  for (var i = 0; i < currentUser.data.length; i++) {
-    console.log("len " + currentUser.data.length);
+  for (var i = 0; i < button.data.length; i++) {
+    console.log("len " + button.data.length);
     switch(true) {
-      case (currentUser.data[i].disabled  == "asia" && currentUser.data[currentUser.data[currentUser.data.length-1].currentUserNumber].currentUserName == "aram"):
+      case (button.data[i].disabled == "asia"):
       document.getElementById("asia").setAttribute("disabled", "disabled");
-      console.log("asia " + currentUser.data.length);
       break;
-      case (currentUser.data[i].disabled  == "europe"):
+      case (button.data[i].disabled == "europe"):
       document.getElementById("europe").setAttribute("disabled", "disabled");
       break;
-      case (currentUser.data[i].disabled  == "africa"):
+      case (button.data[i].disabled == "africa"):
       document.getElementById("africa").setAttribute("disabled", "disabled");
       break;
-      case (currentUser.data[i].disabled  == "americas"):
+      case (button.data[i].disabled == "americas"):
       document.getElementById("americas").setAttribute("disabled", "disabled");
       break;
-      case (currentUser.data[i].disabled  == "oceania"):
+      case (button.data[i].disabled == "oceania"):
       document.getElementById("oceania").setAttribute("disabled", "disabled");
       break;
-      case (currentUser.data[i].disabled  == "world"):
+      case (button.data[i].disabled == "world"):
       document.getElementById("world").setAttribute("disabled", "disabled");
       break;
     }
