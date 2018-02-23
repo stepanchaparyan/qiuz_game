@@ -10,8 +10,6 @@
  currentUser = db.getCollection('currentUser');
  button = db.addCollection('Button');
  button = db.getCollection('Button');
- set = db.addCollection('Set');
- set = db.getCollection('Set');
  //info.removeDataOnly()
  //currentUser.removeDataOnly()
  //button.removeDataOnly()
@@ -23,7 +21,7 @@
       Password: "Password",
       MainPoints: 0,
       CapitalPoints: 0,
-      FlagPoints: 0,
+      FlagPoints: 0
    });
    currentUser.insert({
       currentUserName: "currentUserName",
