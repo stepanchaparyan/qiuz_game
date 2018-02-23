@@ -26,7 +26,6 @@ let reload = () => {
 let questionsMain = () => {
   randomNumberMain = Math.floor(Math.random() * Math.floor(2));
   randomNumberMain == 1 ? questionsRight() : questionsWrong();
-  //console.log(randomNumberMain);
 }
 
 //print Wrong question
@@ -108,6 +107,11 @@ let finalResult = () => {
 
 let tryAgain = () => {
   resetPoints();
+  db.loadDatabase({}, function () {
+  button = db.getCollection('Button');
+  button.removeDataOnly();
+  db.saveDatabase();
+  })
   document.location.reload();
 }
 
@@ -116,6 +120,7 @@ let nextGame = () => {
   reload();
   document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
   setDisabledThisGame();
+  document.location.reload();
 }
 
 let setDisabledThisGame = () => {

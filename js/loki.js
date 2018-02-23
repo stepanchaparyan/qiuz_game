@@ -5,8 +5,8 @@
 
  db.loadDatabase({}, function() {
  info = db.addCollection('Info');
- currentUser = db.addCollection('currentUser');
  info = db.getCollection('Info');
+ currentUser = db.addCollection('currentUser');
  currentUser = db.getCollection('currentUser');
  button = db.addCollection('Button');
  button = db.getCollection('Button');
@@ -24,7 +24,7 @@
       FlagPoints: 0
    });
    currentUser.insert({
-      currentUserName: "currentUserName",
+      currentUserName: "user",
       currentUserNumber: 0
    });
    button.insert({
