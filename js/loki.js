@@ -80,6 +80,7 @@
 
  let loginCurrentUser = () => {
    findUserName();
+   
    db.loadDatabase({}, function () {
    currentUser = db.getCollection('currentUser');
    currentUser.insert({
@@ -88,8 +89,14 @@
     });
   db.saveDatabase();
   })
- }
 
+  db.loadDatabase({}, function () {
+  button = db.getCollection('Button');
+  button.removeDataOnly();
+  db.saveDatabase();
+  })
+
+ }
 
  let addDisabled = (continent) => {
   db.loadDatabase({}, function () {

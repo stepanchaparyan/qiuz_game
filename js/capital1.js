@@ -15,13 +15,6 @@ let hideAndShow = () => {
   document.getElementById('result-message').classList.add("hide-display");
 }
 
-let reload = () => {
-  document.getElementById('mainCards').removeAttribute("class");
-  document.getElementById('main').classList.remove("hide-display");
-  document.getElementById('quizResults').classList.add("hide-display");
-  document.getElementById('feedback-page').classList.add("hide-display");
-}
-
 //generate and print right or wrong question
 let questionsMain = () => {
   randomNumberMain = Math.floor(Math.random() * Math.floor(2));
@@ -117,7 +110,6 @@ let tryAgain = () => {
 
 let nextGame = () => {
   addPoints();
-  reload();
   document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
   setDisabledThisGame();
   document.location.reload();
@@ -126,22 +118,16 @@ let nextGame = () => {
 let setDisabledThisGame = () => {
   if (countries_list == COUNTRIES_ASIA) {
     addDisabled("asia");
-    document.getElementById("asia").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_EUROPE) {
     addDisabled("europe");
-    document.getElementById("europe").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_AFRICA) {
     addDisabled("africa");
-    document.getElementById("africa").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_AMERICAS) {
     addDisabled("americas");
-    document.getElementById("americas").setAttribute("disabled", "disabled");
   } else if (countries_list == COUNTRIES_OCEANIA) {
     addDisabled("oceania");
-    document.getElementById("oceania").setAttribute("disabled", "disabled");
   } else {
     addDisabled("world");
-    document.getElementById("world").setAttribute("disabled", "disabled");
   }
 }
 
