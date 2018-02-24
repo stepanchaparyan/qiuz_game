@@ -17,18 +17,9 @@ var randomNumberCountriesLengthExcluded3;
 
 //function for hide first card and show question cards
 let hideAndShow = () => {
-  document.getElementById('start-page-world').setAttribute("class", "hide-display");
-  document.getElementById('start-page-europe').setAttribute("class", "hide-display");
-  document.getElementById('start-page-asia').setAttribute("class", "hide-display");
-  document.getElementById('start-page-africa').setAttribute("class", "hide-display");
-  document.getElementById('start-page-americas').setAttribute("class", "hide-display");
-  document.getElementById('start-page-oceania').setAttribute("class", "hide-display");
-  document.getElementById('center-part-title').setAttribute("class", "hide-display");
-  document.getElementById('quiz-questions').removeAttribute("class");
-  document.getElementById('quiz-image').removeAttribute("class");
-  document.getElementById('quiz-nav').removeAttribute("class");
-  document.getElementById('quiz-answers').removeAttribute("class");
-  document.getElementById('result-step-score').removeAttribute("class");
+  document.getElementById('mainCards').classList.add("hide-display");
+  document.getElementById('quizResults').classList.remove("hide-display");
+  document.getElementById('result-message').classList.add("hide-display");
 }
 
 //generate and print right or wrong question
@@ -71,10 +62,6 @@ var setRandomNumbersBetween1_4 = () => {
   randomNumberExcluded1 = generateRandom1(1, 4);
   randomNumberExcluded2 = generateRandom2(1, 4);
   randomNumberExcluded3 = generateRandom3(1, 4);
-  console.log(randomNumberBetween1_4);
-  console.log(randomNumberExcluded1);
-  console.log(randomNumberExcluded2);
-  console.log(randomNumberExcluded3); 
 }
 
 var setRandomNumbersCountriesLength = () => {
@@ -93,10 +80,6 @@ var setRandomNumbersCountriesLength = () => {
   randomNumberCountriesLengthExcluded1 = generateRandom1(1, countries_list.length-1);
   randomNumberCountriesLengthExcluded2 = generateRandom2(1, countries_list.length-1);
   randomNumberCountriesLengthExcluded3 = generateRandom3(1, countries_list.length-1);
-  console.log(randomNumber);
-  console.log(randomNumberCountriesLengthExcluded1);
-  console.log(randomNumberCountriesLengthExcluded2);
-  console.log(randomNumberCountriesLengthExcluded3);
 }
 
 let test = () => {
@@ -158,21 +141,94 @@ let changeDisabled = () => {
 
 //print score and question number
 let result = () => {
-  document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /10";
-  document.getElementById("result-score").innerHTML = " Score: " + score + " /10";
+  document.getElementById("result-step").innerHTML = " Question: " + (questionNumber + 1) + " /20";
+  document.getElementById("result-score").innerHTML = " Score: " + score + " /20";
 }
 
 let finalResult = () => {
-  if (questionNumber == 5) {
-  document.getElementById("final-score").innerHTML = "You win " + score + " points";
-  document.getElementById('main').setAttribute("class", "hide-display");
+  let text;
+  if (questionNumber == 20) {
+    switch(true) {
+      case (score == 20):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 20 && score > 16):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 17 && score > 13):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 14 && score > 10):
+        text = "You win the game with " + score + " points";
+        break;
+      case (score < 11 && score > 7):
+          text = "You win the game with " + score + " points";
+          break;
+      default:
+      text = "You lost the game and got only " + score + " points";
+}
+  document.getElementById("final-score").innerHTML = text;
+  document.getElementById('main').classList.add("hide-display");
   document.getElementById('feedback-page').removeAttribute("class");
   }
 }
 
 let tryAgain = () => {
-  addPoints();
+  resetPoints();
+  db.loadDatabase({}, function () {
+  button = db.getCollection('Button');
+  button.removeDataOnly();
+  db.saveDatabase();
+  })
   document.location.reload();
+}
+
+let nextGame = () => {
+  addPoints();
+  document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
+  setDisabledThisGame();
+  document.location.reload();
+}
+
+let setDisabledThisGame = () => {
+  if (countries_list == COUNTRIES_ASIA) {
+    addDisabled("asia");
+  } else if (countries_list == COUNTRIES_EUROPE) {
+    addDisabled("europe");
+  } else if (countries_list == COUNTRIES_AFRICA) {
+    addDisabled("africa");
+  } else if (countries_list == COUNTRIES_AMERICAS) {
+    addDisabled("americas");
+  } else if (countries_list == COUNTRIES_OCEANIA) {
+    addDisabled("oceania");
+  } else {
+    addDisabled("world");
+  }
+}
+
+let checkDisabledInLoad = () => {
+  for (var i = 0; i < button.data.length; i++) {
+    switch(true) {
+      case (button.data[i].disabled == "asia"):
+      document.getElementById("asia").setAttribute("disabled", "disabled");
+      break;
+      case (button.data[i].disabled == "europe"):
+      document.getElementById("europe").setAttribute("disabled", "disabled");
+      break;
+      case (button.data[i].disabled == "africa"):
+      document.getElementById("africa").setAttribute("disabled", "disabled");
+      break;
+      case (button.data[i].disabled == "americas"):
+      document.getElementById("americas").setAttribute("disabled", "disabled");
+      break;
+      case (button.data[i].disabled == "oceania"):
+      document.getElementById("oceania").setAttribute("disabled", "disabled");
+      break;
+      case (button.data[i].disabled == "world"):
+      document.getElementById("world").setAttribute("disabled", "disabled");
+      break;
+    }
+  }
 }
 
 //generateRandum numbers for question
@@ -192,7 +248,6 @@ let setRandomNumbers = (continent) => {
   }
   randomNumber = Math.floor(Math.random() * countries_list.length-1) + 1;
 }
-
 
 let chooseContinent = () => {
   if(countries_list == COUNTRIES_EUROPE) {

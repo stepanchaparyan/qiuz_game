@@ -96,11 +96,9 @@ footer {
 .center-part-title {
   font-size: 25px;
   font-weight: bold;
-  color: purple;
-  margin-top: 2%;
-  margin-bottom: 2%; }
+  color: purple; }
 
-.card-center {
+.card-center, .center-part-title {
   margin-top: 2%;
   margin-bottom: 2%; }
 
@@ -181,6 +179,12 @@ p {
   margin-right: auto;
   margin-left: auto; }
 
+#feedback-image {
+  width: 60%;
+  margin-top: 6%;
+  margin-right: auto;
+  margin-left: auto; }
+
 .quiz-nav {
   width: 100%;
   height: 100%; }
@@ -208,7 +212,9 @@ p {
 
 .feedback-page h1 {
   font-size: 28px;
-  color: lightblue; }
+  color: black;
+  margin-bottom: 4%;
+  font-weight: bold; }
 
 #feedback-page {
   margin: 55px;
@@ -217,23 +223,25 @@ p {
   border-radius: 40px; }
 
 .final-score {
-  background-color: #15b7a1;
+  background-color: #48B484;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   font-weight: bold;
   font-size: 20px;
-  width: 50%;
-  border-radius: 10px;
-  margin-left: 25%; }
+  border-radius: 10px; }
 
-#btn-try-again {
-  background-color: #eae0c7;
+#btn-try-again, #btn-next-game {
+  background-color: #bfb291;
   border: none;
   border-radius: 5px;
-  width: 50%;
+  width: 45%;
   outline: 0;
   height: 40px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 1%; }
+
+#btn-try-again:hover, #btn-next-game:hover {
+  background-color: #a89c7e; }
 
 /************************/
 #answer1, #answer2, #answer3, #answer4 {

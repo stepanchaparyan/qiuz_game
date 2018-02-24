@@ -8,8 +8,8 @@ $cardButtonStartGold: #be9e21;
 $cardButtonStartHoverGold: #ab8e1d;
 $leftPartBackgroundLightGrey: #f5f0e4;
 $ButtonNextActiveBlue: #79b9e1;
-$finalScoreGreenBlue: #15b7a1;
-$tryAgainLightGrey: #eae0c7;
+$tryAgainLightGrey: #bfb291;
+$tryAgainHoverLightGrey: #a89c7e;
 $rightWrongLightGreenBlue: #cee1e2;
 $rightWrongHoverLightGreenBlue: #b5d2d3;
 $resultMessageLightGrey: #e0d0ab;
@@ -19,7 +19,6 @@ $buttonDisabled: #dddddd;
 $questionCorrectGreen: rgba(91, 140, 59, 0.3);
 
 /**** Main page *******/
-
 body {
   background-color: $backgroundGreen;
 }
@@ -134,8 +133,7 @@ footer {
   font-size: 25px;
   font-weight: bold;
   color: purple;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  @extend .card-center;
 }
 
 .card-center {
@@ -232,6 +230,13 @@ p {
   margin-left: auto;
 }
 
+#feedback-image {
+  width: 60%;
+  margin-top: 6%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .quiz-nav {
   width: 100%;
   height: 100%;
@@ -264,7 +269,9 @@ p {
 
 .feedback-page h1 {
   font-size: 28px;
-  color: lightblue;
+  color: black;
+  margin-bottom: 4%;
+  font-weight: bold;
 }
 
 #feedback-page {
@@ -275,24 +282,27 @@ p {
 }
 
 .final-score {
-  background-color: $finalScoreGreenBlue;
+  background-color: $backgroundGreen;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   font-weight: bold;
   font-size: 20px;
-  width: 50%;
   border-radius: 10px;
-  margin-left: 25%;
 }
 
-#btn-try-again {
+#btn-try-again, #btn-next-game {
   background-color: $tryAgainLightGrey;
   border: none;
   border-radius: 5px;
-  width: 50%;
-  outline:0;
+  width: 45%;
+  outline: 0;
   height: 40px;
   font-weight: bold;
+  margin: 1%;
+}
+
+#btn-try-again:hover, #btn-next-game:hover {
+  background-color: $tryAgainHoverLightGrey;
 }
 
 /************************/
