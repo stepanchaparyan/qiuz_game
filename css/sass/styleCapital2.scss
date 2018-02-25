@@ -36,6 +36,8 @@ nav {
   margin-bottom: 0 !important;
   font-weight: bold;
   font-size: 17px;
+  height: 6vh;
+  position: relative;
 }
 
 li#point {
@@ -82,10 +84,10 @@ footer {
   background-color: $footerLightBlack;
   clear: left;
   text-align: center;
-  position:absolute;
-  bottom:0;
-  width:84%;
-  height:60px;
+  position: relative;
+  bottom: 0;
+  width: 84%;
+  height: 55px;
   margin-left: 8%;
   margin-right: 8%;
 }
@@ -113,9 +115,9 @@ footer {
 
 .row {
   text-align: center;
-  position: absolute;
+  position: relative;
   width: 84%;
-  height: 90%;
+  height: 87vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
