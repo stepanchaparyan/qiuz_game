@@ -15,7 +15,6 @@ nav {
   margin-bottom: 0 !important;
   font-weight: bold;
   font-size: 17px;
-  height: 6vh;
   position: relative; }
 
 li#point {
@@ -58,7 +57,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 84%;
-  height: 55px;
+  height: 6vh;
   margin-left: 8%;
   margin-right: 8%; }
 
@@ -83,7 +82,7 @@ footer {
   text-align: center;
   position: relative;
   width: 84%;
-  height: 87vh;
+  height: 89vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
@@ -146,21 +145,6 @@ p {
 
 .button-start:hover {
   background-color: #ab8e1d; }
-
-/***left-part***/
-.left-part {
-  background-color: #f5f0e4;
-  height: 100%;
-  padding: 5px; }
-
-.info {
-  margin: 20px 0 10px 0; }
-
-/***right-part***/
-.right-part {
-  background-color: #f5f0e4;
-  height: 100%;
-  padding: 10px 1px 10px 1px; }
 
 /***** quiz-questions *****/
 #quiz-questions {

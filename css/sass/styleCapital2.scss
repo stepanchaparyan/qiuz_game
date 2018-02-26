@@ -6,12 +6,12 @@ $centerBackgroundLightGrey: #FAF8F2;
 $cardContinentElectricBlue: #2935e2;
 $cardButtonStartGold: #be9e21;
 $cardButtonStartHoverGold: #ab8e1d;
-$leftPartBackgroundLightGrey: #f5f0e4;
 $ButtonNextActiveBlue: #79b9e1;
 $tryAgainLightGrey: #bfb291;
 $tryAgainHoverLightGrey: #a89c7e;
 $rightWrongLightGreenBlue: #cee1e2;
 $rightWrongHoverLightGreenBlue: #b5d2d3;
+$leftPartBackgroundLightGrey: #f5f0e4;
 $resultMessageLightGrey: #e0d0ab;
 $resultScoreLightGrey: #e5d8b9;
 $resultMessageBorderLightGrey: #dac89c;
@@ -36,7 +36,6 @@ nav {
   margin-bottom: 0 !important;
   font-weight: bold;
   font-size: 17px;
-  height: 6vh;
   position: relative;
 }
 
@@ -87,7 +86,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 84%;
-  height: 55px;
+  height: 6vh;
   margin-left: 8%;
   margin-right: 8%;
 }
@@ -117,7 +116,7 @@ footer {
   text-align: center;
   position: relative;
   width: 84%;
-  height: 87vh;
+  height: 89vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
@@ -191,24 +190,6 @@ p {
 
 .button-start:hover {
   background-color: $cardButtonStartHoverGold;
-}
-
-/***left-part***/
-.left-part {
-  background-color: $leftPartBackgroundLightGrey;
-  height: 100%;
-  padding: 5px;
-}
-
-.info {
-  margin: 20px 0 10px 0;
-}
-
-/***right-part***/
-.right-part {
-  background-color: $leftPartBackgroundLightGrey;
-  height: 100%;
-  padding: 10px 1px 10px 1px;
 }
 
 /***** quiz-questions *****/
@@ -367,18 +348,6 @@ button:disabled {
 button:disabled:hover {
   cursor: not-allowed;
   background: $buttonDisabled;
-}
-
-#point {
-  font-size: 30px;
-  font-weight: bold;
-  color: orangered;
-}
-
-#pointText {
-  margin-top: 15px;
-  font-weight: bold;
-  color: blue;
 }
 
 /********* Responsive media queries ************/

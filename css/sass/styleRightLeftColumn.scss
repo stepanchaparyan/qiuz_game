@@ -1,3 +1,5 @@
+$leftPartBackgroundLightGrey: #f5f0e4;
+
 .bx-wrapper {
   margin-top: 20px !important;
 }
@@ -33,4 +35,21 @@
   cursor: pointer;
 	font-weight: bold;
   margin: 15px 0 15px 0;
+}
+
+/***left-part***/
+.left-part {
+  background-color: $leftPartBackgroundLightGrey;
+  height: 100%;
+}
+
+.info {
+  margin: 20px 0 10px 0;
+}
+
+/***right-part***/
+.right-part {
+  background-color: $leftPartBackgroundLightGrey;
+  height: 100%;
+  padding: 10px 1px 10px 1px;
 }

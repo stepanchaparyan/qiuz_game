@@ -30,4 +30,18 @@
   font-weight: bold;
   margin: 15px 0 15px 0; }
 
+/***left-part***/
+.left-part {
+  background-color: #f5f0e4;
+  height: 100%; }
+
+.info {
+  margin: 20px 0 10px 0; }
+
+/***right-part***/
+.right-part {
+  background-color: #f5f0e4;
+  height: 100%;
+  padding: 10px 1px 10px 1px; }
+
 /*# sourceMappingURL=styleRightLeftColumn.css.map */
