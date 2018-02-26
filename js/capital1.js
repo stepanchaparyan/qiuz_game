@@ -101,8 +101,11 @@ let finalResult = () => {
 let tryAgain = () => {
   resetPoints();
   db.loadDatabase({}, function () {
-  button = db.getCollection('Button');
-  button.removeDataOnly();
+  info = db.getCollection('Info');
+  for (var i = 0; i < info.data.length; i++) {
+    info.data[i].disabled = "";
+    info.update(info.data[i]);
+  }
   db.saveDatabase();
   })
   document.location.reload();
@@ -117,40 +120,41 @@ let nextGame = () => {
 
 let setDisabledThisGame = () => {
   if (countries_list == COUNTRIES_ASIA) {
-    addDisabled("asia");
+    addDisabledCapital1("asia");
   } else if (countries_list == COUNTRIES_EUROPE) {
-    addDisabled("europe");
+    addDisabledCapital1("europe");
   } else if (countries_list == COUNTRIES_AFRICA) {
-    addDisabled("africa");
+    addDisabledCapital1("africa");
   } else if (countries_list == COUNTRIES_AMERICAS) {
-    addDisabled("americas");
+    addDisabledCapital1("americas");
   } else if (countries_list == COUNTRIES_OCEANIA) {
-    addDisabled("oceania");
+    addDisabledCapital1("oceania");
   } else {
-    addDisabled("world");
+    addDisabledCapital1("world");
   }
 }
 
 let checkDisabledInLoad = () => {
-  for (var i = 0; i < button.data.length; i++) {
-    console.log("len " + button.data.length);
+  for (var i = 0; i < info.data.length; i++) {
+    console.log("len " + info.data.length);
+    console.log("len2 " + info.data[i].disabledAsiaCapital1);
     switch(true) {
-      case (button.data[i].disabled == "asia"):
+      case (info.data[i].disabledAsiaCapital1 == "asia"):
       document.getElementById("asia").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "europe"):
+      case (info.data[i].disabledEuropeCapital1 == "europe"):
       document.getElementById("europe").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "africa"):
+      case (info.data[i].disabledAfricaCapital1 == "africa"):
       document.getElementById("africa").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "americas"):
+      case (info.data[i].disabledAmericasCapital1 == "americas"):
       document.getElementById("americas").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "oceania"):
+      case (info.data[i].disabledOceaniaCapital1 == "oceania"):
       document.getElementById("oceania").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "world"):
+      case (info.data[i].disabledWorldCapital1 == "world"):
       document.getElementById("world").setAttribute("disabled", "disabled");
       break;
     }

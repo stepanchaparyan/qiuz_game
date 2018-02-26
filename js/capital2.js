@@ -176,8 +176,14 @@ let finalResult = () => {
 let tryAgain = () => {
   resetPoints();
   db.loadDatabase({}, function () {
-  button = db.getCollection('Button');
-  button.removeDataOnly();
+  info = db.getCollection('Info');
+  for (var i = 0; i < info.data.length; i++) {
+
+    info.data[i].disabled = "";
+    info.update(info.data[i]);
+
+  }
+  //info.removeDataOnly();
   db.saveDatabase();
   })
   document.location.reload();
@@ -192,39 +198,39 @@ let nextGame = () => {
 
 let setDisabledThisGame = () => {
   if (countries_list == COUNTRIES_ASIA) {
-    addDisabled("asia");
+    addDisabledCapital2("asia");
   } else if (countries_list == COUNTRIES_EUROPE) {
-    addDisabled("europe");
+    addDisabledCapital2("europe");
   } else if (countries_list == COUNTRIES_AFRICA) {
-    addDisabled("africa");
+    addDisabledCapital2("africa");
   } else if (countries_list == COUNTRIES_AMERICAS) {
-    addDisabled("americas");
+    addDisabledCapital2("americas");
   } else if (countries_list == COUNTRIES_OCEANIA) {
-    addDisabled("oceania");
+    addDisabledCapital2("oceania");
   } else {
-    addDisabled("world");
+    addDisabledCapital2("world");
   }
 }
 
 let checkDisabledInLoad = () => {
-  for (var i = 0; i < button.data.length; i++) {
+  for (var i = 0; i < info.data.length; i++) {
     switch(true) {
-      case (button.data[i].disabled == "asia"):
+      case (info.data[i].disabled == "asia" && info.data[i].page == "capital2"):
       document.getElementById("asia").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "europe"):
+      case (info.data[i].disabled == "europe" && info.data[i].page == "capital2"):
       document.getElementById("europe").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "africa"):
+      case (info.data[i].disabled == "africa" && info.data[i].page == "capital2"):
       document.getElementById("africa").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "americas"):
+      case (info.data[i].disabled == "americas" && info.data[i].page == "capital2"):
       document.getElementById("americas").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "oceania"):
+      case (info.data[i].disabled == "oceania" && info.data[i].page == "capital2"):
       document.getElementById("oceania").setAttribute("disabled", "disabled");
       break;
-      case (button.data[i].disabled == "world"):
+      case (info.data[i].disabled == "world" && info.data[i].page == "capital2"):
       document.getElementById("world").setAttribute("disabled", "disabled");
       break;
     }

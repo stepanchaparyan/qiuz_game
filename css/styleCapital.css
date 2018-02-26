@@ -15,7 +15,8 @@ nav {
   margin-bottom: 0 !important;
   font-weight: bold;
   font-size: 17px;
-  position: relative; }
+  position: relative;
+  height: 5vh; }
 
 li#point {
   color: white;
@@ -82,7 +83,7 @@ footer {
   text-align: center;
   position: relative;
   width: 84%;
-  height: 89vh;
+  height: 88vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
