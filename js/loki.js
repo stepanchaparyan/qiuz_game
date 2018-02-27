@@ -18,18 +18,18 @@
       MainPoints: 0,
       CapitalPoints: 0,
       FlagPoints: 0,
-      disabledAsiaCapital1: "",
-      disabledAsiaCapital2: "",
-      disabledAfricaCapital1: "",
-      disabledAfricaCapital2: "",
-      disabledEuropeCapital1: "",
-      disabledEuropeCapital2: "",
-      disabledOceaniaCapital1: "",
-      disabledOceaniaCapital2: "",
-      disabledAmericasCapital1: "",
-      disabledAmericasCapital2: "",
-      disabledWorldCapital1: "",
-      disabledWorldCapital2: "",
+      asia1: "",
+      europe1: "",
+      africa1: "",
+      americas1: "",
+      oceania1: "",
+      world1: "",
+      asia2: "",
+      europe2: "",
+      africa2: "",
+      americas2: "",
+      oceania2: "",
+      world2: "",
       page: ""
    });
    currentUser.insert({
@@ -57,6 +57,39 @@
    });
  }
 
+ let resetDisabled = () => {
+   db.loadDatabase({}, function () {
+   info = db.getCollection('Info');
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia2 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa2 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe2 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas2 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania2 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 = "";
+     info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world2 = "";
+     info.update(info.data);
+     db.saveDatabase();
+   })
+   document.location.reload();
+ }
+
+ let tryAgain = () => {
+   resetPoints();
+   resetDisabled();
+ }
+
+ let nextGame = () => {
+   addPoints();
+   document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
+   setDisabledThisGame();
+   document.location.reload();
+ }
+
 //signup//
  let addUser = () => {
    db.loadDatabase({}, function () {
@@ -68,18 +101,18 @@
       MainPoints: 0,
       CapitalPoints: 0,
       FlagPoints: 0,
-      disabledAsiaCapital1: "",
-      disabledAsiaCapital2: "",
-      disabledAfricaCapital1: "",
-      disabledAfricaCapital2: "",
-      disabledEuropeCapital1: "",
-      disabledEuropeCapital2: "",
-      disabledOceaniaCapital1: "",
-      disabledOceaniaCapital2: "",
-      disabledAmericasCapital1: "",
-      disabledAmericasCapital2: "",
-      disabledWorldCapital1: "",
-      disabledWorldCapital2: "",
+      asia1: "",
+      europe1: "",
+      africa1: "",
+      americas1: "",
+      oceania1: "",
+      world1: "",
+      asia2: "",
+      europe2: "",
+      africa2: "",
+      americas2: "",
+      oceania2: "",
+      world2: "",
       page: ""
     });
   db.saveDatabase();
@@ -114,76 +147,51 @@ let addDisabledCapital1 = (continent) => {
   db.loadDatabase({}, function () {
   info = db.getCollection('Info');
   var user = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].Name;
-  console.log("user is " + user);
-  for (var i = 0; i < info.data.length; i++) {
     if (continent == "asia") {
-      info.data[i].disabledAsiaCapital1 = "asia";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 = "disabled";
     } else if (continent == "africa") {
-      info.data[i].disabledAfricaCapital1 = "africa";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa1 = "disabled";
     } else if (continent == "europe") {
-      info.data[i].disabledEuropeCapital1 = "europe";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe1 = "disabled";
     } else if (continent == "oceania") {
-      info.data[i].disabledOceaniaCapital1 = "oceania";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 = "disabled";
     } else if (continent == "world") {
-      info.data[i].disabledWorldCapital1 = "world";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 = "disabled";
     } else if (continent == "americas") {
-      info.data[i].disabledAmericasCapital1 = "america";
-      info.update(info.data[i]);
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 = "disabled";
     }
-  }
+    info.update(info.data);
   db.saveDatabase();
   })
  }
 
  let addDisabledCapital2 = (continent) => {
-  db.loadDatabase({}, function () {
-  info = db.getCollection('Info');
-  var user = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].Name;
-  console.log(user);
-  if (continent == "asia") {
-     info.insert({
-       disabled: "asia",
-       page: "capital2"
-     });
-  } else if (continent == "africa") {
-     info.insert({
-       disabled: "africa",
-       page: "capital2"
-     });
-  } else if (continent == "europe") {
-     info.insert({
-      disabled: "europe",
-      page: "capital2"
-     });
-  } else if (continent == "oceania") {
-     info.insert({
-       disabled: "oceania",
-       page: "capital2"
-     });
-  } else if (continent == "world") {
-     info.insert({
-       disabled: "world",
-       page: "capital2"
-     });
-  } else if (continent == "americas") {
-     info.insert({
-       disabled: "americas",
-       page: "capital2"
-     });
+   db.loadDatabase({}, function () {
+   info = db.getCollection('Info');
+   var user = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].Name;
+   for (var i = 0; i < info.data.length; i++) {
+     if (continent == "asia") {
+       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia2 = "disabled";
+     } else if (continent == "africa") {
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa2 = "disabled";
+     } else if (continent == "europe") {
+       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe2 = "disabled";
+     } else if (continent == "oceania") {
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania2 = "disabled";
+     } else if (continent == "world") {
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world2 = "disabled";
+     } else if (continent == "americas") {
+       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas2 = "disabled";
+     }
+     info.update(info.data[i]);
+   }
+   db.saveDatabase();
+   })
   }
-  db.saveDatabase();
-  })
- }
 
  let printUsers = () => {
    for (var i = 0; i < info.data.length; i++) {
      console.log(info.data[i].Name);
-     console.log(info.data[i].Email);
      console.log(info.data[i].Password);
    }
    };

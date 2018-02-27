@@ -83,7 +83,6 @@ var setRandomNumbersCountriesLength = () => {
 }
 
 let test = () => {
-  console.log("event " + this.event.target.innerHTML);
   if (this.event.target.innerHTML == countries_list[randomNumber].capital) {
     setNewCSS(this.event.target.id, "green");
     score += 1;
@@ -173,29 +172,6 @@ let finalResult = () => {
   }
 }
 
-let tryAgain = () => {
-  resetPoints();
-  db.loadDatabase({}, function () {
-  info = db.getCollection('Info');
-  for (var i = 0; i < info.data.length; i++) {
-
-    info.data[i].disabled = "";
-    info.update(info.data[i]);
-
-  }
-  //info.removeDataOnly();
-  db.saveDatabase();
-  })
-  document.location.reload();
-}
-
-let nextGame = () => {
-  addPoints();
-  document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
-  setDisabledThisGame();
-  document.location.reload();
-}
-
 let setDisabledThisGame = () => {
   if (countries_list == COUNTRIES_ASIA) {
     addDisabledCapital2("asia");
@@ -213,28 +189,25 @@ let setDisabledThisGame = () => {
 }
 
 let checkDisabledInLoad = () => {
-  for (var i = 0; i < info.data.length; i++) {
-    switch(true) {
-      case (info.data[i].disabled == "asia" && info.data[i].page == "capital2"):
+    console.log("len " + info.data.length);
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia2 == "disabled") {
       document.getElementById("asia").setAttribute("disabled", "disabled");
-      break;
-      case (info.data[i].disabled == "europe" && info.data[i].page == "capital2"):
-      document.getElementById("europe").setAttribute("disabled", "disabled");
-      break;
-      case (info.data[i].disabled == "africa" && info.data[i].page == "capital2"):
-      document.getElementById("africa").setAttribute("disabled", "disabled");
-      break;
-      case (info.data[i].disabled == "americas" && info.data[i].page == "capital2"):
-      document.getElementById("americas").setAttribute("disabled", "disabled");
-      break;
-      case (info.data[i].disabled == "oceania" && info.data[i].page == "capital2"):
-      document.getElementById("oceania").setAttribute("disabled", "disabled");
-      break;
-      case (info.data[i].disabled == "world" && info.data[i].page == "capital2"):
-      document.getElementById("world").setAttribute("disabled", "disabled");
-      break;
     }
-  }
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe2 == "disabled") {
+      document.getElementById("europe").setAttribute("disabled", "disabled");
+    }
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa2 == "disabled") {
+      document.getElementById("africa").setAttribute("disabled", "disabled");
+    }
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas2 == "disabled") {
+      document.getElementById("americas").setAttribute("disabled", "disabled");
+    }
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania2 == "disabled") {
+      document.getElementById("oceania").setAttribute("disabled", "disabled");
+    }
+    if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world2 == "disabled") {
+      document.getElementById("world").setAttribute("disabled", "disabled");
+    }
 }
 
 //generateRandum numbers for question
