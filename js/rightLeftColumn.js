@@ -7,6 +7,7 @@ let loadFunction = () => {
   console.log("number " + currentUser.data[currentUser.data.length-1].currentUserNumber);
   document.getElementById('name').innerHTML = currentUser.data[currentUser.data.length-1].currentUserName;
   checkDisabledInLoad();
+  checkTitleOnLoad();
 }
 
 $(document).ready(function(){
@@ -17,6 +18,7 @@ $('.bxslider').bxSlider({
   slideWidth: 600,
   speed: 800,
   randomStart: true,
-  responsive: true
+  responsive: true,
+  controls: false
 });
 });

@@ -29,8 +29,7 @@
       africa2: "",
       americas2: "",
       oceania2: "",
-      world2: "",
-      page: ""
+      world2: ""
    });
    currentUser.insert({
       currentUserName: "user",
@@ -112,8 +111,7 @@
       africa2: "",
       americas2: "",
       oceania2: "",
-      world2: "",
-      page: ""
+      world2: ""
     });
   db.saveDatabase();
   })
@@ -189,7 +187,7 @@ let addDisabledCapital1 = (continent) => {
    })
   }
 
- let printUsers = () => {
+  let printUsers = () => {
    for (var i = 0; i < info.data.length; i++) {
      console.log(info.data[i].Name);
      console.log(info.data[i].Password);

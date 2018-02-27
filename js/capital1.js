@@ -115,7 +115,7 @@ let setDisabledThisGame = () => {
 }
 
 let checkDisabledInLoad = () => {
-    console.log("len " + info.data.length);
+    console.log("length " + info.data.length);
     if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 == "disabled") {
       document.getElementById("asia").setAttribute("disabled", "disabled");
     }
@@ -136,6 +136,16 @@ let checkDisabledInLoad = () => {
     }
   }
 
+let checkTitleOnLoad = () => {
+  if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 == "disabled") {
+    alert("ok");
+  }
+}
 
 //generateRandum numbers for question
 let setRandomNumbers = (continent) => {
