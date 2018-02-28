@@ -283,6 +283,20 @@ button:disabled:hover {
   cursor: not-allowed;
   background: #dddddd; }
 
+#nextLevel {
+  background-color: #48B484;
+  border: none;
+  border-radius: 5px;
+  width: 75%;
+  outline: 0;
+  height: 50px;
+  font-weight: bold;
+  margin: 5%;
+  font-size: 1.5em; }
+
+#nextLevel:hover {
+  background-color: #42a67a; }
+
 /********* Responsive media queries ************/
 @media (min-width: 768px) and (max-width: 980px) {
   #pointText {

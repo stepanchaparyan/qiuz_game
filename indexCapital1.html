@@ -60,7 +60,7 @@
               <div class="card-body" >
                 <h4 class="card-title">Capitals</h4>
                 <p class="card-text">Go to second level</p>
-                <button class="button-start" onclick="window.location='indexCapital2.html';">Start</button>
+                <button id="leftCard" class="button-start" disabled="disabled" onclick="window.location='indexCapital2.html';">Start</button>
               </div>
             </div>
 
@@ -152,6 +152,10 @@
               <button class="button-start" id="world" onclick="start('World')">Start</button>
             </div>
           </div>
+        </div>
+
+        <div class="levelResult hide-display" id="levelResult">
+          <button id="nextLevel" onclick="window.location='indexCapital2.html';">Play next level</button>
         </div>
 
       </div>
