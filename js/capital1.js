@@ -143,9 +143,9 @@ let checkTitleOnLoad = () => {
       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 == "disabled" &&
       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 == "disabled" &&
       info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 == "disabled") {
-    //document.getElementById("capital2").setAttribute("disabled", "false");
     document.getElementById("levelResult").removeAttribute("class");
     document.getElementById("leftCard").removeAttribute("disabled");
+    document.getElementById("knightTitle").innerHTML = "Baron";
   }
 }
 

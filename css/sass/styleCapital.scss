@@ -3,7 +3,7 @@ $backgroundGreen: #48B484;
 $navbarHoverGreen: #42a67a;
 $footerLightBlack: #262626;
 $centerBackgroundLightGrey: #FAF8F2;
-$cardContinentElectricBlue: #2935e2;
+$cardContinentElectricBlue: #0d618a;
 $cardButtonStartGold: #be9e21;
 $cardButtonStartHoverGold: #ab8e1d;
 $ButtonNextActiveBlue: #79b9e1;
@@ -40,20 +40,8 @@ nav {
   height: 6vh;
 }
 
-li#point {
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  display: block;
-}
-
 .navbar {
   background-color: transparent;
-}
-
-.navbar-nav>li>a {
-  color: white !important;
 }
 
 .navbar-brand {
@@ -61,7 +49,11 @@ li#point {
   padding-bottom: 7% !important;
 }
 
-.navbar-brand:hover, .navbar-nav>li>a:hover {
+.navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-brand:hover, #signout:hover, .navbar-nav>li>a:hover {
   background-color: $navbarHoverGreen;
 }
 
@@ -75,6 +67,24 @@ li#point {
   height: 30px;
   border-radius: 50%;
   margin: 10px 10px 10px 10px;
+}
+
+#signout {
+  margin-left: 18px;
+  color: white;
+  text-decoration: none;
+  color: white !important;
+}
+
+#username {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+#logo {
+  cursor: pointer;
 }
 
 /****** Footer *******/
@@ -134,7 +144,7 @@ footer {
 .center-part-title {
   font-size: 25px;
   font-weight: bold;
-  color: purple;
+  color: #0d618a;
   @extend .card-center;
 }
 
@@ -331,10 +341,6 @@ p {
   padding: 7px;
 }
 
-#logo {
-  cursor: pointer;
-}
-
 .greenBorder {
   border-color: $backgroundGreen !important;
 }
@@ -366,6 +372,7 @@ button:disabled:hover {
 #nextLevel:hover {
   background-color: $navbarHoverGreen;
 }
+
 /********* Responsive media queries ************/
 
 @media (min-width: 768px) and (max-width: 980px) {

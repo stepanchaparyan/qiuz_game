@@ -208,6 +208,31 @@ let checkDisabledInLoad = () => {
     }
 }
 
+let checkTitleOnLoad = () => {
+  if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 == "disabled") {
+    document.getElementById("leftCard").removeAttribute("disabled");
+    document.getElementById("knightTitle").innerHTML = "Baron";
+  }
+  if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia2 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe2 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa2 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas2 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania2 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world2 == "disabled") {
+    //document.getElementById("levelResult").removeAttribute("class");
+    //document.getElementById("leftCard").removeAttribute("disabled");
+    document.getElementById("knightTitle").innerHTML = "Graf";
+    document.getElementById("levelResult").removeAttribute("class");
+    document.getElementById("nextLevel").innerHTML = "Thank you";
+  }
+
+}
+
 //generateRandum numbers for question
 let setRandomNumbers = (continent) => {
   if(continent == "Asia") {

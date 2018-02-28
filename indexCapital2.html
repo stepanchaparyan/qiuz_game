@@ -39,9 +39,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Your title</a></li>
+            <li><a>  <span id="username">  </span></a></li>
             <img id="user_picture" src="img/stepan.jpg" alt="Avatar" class="avatar">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
+            <li><a><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -58,7 +58,7 @@
             <div class="card-body">
               <h4 class="card-title">Capitals</h4>
               <p class="card-text">Go to first level</p>
-              <button class="button-start" onclick="window.location='indexCapital1.html';">Start</button>
+              <button id="leftCard" class="button-start" onclick="window.location='indexCapital1.html';">Start</button>
             </div>
           </div>
 
@@ -82,7 +82,7 @@
       <div id="main">
       <div id="mainCards">
 
-        <div class="center-part-title col-lg-12 col-md-12 hidden-sm hidden-xs" id="center-part-title">You can choose the continent and get more points</div>
+        <div class="center-part-title col-lg-12 col-md-12 hidden-sm hidden-xs" id="center-part-title">Choose the continent and get more points</div>
 
         <div class="card-center col-lg-4 col-md-4 col-sm-6 col-xs-6" id="start-page-asia">
           <div class="card-style" style="border-color:green; background-color:#a0e2a0">
@@ -156,6 +156,10 @@
           </div>
         </div>
 
+        <div class="levelResult hide-display" id="levelResult">
+          <button id="nextLevel" onclick="window.location='indexCapital2.html';">Play next level</button>
+        </div>
+
 	     </div>
 
         <div id="quizResults" class="hide-display">
@@ -196,12 +200,15 @@
       </div>
 
     </div>
-      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 right-part">
-        <div id="pointText">Points</div>
-        <div id="point"></div>
-        <div id="name"></div>
-        <button id="restart" onclick="tryAgain()">Restart the game</button>
-      </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 right-part">
+      <div id="pointText">Points</div>
+      <div id="point"></div>
+    <div id="titlePart">
+      <div id="myTitleIs">My title is </div>
+      <div id="knightTitle">Knight</div>
+    </div>
+      <button id="restart" onclick="tryAgain()">Restart the game</button>
+    </div>
 
     </div>
 

@@ -18,24 +18,17 @@ nav {
   position: relative;
   height: 6vh; }
 
-li#point {
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  display: block; }
-
 .navbar {
   background-color: transparent; }
-
-.navbar-nav > li > a {
-  color: white !important; }
 
 .navbar-brand {
   color: white !important;
   padding-bottom: 7% !important; }
 
-.navbar-brand:hover, .navbar-nav > li > a:hover {
+.navbar-nav > li > a {
+  color: white; }
+
+.navbar-brand:hover, #signout:hover, .navbar-nav > li > a:hover {
   background-color: #42a67a; }
 
 .navbar-header {
@@ -47,6 +40,21 @@ li#point {
   height: 30px;
   border-radius: 50%;
   margin: 10px 10px 10px 10px; }
+
+#signout {
+  margin-left: 18px;
+  color: white;
+  text-decoration: none;
+  color: white !important; }
+
+#username {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  color: white; }
+
+#logo {
+  cursor: pointer; }
 
 /****** Footer *******/
 footer {
@@ -98,7 +106,7 @@ footer {
 .center-part-title {
   font-size: 25px;
   font-weight: bold;
-  color: purple; }
+  color: #0d618a; }
 
 .card-center, .center-part-title {
   margin-top: 2%;
@@ -119,7 +127,7 @@ footer {
 .card-continent {
   font-weight: bold;
   font-size: 22px;
-  color: #2935e2; }
+  color: #0d618a; }
 
 .card-title {
   margin-bottom: 0;
@@ -266,9 +274,6 @@ p {
   font-weight: bold;
   margin: 1%;
   padding: 7px; }
-
-#logo {
-  cursor: pointer; }
 
 .greenBorder {
   border-color: #48B484 !important; }

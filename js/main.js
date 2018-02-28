@@ -1,3 +1,19 @@
+let loadFunctionMain = () => {
+  checkTitleOnLoad();
+}
+
+let checkTitleOnLoad = () => {
+  if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].europe1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].africa1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].americas1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].oceania1 == "disabled" &&
+      info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].world1 == "disabled") {
+    document.getElementById("capital2").removeAttribute("disabled");
+
+  }
+}
+
 (function ($) {
 
     // Init Wow

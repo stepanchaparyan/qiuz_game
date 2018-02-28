@@ -18,13 +18,6 @@ nav {
   position: relative;
   height: 6vh; }
 
-li#point {
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  display: block; }
-
 .navbar {
   background-color: transparent; }
 
@@ -47,6 +40,21 @@ li#point {
   height: 30px;
   border-radius: 50%;
   margin: 10px 10px 10px 10px; }
+
+#signout {
+  margin-left: 18px;
+  color: white;
+  text-decoration: none;
+  color: white !important; }
+
+#username {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  color: white; }
+
+#logo {
+  cursor: pointer; }
 
 /****** Footer *******/
 footer {
@@ -98,7 +106,7 @@ footer {
 .center-part-title {
   font-size: 25px;
   font-weight: bold;
-  color: purple; }
+  color: #0d618a; }
 
 .card-center, .center-part-title {
   margin-top: 2%;
@@ -119,7 +127,7 @@ footer {
 .card-continent {
   font-weight: bold;
   font-size: 22px;
-  color: #2935e2; }
+  color: #0d618a; }
 
 .card-title {
   margin-bottom: 0;
@@ -267,9 +275,6 @@ p {
   margin: 1%;
   padding: 7px; }
 
-#logo {
-  cursor: pointer; }
-
 .greenBorder {
   border-color: #48B484 !important; }
 
@@ -282,6 +287,20 @@ button:disabled {
 button:disabled:hover {
   cursor: not-allowed;
   background: #dddddd; }
+
+#nextLevel {
+  background-color: #48B484;
+  border: none;
+  border-radius: 5px;
+  width: 75%;
+  outline: 0;
+  height: 50px;
+  font-weight: bold;
+  margin: 5%;
+  font-size: 1.5em; }
+
+#nextLevel:hover {
+  background-color: #42a67a; }
 
 /********* Responsive media queries ************/
 @media (min-width: 768px) and (max-width: 980px) {
