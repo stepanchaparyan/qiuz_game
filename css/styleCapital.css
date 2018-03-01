@@ -16,7 +16,7 @@ nav {
   font-weight: bold;
   font-size: 17px;
   position: relative;
-  height: 6vh; }
+  height: 5vh; }
 
 .navbar {
   background-color: transparent; }
@@ -91,7 +91,7 @@ footer {
   text-align: center;
   position: relative;
   width: 84%;
-  height: 88vh;
+  height: 87.4vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
@@ -301,6 +301,21 @@ button:disabled:hover {
 
 #nextLevel:hover {
   background-color: #42a67a; }
+
+/*********capital2***************/
+#answer1, #answer2, #answer3, #answer4 {
+  background-color: #cee1e2;
+  border: #b5d2d3 solid 2px;
+  border-radius: 5px;
+  width: 45%;
+  outline: 0;
+  height: 50px;
+  font-weight: bold;
+  margin: 1%; }
+
+#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover {
+  background-color: #b5d2d3;
+  border: #b5d2d3 solid 2px; }
 
 /********* Responsive media queries ************/
 @media (min-width: 768px) and (max-width: 980px) {
