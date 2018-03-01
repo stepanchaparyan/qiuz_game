@@ -230,7 +230,6 @@ let checkTitleOnLoad = () => {
     document.getElementById("levelResult").removeAttribute("class");
     document.getElementById("nextLevel").innerHTML = "Thank you";
   }
-
 }
 
 //generateRandum numbers for question
