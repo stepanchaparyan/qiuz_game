@@ -1,5 +1,3 @@
-"use strict"
-
 // variables for question number and score
 let questionNumber = 0;
 let score = 0;

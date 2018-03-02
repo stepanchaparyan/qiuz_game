@@ -95,6 +95,21 @@ body {
     background-color: transparent;
 }
 
+#user_picture {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 10px;
+}
+
+#username {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
 .banner-info {
     padding-top: 17%;
     color: white;

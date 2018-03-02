@@ -4,13 +4,14 @@
 #point {
   font-size: 32px;
   font-weight: bold;
-  color: orangered; }
+  color: orangered;
+  margin: 10px; }
 
 #pointText {
   margin-top: 15px;
   font-weight: bold;
   color: #0d618a;
-  font-size: 1.5em; }
+  font-size: 26px; }
 
 #titlePart {
   background-color: #eff4f9; }
@@ -28,16 +29,19 @@
   padding-top: 2em; }
 
 #restart {
-  border-radius: 10px;
-  background-color: lightblue;
   border: none;
-  color: black;
-  font-size: 16px;
-  padding: 5px;
-  width: 85%;
+  color: #0d618a;
+  background-color: #f5f0e4;
+  font-size: 20px;
+  width: 80%;
   cursor: pointer;
   font-weight: bold;
   margin: 15px 0 15px 0; }
+
+#restart:hover {
+  color: white;
+  background-color: #0d618a;
+  border-radius: 5px; }
 
 /***left-part***/
 .left-part {
@@ -45,7 +49,16 @@
   height: 100%; }
 
 .info {
-  margin: 20px 0 10px 0; }
+  margin: 20px 0 10px 0;
+  font-size: 22px;
+  color: #0d618a;
+  font-weight: bold;
+  cursor: pointer; }
+
+.info:hover {
+  background-color: #0d618a;
+  color: white;
+  border-radius: 10px; }
 
 /***right-part***/
 .right-part {
