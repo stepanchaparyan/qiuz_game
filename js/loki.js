@@ -32,7 +32,7 @@
       world2: ""
    });
    currentUser.insert({
-      currentUserName: "user",
+      currentUserName: "User",
       currentUserNumber: 0
    });
    db.saveDatabase();

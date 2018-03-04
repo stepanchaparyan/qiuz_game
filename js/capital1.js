@@ -71,25 +71,7 @@ let result = () => {
 let finalResult = () => {
   let text;
   if (questionNumber == 20) {
-    switch(true) {
-      case (score == 20):
-        text = "You win the game with " + score + " points";
-        break;
-      case (score < 20 && score > 16):
-        text = "You win the game with " + score + " points";
-        break;
-      case (score < 17 && score > 13):
-        text = "You win the game with " + score + " points";
-        break;
-      case (score < 14 && score > 10):
-        text = "You win the game with " + score + " points";
-        break;
-      case (score < 11 && score > 7):
-          text = "You win the game with " + score + " points";
-          break;
-      default:
-      text = "You lost the game and got only " + score + " points";
-}
+    text = "Thanks you, you got " + score + " points";
   document.getElementById("final-score").innerHTML = text;
   document.getElementById('main').classList.add("hide-display");
   document.getElementById('feedback-page').removeAttribute("class");
@@ -113,7 +95,6 @@ let setDisabledThisGame = () => {
 }
 
 let checkDisabledInLoad = () => {
-    console.log("length " + info.data.length);
     if (info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].asia1 == "disabled") {
       document.getElementById("asia").setAttribute("disabled", "disabled");
     }
@@ -199,8 +180,6 @@ let chooseContinent = () => {
     start("World");
   }
 }
-
-// evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27
 
 let start = (continent) => {
   setRandomNumbers(continent);

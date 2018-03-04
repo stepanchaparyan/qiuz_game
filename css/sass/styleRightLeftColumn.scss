@@ -1,7 +1,10 @@
 $leftPartBackgroundLightGrey: #f5f0e4;
 
-.bx-wrapper {
-  margin-top: 20px !important;
+/***right-part***/
+.right-part {
+  background-color: $leftPartBackgroundLightGrey;
+  height: 100%;
+  padding: 10px 1px 10px 1px;
 }
 
 #point {
@@ -20,6 +23,8 @@ $leftPartBackgroundLightGrey: #f5f0e4;
 
 #titlePart {
   background-color: #eff4f9;
+  border-radius: 5px;
+
 }
 
 #knightTitle {
@@ -42,6 +47,30 @@ $leftPartBackgroundLightGrey: #f5f0e4;
   padding-top: 2em;
 }
 
+#showAllTitles {
+  background-color: #c0b89b;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+#titles {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20%;
+  padding-top: 10px;
+}
+
+#listOfTitles {
+  background-color: #6f625c;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
+}
+
 #restart {
   border: none;
   color: #0d618a;
@@ -52,6 +81,7 @@ $leftPartBackgroundLightGrey: #f5f0e4;
 	font-weight: bold;
   margin: 15px 0 15px 0;
 }
+
 #restart:hover {
   color: white;
   background-color: #0d618a;
@@ -65,7 +95,7 @@ $leftPartBackgroundLightGrey: #f5f0e4;
 }
 
 .info {
-  margin: 20px 0 10px 0;
+  margin: 20px 0 20px 0;
   font-size: 22px;
   color: #0d618a;
   font-weight: bold;
@@ -78,9 +108,6 @@ $leftPartBackgroundLightGrey: #f5f0e4;
   border-radius: 10px;
 }
 
-/***right-part***/
-.right-part {
-  background-color: $leftPartBackgroundLightGrey;
-  height: 100%;
-  padding: 10px 1px 10px 1px;
+.bx-wrapper {
+  margin-top: 20px !important;
 }

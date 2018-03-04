@@ -1,11 +1,8 @@
-develop
-
-
 game levels
 1. questions with two answers
 2. question with 4 answers
 4. questions with unlimited answers
-5. question - you must write the correct word 
+5. question - you must write the correct word
 
 
 strategy levels
@@ -24,8 +21,8 @@ topics
 Technical side
 1. app in Javascript
 2. app in AngularJS
-3. app in Angular2 
-4. app in Ionic 
+3. app in Angular2
+4. app in Ionic
 
 
 1. app who allaw you to create your personal questions and answers by filling them in base
@@ -39,9 +36,6 @@ https://www.youtube.com/watch?v=u6dRHXqinYY
 5. there we see info about difficult steps
 
 comments
-when we press button (write or wrong) border of button will become green or red, and no need extra div for typing <Correct> .... 
-Also after pressing wrong button, wrong button border will become red, and right button will become green
-
 after game when we see result, we can see map where countries with right answers will be green, and wrong answers red
 
 for high levels we can provide game with time
@@ -51,6 +45,8 @@ only capitals in map without any word and need to guess the capitals
 
 quiz with city - we have image of city and question - what is the city
 
-!!! start question 
+!!! start question
 1. new game ? (one simple game with 10 question) (sign in is not important)
 2. challange with many levels (sign in - important)
+
+// evropa 47  // asia 49  // africa 59  // americas 56 (28)  // oceania 27

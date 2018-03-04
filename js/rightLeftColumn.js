@@ -22,3 +22,11 @@ $('.bxslider').bxSlider({
   controls: false
 });
 });
+
+let showAllTitles = () => {
+  document.getElementById('showAllTitles').classList.remove("hide-display");
+}
+
+let hideAllTitles = () => {
+  document.getElementById('showAllTitles').classList.add("hide-display");
+}
