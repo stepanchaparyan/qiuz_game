@@ -27,6 +27,12 @@ $leftPartBackgroundLightGrey: #f5f0e4;
   font-weight: bold;
   font-size: 24px;
   padding-bottom: 1em;
+  cursor: pointer;
+}
+
+#knightTitle:hover {
+  color: black;
+  border-radius: 5px;
 }
 
 #myTitleIs {

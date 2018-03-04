@@ -20,7 +20,12 @@
   color: #0d618a;
   font-weight: bold;
   font-size: 24px;
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  cursor: pointer; }
+
+#knightTitle:hover {
+  color: black;
+  border-radius: 5px; }
 
 #myTitleIs {
   color: #1072a1;

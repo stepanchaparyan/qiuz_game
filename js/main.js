@@ -1,4 +1,5 @@
 let loadFunctionMain = () => {
+  document.getElementById('username').innerHTML = currentUser.data[currentUser.data.length-1].currentUserName;
   checkTitleOnLoad();
 }
 
