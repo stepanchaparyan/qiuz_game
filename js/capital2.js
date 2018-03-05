@@ -149,6 +149,9 @@ let finalResult = () => {
   document.getElementById("final-score").innerHTML = text;
   document.getElementById('main').classList.add("hide-display");
   document.getElementById('feedback-page').removeAttribute("class");
+  addPoints();
+  document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
+  setDisabledThisGame();
   }
 }
 

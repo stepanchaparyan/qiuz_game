@@ -44,7 +44,6 @@
    info = db.getCollection('Info');
    info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints += score;
    db.saveDatabase();
-   console.log("points " + info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints);
    });
  }
 
@@ -83,9 +82,6 @@
  }
 
  let nextGame = () => {
-   addPoints();
-   document.getElementById('point').innerHTML = info.data[currentUser.data[currentUser.data.length-1].currentUserNumber].CapitalPoints;
-   setDisabledThisGame();
    document.location.reload();
  }
 
