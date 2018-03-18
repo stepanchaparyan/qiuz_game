@@ -3,17 +3,17 @@ function login() {
     let signupPage = document.getElementById("signupPage");
     let titleText = document.getElementById("titleText");
 
-    if (signupPage.classList.contains("hide-display") == false) signupPage.setAttribute("class", "hide-display");
+    if (signupPage.classList.contains("hideDisplay") == false) signupPage.setAttribute("class", "hideDisplay");
 
-    if (loginPage.classList.contains("hide-display")) {
+    if (loginPage.classList.contains("hideDisplay")) {
       loginPage.removeAttribute("class");
       titleText.setAttribute("class", "banner-info text-center wow fadeIn delay-05s col-md-9 col-sm-6 col-xs-4");
       if (window.innerWidth < 767) {
-        document.getElementById("login-box").setAttribute("style", "left: 50%");
+        document.getElementById("loginBox").setAttribute("style", "left: 50%");
         titleText.setAttribute("style", "display: none");
       }
     } else {
-      loginPage.setAttribute("class", "hide-display");
+      loginPage.setAttribute("class", "hideDisplay");
       titleText.setAttribute("class", "banner-info text-center wow fadeIn delay-05s");
       titleText.setAttribute("style", "display: block");
     }

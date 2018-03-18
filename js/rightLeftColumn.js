@@ -24,9 +24,9 @@ $('.bxslider').bxSlider({
 });
 
 let showAllTitles = () => {
-  document.getElementById('showAllTitles').classList.remove("hide-display");
+  document.getElementById('showAllTitles').classList.remove("hideDisplay");
 }
 
 let hideAllTitles = () => {
-  document.getElementById('showAllTitles').classList.add("hide-display");
+  document.getElementById('showAllTitles').classList.add("hideDisplay");
 }

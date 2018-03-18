@@ -9,7 +9,7 @@ body {
   padding: 60px 0px;
   background-color: #f9f9fb; }
 
-.hide-display {
+.hideDisplay {
   display: none; }
 
 /************* HEADER ****************/
@@ -181,20 +181,20 @@ body {
 #games {
   background-color: #f5f6f9; }
 
-.game-title {
+.gameTitle {
   font-size: 40px;
   font-weight: bold;
   color: #659781;
   text-align: center; }
 
-.game-text {
+.gameText {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #be9e21;
   text-align: center; }
 
-.card-style {
+.cardStyle {
   font-size: 14px;
   text-align: center;
   color: black;
@@ -203,7 +203,7 @@ body {
   padding: 1px;
   margin: 10px; }
 
-.button-style {
+.buttonStyle {
   display: inline-block;
   border-radius: 16px;
   background-color: #be9e21;
@@ -217,7 +217,7 @@ body {
   margin: 5px;
   font-weight: bold; }
 
-.button-style:hover {
+.buttonStyle:hover {
   background-color: #ab8e1d; }
 
 button:disabled {
