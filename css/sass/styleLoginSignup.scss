@@ -10,7 +10,7 @@ $midBlue: #1c8adb;
   font-family: sans-serif;
 }
 
-.login-box {
+.loginBox {
   width: 320px;
   height: 60%;
   background: $transparent;
@@ -25,7 +25,7 @@ $midBlue: #1c8adb;
   border-radius: 5px;
 }
 
-.signup-box {
+.signupBox {
   width: 320px;
   height: 76%;
   background: $transparent;
@@ -55,18 +55,18 @@ $midBlue: #1c8adb;
   font-size: 22px;
 }
 
-.login-box p, .signup-box p {
+.loginBox p, .signupBox p {
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
 
-.login-box input, .signup-box input {
+.loginBox input, .signupBox input {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.login-box input[type="text"], input[type="password"], .signup-box input[type="text"], input[type="password"] {
+.loginBox input[type="text"], input[type="password"], .signupBox input[type="text"], input[type="password"] {
   border: none;
   border-bottom: 1px solid white;
   background: transparent;
@@ -106,12 +106,12 @@ $midBlue: #1c8adb;
     background: $lightGrey;
 }
 
-.login-box a, .signup-box a {
+.loginBox a, .signupBox a {
   text-decoration: none;
   font-size: 14px;
   color: white;
 }
 
-.login-box a:hover, .signup-box a:hover {
+.loginBox a:hover, .signupBox a:hover {
   color: lightblue;
 }

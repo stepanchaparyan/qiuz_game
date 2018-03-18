@@ -12,17 +12,17 @@ let signup = () => {
     let loginPage = document.getElementById("loginPage");
     let titleText = document.getElementById("titleText");
 
-    if (loginPage.classList.contains("hide-display") == false) loginPage.setAttribute("class", "hide-display");
+    if (loginPage.classList.contains("hideDisplay") == false) loginPage.setAttribute("class", "hideDisplay");
 
-    if (signupPage.classList.contains("hide-display")) {
+    if (signupPage.classList.contains("hideDisplay")) {
       signupPage.removeAttribute("class");
       titleText.setAttribute("class", "banner-info text-center wow fadeIn delay-05s col-md-9 col-sm-6 col-xs-4");
       if (window.innerWidth < 767) {
-        document.getElementById("signup-box").setAttribute("style", "left: 50%");
+        document.getElementById("signupBox").setAttribute("style", "left: 50%");
         titleText.setAttribute("style", "display: none");
       }
     } else {
-      signupPage.setAttribute("class", "hide-display");
+      signupPage.setAttribute("class", "hideDisplay");
       titleText.setAttribute("class", "banner-info text-center wow fadeIn delay-05s");
       titleText.setAttribute("style", "display: block");
     }
