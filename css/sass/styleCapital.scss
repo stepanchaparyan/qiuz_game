@@ -37,7 +37,6 @@ nav {
   font-weight: bold;
   font-size: 17px;
   position: relative;
-  height: 5vh;
 }
 
 .navbar {
@@ -51,6 +50,7 @@ nav {
 
 .navbar-nav>li>a {
   color: white;
+  cursor: pointer;
 }
 
 .navbar-brand:hover, #signout:hover, .navbar-nav>li>a:hover {
@@ -97,7 +97,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 84%;
-  height: 6vh;
+  height: 5.5vh;
   margin-left: 8%;
   margin-right: 8%;
 }
@@ -127,7 +127,7 @@ footer {
   text-align: center;
   position: relative;
   width: 84%;
-  height: 88.6vh;
+  height: 89.7vh;
   margin-left: 8%;
   margin-right: 8%;
   background-color: white;
@@ -218,11 +218,29 @@ p {
   padding: 2%;
 }
 
-#quizImage {
-  width: 40%;
-  margin-top: 2%;
-  margin-right: auto;
-  margin-left: auto;
+#questionImage {
+  width: 25%;
+  height: 140px;
+  margin: 30px;
+}
+
+hr {
+  border-color: #a6a6a6;
+  width: 80%;
+}
+
+#titleTextFlag1 {
+  background-color: $rightWrongLightGreenBlue;
+  font-size: 2em;
+  font-weight: bold;
+  color: #0d618a;
+  padding: 0.5em;
+  border-radius: 0 0 20px 20px;
+  margin: 0 5% 0 5%;
+}
+
+#roundNumber {
+  color: #083b54;
 }
 
 #feedbackImage {

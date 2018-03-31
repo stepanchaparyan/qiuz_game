@@ -7,6 +7,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/ai.svg",
 },
 {
   "name": "Antigua and Barbuda",
@@ -15,6 +16,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/ag.svg",
 },
 {
   "name": "Argentina",
@@ -23,6 +25,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "South America",
   "language": ["Spanish"],
   "borders": ["BOL", "BRA", "CHL", "PRY", "URY"],
+  "flag": "flags/ar.svg",
 },
 {
   "name": "Aruba",
@@ -31,14 +34,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["Dutch", "Papiamento"],
   "borders": [],
-},
-{
-  "name": "Ascension Island",
-  "capital": "Georgetown",
-  "region": "Americas",
-  "subregion": "South America",
-  "language": ["English"],
-  "borders": [],
+  "flag": "flags/aw.svg",
 },
 {
   "name": "Bahamas",
@@ -47,6 +43,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/bs.svg",
 },
 {
   "name": "Barbados",
@@ -55,6 +52,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/bb.svg",
 },
 {
   "name": "Belize",
@@ -63,6 +61,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Central America",
   "language": ["English"],
   "borders": ["GTM", "MEX"],
+  "flag": "flags/bz.svg",
 },
 {
   "name": "Bermuda",
@@ -71,6 +70,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Northern America",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/bm.svg",
 },
 {
   "name": "Bolivia",
@@ -79,14 +79,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "South America",
   "language": ["Spanish", "Quechua", "Aymara", "Guaran\u00ed"],
   "borders": ["ARG", "BRA", "CHL", "PRY", "PRU"],
-},
-{
-  "name": "Bonaire",
-  "capital": "Kralendijk",
-  "region": "Americas",
-  "subregion": "Caribbean",
-  "language": ["Dutch"],
-  "borders": [],
+  "flag": "flags/bo.svg",
 },
 {
   "name": "Brazil",
@@ -95,6 +88,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "South America",
   "language": ["Portuguese"],
   "borders": ["ARG", "BOL", "COL", "GUF", "GUY", "PRY", "PER", "SUR", "URY", "VEN"],
+  "flag": "flags/br.svg",
 },
 {
 	"name": "British Virgin Islands",
@@ -103,6 +97,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/vg.svg",
 },
 {
   "name": "Canada",
@@ -111,6 +106,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Northern America",
 	"language": ["English", "French"],
 	"borders": ["USA"],
+  "flag": "flags/ca.svg",
 },
 {
 	"name": "Cayman Islands",
@@ -119,6 +115,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/ky.svg",
 },
 {
 	"name": "Chile",
@@ -127,6 +124,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "South America",
   "language": ["Spanish"],
   "borders": ["ARG", "BOL", "PER"],
+  "flag": "flags/cl.svg",
 },
 {
 	"name": "Colombia",
@@ -135,6 +133,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish"],
 	"borders": ["BRA", "ECU", "PAN", "PER", "VEN"],
+  "flag": "flags/co.svg",
 },
 {
 	"name": "Costa Rica",
@@ -143,6 +142,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Central America",
 	"language": ["Spanish"],
 	"borders": ["NIC", "PAN"],
+  "flag": "flags/cr.svg",
 },
 {
 	"name": "Cuba",
@@ -151,14 +151,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["Spanish"],
   "borders": [],
-},
-{
-	"name": "Cura\u00e7ao",
-	"capital": "Willemstad",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["Dutch", "Papiamentu", "English"],
-	"borders": [],
+  "flag": "flags/cu.svg",
 },
 {
 	"name": "Dominica",
@@ -167,6 +160,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/dm.svg",
 },
 {
 	"name": "Dominican Republic",
@@ -175,6 +169,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["Spanish"],
   "borders": ["HTI"],
+  "flag": "flags/do.svg",
 },
 {
 	"name": "Ecuador",
@@ -183,6 +178,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish"],
 	"borders": ["COL", "PER"],
+  "flag": "flags/ec.svg",
 },
 {
 	"name": "El Salvador",
@@ -191,6 +187,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Central America",
   "language": ["Castilian"],
   "borders": ["GTM", "HND"],
+  "flag": "flags/sv.svg",
 },
 {
 	"name": "Falkland Islands",
@@ -199,14 +196,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["English"],
 	"borders": [],
-},
-{
-  "name": "French Guiana",
-  "capital": "Cayenne",
-  "region": "Americas",
-  "subregion": "South America",
-  "language": ["French"],
-	"borders": ["BRA", "SUR"],
+  "flag": "flags/fk.svg",
 },
 {
 	"name": "Grenada",
@@ -215,14 +205,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
-},
-{
-	"name": "Guadeloupe",
-  "capital": "Basse-Terre",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["French"],
-	"borders": [],
+  "flag": "flags/gd.svg",
 },
 {
 	"name": "Guatemala",
@@ -231,6 +214,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Central America",
 	"language": ["Spanish"],
 	"borders": ["BLZ", "SLV", "HND", "MEX"],
+  "flag": "flags/gt.svg",
 },
 {
 	"name": "Guyana",
@@ -239,6 +223,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "South America",
   "language": ["English"],
   "borders": ["BRA", "SUR", "VEN"],
+  "flag": "flags/gy.svg",
 },
 {
   "name": "Haiti",
@@ -247,6 +232,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["French", "Haitian Creole"],
 	"borders": ["DOM"],
+  "flag": "flags/ht.svg",
 },
 {
 	"name": "Honduras",
@@ -255,6 +241,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Central America",
 	"language": ["Spanish"],
 	"borders": ["GTM", "SLV", "NIC"],
+  "flag": "flags/hn.svg",
 },
 {
 	"name": "Jamaica",
@@ -263,14 +250,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["Jamaican English"],
 	"borders": [],
-},
-{
-	"name": "Martinique",
-	"capital": "Fort-de-France",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["French"],
-	"borders": [],
+  "flag": "flags/jm.svg",
 },
 {
 	"name": "Mexico",
@@ -279,14 +259,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Central America",
 	"language": ["Spanish"],
 	"borders": ["BLZ", "GTM", "USA"],
-},
-{
-	"name": "Montserrat",
-	"capital": "Plymouth",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["English"],
-	"borders": [],
+  "flag": "flags/mx.svg",
 },
 {
 	"name": "Nicaragua",
@@ -295,6 +268,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Central America",
 	"language": ["Spanish"],
 	"borders": ["CRI", "HND"],
+  "flag": "flags/ni.svg",
 },
 {
 	"name": "Panama",
@@ -303,6 +277,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Central America",
   "language": ["Spanish"],
   "borders": ["COL", "CRI"],
+  "flag": "flags/pa.svg",
 },
 {
 	"name": "Paraguay",
@@ -311,6 +286,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish", "Guaran\u00ed"],
 	"borders": ["ARG", "BOL", "BRA"],
+  "flag": "flags/py.svg",
 },
 {
 	"name": "Peru",
@@ -319,6 +295,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish", "Quechua", "Aymara"],
 	"borders": ["BOL", "BRA", "CHL", "COL", "ECU"],
+  "flag": "flags/pe.svg",
 },
 {
 	"name": "Puerto Rico",
@@ -327,14 +304,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["Spanish", "English"],
 	"borders": [],
-},
-{
-	"name": "Saint Barth\u00e9lemy",
-	"capital": "Gustavia",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["French"],
-	"borders": [],
+  "flag": "flags/pr.svg",
 },
 {
 	"name": "Saint Kitts and Nevis",
@@ -343,6 +313,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/kn.svg",
 },
 {
 	"name": "Saint Lucia",
@@ -351,22 +322,7 @@ const COUNTRIES_AMERICAS = [
   "subregion": "Caribbean",
   "language": ["English"],
   "borders": [],
-},
-{
-	"name": "Saint Martin",
-	"capital": "Marigot",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["French"],
-	"borders": ["SXM", "NLD"],
-},
-{
-	"name": "Saint Pierre and Miquelon",
-	"capital": "Saint-Pierre",
-	"region": "Americas",
-	"subregion": "Northern America",
-	"language": ["French"],
-	"borders": [],
+  "flag": "flags/lc.svg",
 },
 {
 	"name": "Saint Vincent and the Grenadines",
@@ -375,6 +331,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/vc.svg",
 },
 {
 	"name": "Sint Maarten",
@@ -383,14 +340,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["Dutch", "English"],
 	"borders": ["MAF"],
-},
-{
-	"name": "South Georgia",
-	"capital": "King Edward Point",
-	"region": "Americas",
-	"subregion": "South America",
-	"language": ["English"],
-	"borders": [],
+  "flag": "flags/sx.svg",
 },
 {
 	"name": "Suriname",
@@ -399,6 +349,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Dutch"],
 	"borders": ["BRA", "GUF", "FRA", "GUY"],
+  "flag": "flags/sr.svg",
 },
 {
 	"name": "Trinidad and Tobago",
@@ -407,14 +358,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
-},
-{
-	"name": "Turks and Caicos Islands",
-	"capital": "Cockburn Town",
-	"region": "Americas",
-	"subregion": "Caribbean",
-	"language": ["English"],
-	"borders": [],
+  "flag": "flags/tt.svg",
 },
 {
 	"name": "United States",
@@ -423,6 +367,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Northern America",
 	"language": ["English"],
 	"borders": ["CAN", "MEX"],
+  "flag": "flags/us.svg",
 },
 {
 	"name": "United States Virgin Islands",
@@ -431,6 +376,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "Caribbean",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/vi.svg",
 },
 {
 	"name": "Uruguay",
@@ -439,6 +385,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish"],
 	"borders": ["ARG", "BRA"],
+  "flag": "flags/uy.svg",
 },
 {
 	"name": "Venezuela",
@@ -447,6 +394,7 @@ const COUNTRIES_AMERICAS = [
 	"subregion": "South America",
 	"language": ["Spanish"],
 	"borders": ["BRA", "COL", "GUY"],
+  "flag": "flags/ve.svg",
 }
 
 ]

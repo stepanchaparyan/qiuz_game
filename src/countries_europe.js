@@ -7,6 +7,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Southern Europe",
   "language": ["Albanian"],
   "borders": ["MNE", "GRC", "MKD", "KOS"],
+  "flag": "flags/al.svg",
 },
 {
   "name": "Andorra",
@@ -15,6 +16,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Southern Europe",
   "language": ["Catalan"],
   "borders": ["FRA", "ESP"],
+  "flag": "flags/ad.svg",
 },
 {
   "name": "Austria",
@@ -23,6 +25,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Western Europe",
   "language": ["German"],
   "borders": ["CZE", "DEU", "HUN", "ITA", "LIE", "SVK", "SVN", "CHE"],
+  "flag": "flags/at.svg",
 },
 {
   "name": "Belarus",
@@ -31,6 +34,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Eastern Europe",
   "language": ["Belarusian", "Russian"],
   "borders": ["LVA", "LTU", "POL", "RUS", "UKR"],
+  "flag": "flags/by.svg",
 },
 {
   "name": "Belgium",
@@ -39,6 +43,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Western Europe",
   "language": ["Dutch", "French", "German"],
   "borders": ["FRA", "DEU", "LUX", "NLD"],
+  "flag": "flags/be.svg",
 },
 {
   "name": "Bosnia and Herzegovina",
@@ -47,6 +52,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Southern Europe",
   "language": ["Bosnian", "Croatian", "Serbian"],
   "borders": ["HRV", "MNE", "SRB"],
+  "flag": "flags/ba.svg",
 },
 {
 	"name": "Bulgaria",
@@ -55,6 +61,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Bulgarian"],
 	"borders": ["GRC", "MKD", "ROU", "SRB", "TUR"],
+  "flag": "flags/bg.svg",
 },
 {
 	"name": "Croatia",
@@ -63,6 +70,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Croatian"],
 	"borders": ["BIH", "HUN", "MNE", "SRB", "SVN"],
+  "flag": "flags/hr.svg",
 },
 {
 	"name": "Cyprus",
@@ -71,6 +79,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Greek", "Turkish"],
 	"borders": ["GBR"],
+  "flag": "flags/cy.svg",
 },
 {
 	"name": "Czech Republic",
@@ -79,6 +88,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Eastern Europe",
   "language": ["Czech"],
   "borders": ["AUT", "DEU", "POL", "SVK"],
+  "flag": "flags/cz.svg",
 },
 {
 	"name": "Denmark",
@@ -87,6 +97,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Northern Europe",
 	"language": ["Danish"],
 	"borders": ["DEU"],
+  "flag": "flags/dk.svg",
 },
 {
 	"name": "Estonia",
@@ -95,6 +106,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Northern Europe",
   "language": ["Estonian"],
   "borders": ["LVA", "RUS"],
+  "flag": "flags/ee.svg",
 },
 {
 	"name": "Finland",
@@ -103,6 +115,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Northern Europe",
   "language": ["Finnish", "Swedish"],
   "borders": ["NOR", "SWE", "RUS"],
+  "flag": "flags/fi.svg",
 },
 {
 	"name": "France",
@@ -111,6 +124,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Western Europe",
 	"language": ["French"],
 	"borders": ["AND", "BEL", "DEU", "ITA", "LUX", "MCO", "ESP", "CHE"],
+  "flag": "flags/fr.svg",
 },
 {
 	"name": "Germany",
@@ -119,6 +133,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Western Europe",
 	"language": ["German"],
 	"borders": ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"],
+  "flag": "flags/de.svg",
 },
 {
 	"name": "Gibraltar",
@@ -127,6 +142,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Southern Europe",
   "language": ["English"],
   "borders": ["ESP"],
+  "flag": "flags/gi.svg",
 },
 {
 	"name": "Greece",
@@ -135,6 +151,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Greek"],
 	"borders": ["ALB", "BGR", "TUR", "MKD"],
+  "flag": "flags/gr.svg",
 },
 {
 	"name": "Vatican City",
@@ -143,6 +160,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Southern Europe",
   "language": ["Italian"],
 	"borders": ["ITA"],
+  "flag": "flags/va.svg",
 },
 {
 	"name": "Hungary",
@@ -151,6 +169,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Hungarian"],
 	"borders": ["AUT", "HRV", "ROU", "SRB", "SVK", "SVN", "UKR"],
+  "flag": "flags/hu.svg",
 },
 {
 	"name": "Iceland",
@@ -159,6 +178,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Northern Europe",
 	"language": ["Icelandic"],
 	"borders": [],
+  "flag": "flags/is.svg",
 },
 {
 	"name": "Ireland",
@@ -167,6 +187,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Northern Europe",
   "language": ["Irish", "English"],
   "borders": ["GBR"],
+  "flag": "flags/ie.svg",
 },
 {
 	"name": "Italy",
@@ -175,6 +196,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Italian"],
 	"borders": ["AUT", "FRA", "SMR", "SVN", "CHE", "VAT"],
+  "flag": "flags/it.svg",
 },
 {
   "name": "Latvia",
@@ -183,6 +205,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Northern Europe",
   "language": ["Latvian"],
   "borders": ["BLR", "EST", "LTU", "RUS"],
+  "flag": "flags/lv.svg",
 },
 {
 	"name": "Liechtenstein",
@@ -192,6 +215,7 @@ const COUNTRIES_EUROPE = [
 	"language": ["German"],
 	"languageCodes": ["de"],
 	"borders": ["AUT", "CHE"],
+  "flag": "flags/li.svg",
 },
 {
 	"name": "Lithuania",
@@ -201,6 +225,7 @@ const COUNTRIES_EUROPE = [
 	"language": ["Lithuanian"],
 	"languageCodes": ["lt"],
 	"borders": ["BLR", "LVA", "POL", "RUS"],
+  "flag": "flags/lt.svg",
 },
 {
 	"name": "Luxembourg",
@@ -209,6 +234,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Western Europe",
   "language": ["French", "German", "Luxembourgish"],
   "borders": ["BEL", "FRA", "DEU"],
+  "flag": "flags/lu.svg",
 },
 {
 	"name": "Macedonia",
@@ -217,6 +243,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Macedonian"],
 	"borders": ["ALB", "BGR", "GRC", "KOS", "SRB"],
+  "flag": "flags/mk.svg",
 },
 {
 	"name": "Malta",
@@ -225,6 +252,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Maltese", "English"],
 	"borders": [],
+  "flag": "flags/mt.svg",
 },
 {
 	"name": "Moldova",
@@ -233,6 +261,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Eastern Europe",
   "language": ["Moldovan"],
   "borders": ["ROU", "UKR"],
+  "flag": "flags/md.svg",
 },
 {
   "name": "Monaco",
@@ -241,6 +270,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Western Europe",
   "language": ["French"],
   "borders": ["FRA"],
+  "flag": "flags/mc.svg",
 },
 {
 	"name": "Montenegro",
@@ -249,6 +279,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Montenegrin"],
 	"borders": ["ALB", "BIH", "HRV", "KOS", "SRB"],
+  "flag": "flags/me.svg",
 },
 {
 	"name": "Netherlands",
@@ -257,6 +288,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Western Europe",
 	"language": ["Dutch"],
 	"borders": ["BEL", "DEU"],
+  "flag": "flags/nl.svg",
 },
 {
 	"name": "Norway",
@@ -265,6 +297,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Northern Europe",
 	"language": ["Norwegian", "Bokm\u00e5l", "Nynorsk"],
 	"borders": ["FIN", "SWE", "RUS"],
+  "flag": "flags/no.svg",
 },
 {
 	"name": "Poland",
@@ -273,6 +306,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Polish"],
 	"borders": ["BLR", "CZE", "DEU", "LTU", "RUS", "SVK", "UKR"],
+  "flag": "flags/pl.svg",
 },
 {
 	"name": "Portugal",
@@ -281,6 +315,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Portuguese"],
 	"borders": ["ESP"],
+  "flag": "flags/pt.svg",
 },
 {
 	"name": "Republic of Kosovo",
@@ -289,6 +324,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Albanian", "Serbian"],
 	"borders": ["ALB", "MKD", "MNE", "SRB"],
+  "flag": "flags/koso.svg",
 },
 {
 	"name": "Romania",
@@ -297,6 +333,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Eastern Europe",
   "language": ["Romanian"],
   "borders": ["BGR", "HUN", "MDA", "SRB", "UKR"],
+  "flag": "flags/ro.svg",
 },
 {
 	"name": "Russia",
@@ -305,6 +342,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Russian"],
 	"borders": ["AZE", "BLR", "CHN", "EST", "FIN", "GEO", "KAZ", "PRK", "LVA", "LTU", "MNG", "NOR", "POL", "UKR"],
+  "flag": "flags/ru.svg",
 },
 {
 	"name": "San Marino",
@@ -313,6 +351,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Italian"],
 	"borders": ["ITA"],
+  "flag": "flags/sm.svg",
 },
 {
 	"name": "Serbia",
@@ -321,6 +360,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Serbian"],
 	"borders": ["BIH", "BGR", "HRV", "HUN", "KOS", "MKD", "MNE", "ROU"],
+  "flag": "flags/rs.svg",
 },
 {
 	"name": "Slovakia",
@@ -329,6 +369,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Eastern Europe",
   "language": ["Slovak"],
   "borders": ["AUT", "CZE", "HUN", "POL", "UKR"],
+  "flag": "flags/sk.svg",
 },
 {
 	"name": "Slovenia",
@@ -337,6 +378,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Slovene"],
 	"borders": ["AUT", "HRV", "ITA", "HUN"],
+  "flag": "flags/si.svg",
 },
 {
 	"name": "Spain",
@@ -345,6 +387,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Southern Europe",
 	"language": ["Spanish", "Basque", "Catalan", "Galician", "Occitan"],
 	"borders": ["AND", "FRA", "GIB", "PRT", "MAR"],
+  "flag": "flags/es.svg",
 },
 {
 	"name": "Sweden",
@@ -353,6 +396,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Northern Europe",
 	"language": ["Swedish"],
 	"borders": ["FIN", "NOR"],
+  "flag": "flags/se.svg",
 },
 {
 	"name": "Switzerland",
@@ -361,6 +405,7 @@ const COUNTRIES_EUROPE = [
   "subregion": "Western Europe",
   "language": ["German", "French", "Italian", "Romansh"],
   "borders": ["AUT", "FRA", "ITA", "LIE", "DEU"],
+  "flag": "flags/ch.svg",
 },
 {
 	"name": "Ukraine",
@@ -369,6 +414,7 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Eastern Europe",
 	"language": ["Ukrainian"],
 	"borders": ["BLR", "HUN", "MDA", "POL", "ROU", "RUS", "SVK"],
+  "flag": "flags/ua.svg",
 },
 {
 	"name": "United Kingdom",
@@ -377,5 +423,6 @@ const COUNTRIES_EUROPE = [
 	"subregion": "Northern Europe",
 	"language": ["English"],
 	"borders": ["IRL"],
+  "flag": "flags/gb.svg",
 },
 ]

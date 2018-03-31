@@ -20,13 +20,19 @@ let questionsMain = () => {
 }
 
 //print Wrong question
-let questionsWrong = () => document.getElementById("quizQuestions").innerHTML = "The capital city of " + countriesList[randomNumber].name + " is " + countriesList[randomNumberExcluded].capital;
+let questionsWrong = () => {
+    document.getElementById("quizQuestions").innerHTML = `The capital city of ${countriesList[randomNumber].name} is ${countriesList[randomNumberExcluded].capital}`;
+    document.getElementById("questionImage").src = countriesList[randomNumber].flag;
+}
 
 //print Right question
-let questionsRight = () => document.getElementById("quizQuestions").innerHTML = "The capital city of " + countriesList[randomNumber].name + " is " + countriesList[randomNumber].capital;
+let questionsRight = () => {
+  document.getElementById("quizQuestions").innerHTML = `The capital city of ${countriesList[randomNumber].name} is ${countriesList[randomNumber].capital}`;
+  document.getElementById("questionImage").src = countriesList[randomNumber].flag;
+}
 
 //print Right answer
-let addRightAnswer = () => document.getElementById("resultMessage").innerHTML = "Right answer: " + countriesList[randomNumber].capital + " is the capital of " + countriesList[randomNumber].name;
+let addRightAnswer = () => document.getElementById("resultMessage").innerHTML = `Right answer: ${countriesList[randomNumber].capital} is the capital of ${countriesList[randomNumber].name}`;
 
 let getFocus = () => document.getElementById("btnNext").focus();
 
@@ -64,14 +70,14 @@ let testWrong = () => {
 
 //print score and question number
 let result = () => {
-  document.getElementById("resultStep").innerHTML = " Question: " + (questionNumber + 1) + " /20";
-  document.getElementById("resultScore").innerHTML = " Score: " + score + " /20";
+  document.getElementById("resultStep").innerHTML = ` Question: ${questionNumber + 1} /20`;
+  document.getElementById("resultScore").innerHTML = ` Score: ${score} /20`;
 }
 
 let finalResult = () => {
   let text;
   if (questionNumber == 20) {
-    text = "Thanks you, you got " + score + " points";
+    text = `Thank you, you got ${score} points`;
   document.getElementById("finalScore").innerHTML = text;
   document.getElementById('main').classList.add("hide-display");
   document.getElementById('feedbackPage').removeAttribute("class");

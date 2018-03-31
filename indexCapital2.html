@@ -17,6 +17,7 @@
   <script type="text/javascript" src="js/login.js"></script>
   <script type="text/javascript" src="src/lokijs.js"></script>
   <script type="text/javascript" src="js/loki.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
   <script type="text/javascript" src="src/countries.js"></script>
   <script type="text/javascript" src="src/countries_asia.js"></script>
   <script type="text/javascript" src="src/countries_europe.js"></script>
@@ -41,7 +42,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a>  <span id="username">  </span></a></li>
             <li><img id="userPicture" src="img/stepan.jpg" alt="Avatar" class="avatar"></li>
-            <li><a><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
+            <li onclick="signOut()"><a><span class="glyphicon glyphicon-user "></span> Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -87,66 +88,54 @@
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPageAsia">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/asia.jpg" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">Asia</div>
-              <button class="buttonStart" id="asia" onclick="start('Asia')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">Asia</div>
+            <button class="buttonStart" id="asia" onclick="start('Asia')">Start</button>
           </div>
         </div>
 
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPageEurope">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/europe.png" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">Europe</div>
-              <button class="buttonStart" id="europe" onclick="start('Europe')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">Europe</div>
+            <button class="buttonStart" id="europe" onclick="start('Europe')">Start</button>
           </div>
         </div>
 
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPpageAfrica">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/africa.jpg" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">Africa</div>
-              <button class="buttonStart" id="africa" onclick="start('Africa')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">Africa</div>
+            <button class="buttonStart" id="africa" onclick="start('Africa')">Start</button>
           </div>
         </div>
 
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPageAmericas">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/americas.jpg" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">Americas</div>
-              <button class="buttonStart" id="americas" onclick="start('Americas')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">Americas</div>
+            <button class="buttonStart" id="americas" onclick="start('Americas')">Start</button>
           </div>
         </div>
 
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPageOceania">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/oceania.jpg" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">Oceania</div>
-              <button class="buttonStart" id="oceania" onclick="start('Oceania')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">Oceania</div>
+            <button class="buttonStart" id="oceania" onclick="start('Oceania')">Start</button>
           </div>
         </div>
 
         <div class="cardCenter col-lg-4 col-md-4 col-sm-6 col-xs-6" id="startPageWorld">
           <div class="cardStyle" style="border-color:green; background-color:#a0e2a0">
             <img class="cardImgTop" src="img/world.jpg" alt="Card image" >
-            <div class="cardBody" >
-              <h4 class="cardTitle">Capitals</h4>
-              <div class="cardContinent">World</div>
-              <button class="buttonStart" id="world" onclick="start('World')">Start</button>
-            </div>
+            <h4 class="cardTitle">Capitals</h4>
+            <div class="cardContinent">World</div>
+            <button class="buttonStart" id="world" onclick="start('World')">Start</button>
           </div>
         </div>
 

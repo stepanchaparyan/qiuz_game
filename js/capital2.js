@@ -29,7 +29,7 @@ let questionsMain = () => {
 }
 
 //print question
-let question = () => document.getElementById("quizQuestions").innerHTML = "Which is the capital of " + countriesList[randomNumber].name;
+let question = () => document.getElementById("quizQuestions").innerHTML = `Which is the capital of ${countriesList[randomNumber].name}`;
 
 let getRandumAnswer = () => {
   var answer = [];
@@ -119,11 +119,11 @@ let setNewCSS = (id, color) => {
   if (color == "green") {
     document.getElementById(id).setAttribute("class", "greenBorder");
     document.getElementById('resultMessage').setAttribute("class", "greenBorder");
-    document.getElementById("resultMessage").innerHTML = "You are right";
+    document.getElementById("resultMessage").innerHTML = `You are right`;
   } else if (color == "red") {
     document.getElementById(id).setAttribute("class", "redBorder");
     document.getElementById('resultMessage').setAttribute("class", "redBorder");
-    document.getElementById("resultMessage").innerHTML = "Sorry, but the question was right";
+    document.getElementById("resultMessage").innerHTML = `Sorry, but the question was right`;
   }
 }
 
@@ -138,14 +138,14 @@ let changeDisabled = () => {
 
 //print score and question number
 let result = () => {
-  document.getElementById("resultStep").innerHTML = " Question: " + (questionNumber + 1) + " /20";
-  document.getElementById("resultScore").innerHTML = " Score: " + score + " /20";
+  document.getElementById("resultStep").innerHTML = ` Question: ${questionNumber + 1} /20`;
+  document.getElementById("resultScore").innerHTML = ` Score: ${score} /20`;
 }
 
 let finalResult = () => {
   let text;
   if (questionNumber == 20) {
-    text = "Thanks you, you got " + score + " points";
+    text = `Thank you, you got ${score} points`;
   document.getElementById("finalScore").innerHTML = text;
   document.getElementById('main').classList.add("hide-display");
   document.getElementById('feedbackPage').removeAttribute("class");

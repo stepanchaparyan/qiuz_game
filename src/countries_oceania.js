@@ -7,6 +7,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Polynesia",
   "language": ["English", "Samoan"],
   "borders": [],
+  "flag": "flags/as.svg",
 },
 {
   "name": "Australia",
@@ -15,6 +16,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Australia and New Zealand",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/au.svg",
 },
 {
 	"name": "Christmas Island",
@@ -23,6 +25,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Australia and New Zealand",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/cx.svg",
 },
 {
 	"name": "Cocos (Keeling) Islands",
@@ -31,6 +34,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Australia and New Zealand",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/cc.svg",
 },
 {
   "name": "Cook Islands",
@@ -39,6 +43,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Polynesia",
 	"language": ["English", "Cook Islands M\u0101ori"],
 	"borders": [],
+  "flag": "flags/ck.svg",
 },
 {
 	"name": "Fiji",
@@ -47,6 +52,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Melanesia",
   "language": ["English", "Fijian", "Fiji Hindi"],
 	"borders": [],
+  "flag": "flags/fj.svg",
 },
 {
 	"name": "French Polynesia",
@@ -55,6 +61,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Polynesia",
 	"language": ["French"],
 	"borders": [],
+  "flag": "flags/pf.svg",
 },
 {
 	"name": "Guam",
@@ -63,6 +70,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Micronesia",
   "language": ["English", "Chamorro"],
 	"borders": [],
+  "flag": "flags/gu.svg",
 },
 {
 	"name": "Kiribati",
@@ -71,6 +79,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Micronesia",
 	"language": ["English", "Gilbertese"],
 	"borders": [],
+  "flag": "flags/ki.svg",
 },
 {
 	"name": "Marshall Islands",
@@ -79,6 +88,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Micronesia",
 	"language": ["Marshallese", "English"],
 	"borders": [],
+  "flag": "flags/mh.svg",
 },
 {
 	"name": "Micronesia",
@@ -87,8 +97,8 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Micronesia",
   "language": ["English"],
   "borders": [],
+  "flag": "flags/fm.svg",
 },
-
 {
 	"name": "Nauru",
 	"capital": "Yaren",
@@ -96,14 +106,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Micronesia",
   "language": ["Nauruan", "English"],
   "borders": [],
-},
-{
-  "name": "New Caledonia",
-	"capital": "Noum\u00e9a",
-  "region": "Oceania",
-  "subregion": "Melanesia",
-  "language": ["French"],
-  "borders": [],
+  "flag": "flags/nr.svg",
 },
 {
 	"name": "New Zealand",
@@ -112,6 +115,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Australia and New Zealand",
 	"language": ["English", "M\u0101ori", "New Zealand Sign Language"],
 	"borders": [],
+  "flag": "flags/nz.svg",
 },
 {
 	"name": "Niue",
@@ -120,6 +124,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Polynesia",
 	"language": ["Niuean", "English"],
 	"borders": [],
+  "flag": "flags/nu.svg",
 },
 {
 	"name": "Norfolk Island",
@@ -128,6 +133,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Australia and New Zealand",
 	"language": ["English", "Norfuk"],
 	"borders": [],
+  "flag": "flags/nf.svg",
 },
 {
 	"name": "Northern Mariana Islands",
@@ -136,6 +142,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Micronesia",
 	"language": ["English", "Chamorro", "Carolinian"],
 	"borders": [],
+  "flag": "flags/mp.svg",
 },
 {
   "name": "Palau",
@@ -144,6 +151,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Micronesia",
 	"language": ["English", "Palauan"],
 	"borders": [],
+  "flag": "flags/pw.svg",
 },
 {
 	"name": "Papua New Guinea",
@@ -152,14 +160,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Melanesia",
 	"language": ["Hiri Motu", "Tok Pisin", "English"],
 	"borders": ["IDN"],
-},
-{
-	"name": "Pitcairn Islands",
-	"capital": "Adamstown",
-	"region": "Oceania",
-	"subregion": "Polynesia",
-	"language": ["English"],
-	"borders": [],
+  "flag": "flags/pg.svg",
 },
 {
 	"name": "Samoa",
@@ -168,6 +169,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Polynesia",
 	"language": ["Samoan", "English"],
 	"borders": [],
+  "flag": "flags/ws.svg",
 },
 {
 	"name": "Solomon Islands",
@@ -176,6 +178,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Melanesia",
 	"language": ["English"],
 	"borders": [],
+  "flag": "flags/sb.svg",
 },
 {
   "name": "Tokelau",
@@ -184,6 +187,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Polynesia",
   "language": ["Tokelauan", "English", "Samoan"],
   "borders": [],
+  "flag": "flags/tk.svg",
 },
 {
 	"name": "Tonga",
@@ -192,6 +196,7 @@ const COUNTRIES_OCEANIA = [
   "subregion": "Polynesia",
   "language": ["Tongan", "English"],
   "borders": [],
+  "flag": "flags/to.svg",
 },
 {
 	"name": "Tuvalu",
@@ -200,6 +205,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Polynesia",
 	"language": ["Tuvaluan", "English"],
 	"borders": [],
+  "flag": "flags/tv.svg",
 },
 {
 	"name": "Vanuatu",
@@ -208,14 +214,7 @@ const COUNTRIES_OCEANIA = [
 	"subregion": "Melanesia",
 	"language": ["Bislama", "French", "English"],
 	"borders": [],
+  "flag": "flags/vu.svg",
 },
-{
-	"name": "Wallis and Futuna",
-	"capital": "Mata-Utu",
-	"region": "Oceania",
-	"subregion": "Polynesia",
-	"language": ["French"],
-	"borders": [],
-}
 
 ]

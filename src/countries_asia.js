@@ -7,6 +7,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Pashto", "Dari"],
   "borders": ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"],
+  "flag": "flags/af.svg",
 },
 {
   "name": "Armenia",
@@ -16,6 +17,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Armenian"],
   "borders": ["AZE", "GEO", "IRN", "TUR"],
+  "flag": "flags/am.svg",
 },
 {
   "name": "Azerbaijan",
@@ -24,6 +26,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Azerbaijani"],
   "borders": ["ARM", "GEO", "IRN", "RUS", "TUR"],
+  "flag": "flags/az.svg",
 },
 {
   "name": "Bahrain",
@@ -32,6 +35,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": [],
+  "flag": "flags/bh.svg",
 },
 {
   "name": "Bangladesh",
@@ -40,6 +44,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Bangla"],
   "borders": ["MMR", "IND"],
+  "flag": "flags/bd.svg",
 },
 {
   "name": "Bhutan",
@@ -48,6 +53,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Dzongkha"],
   "borders": ["CHN", "IND"],
+  "flag": "flags/bt.svg",
 },
 {
 	"name": "Brunei",
@@ -56,6 +62,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Malay"],
 	"borders": ["MYS"],
+  "flag": "flags/bn.svg",
 },
 {
   "name": "Cambodia",
@@ -64,6 +71,7 @@ const COUNTRIES_ASIA = [
   "subregion": "South-Eastern Asia",
   "language": ["Khmer"],
   "borders": ["LAO", "THA", "VNM"],
+  "flag": "flags/kh.svg",
 },
 {
 	"name": "China",
@@ -72,6 +80,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Standard Chinese"],
 	"borders": ["AFG", "BTN", "MMR", "HKG", "IND", "KAZ", "PRK", "KGZ", "LAO", "MAC", "MNG", "PAK", "RUS", "TJK", "VNM"],
+  "flag": "flags/ch.svg",
 },
 {
 	"name": "Georgia",
@@ -80,6 +89,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Georgian"],
   "borders": ["ARM", "AZE", "RUS", "TUR"],
+  "flag": "flags/ge.svg",
 },
 {
 	"name": "Hong Kong",
@@ -88,6 +98,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["English", "Chinese"],
 	"borders": ["CHN"],
+  "flag": "flags/hk.svg",
 },
 {
 	"name": "India",
@@ -96,6 +107,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Hindi", "English"],
 	"borders": ["AFG", "BGD", "BTN", "MMR", "CHN", "NPL", "PAK", "LKA"],
+  "flag": "flags/in.svg",
 },
 {
 	"name": "Indonesia",
@@ -104,6 +116,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Indonesian"],
 	"borders": ["TLS", "MYS", "PNG"],
+  "flag": "flags/id.svg",
 },
 {
 	"name": "Iran",
@@ -112,6 +125,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Persian"],
   "borders": ["AFG", "ARM", "AZE", "IRQ", "PAK", "TUR", "TKM"],
+  "flag": "flags/ir.svg",
 },
 {
 	"name": "Iraq",
@@ -120,6 +134,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Arabic", "Kurdish", "Syriac"],
 	"borders": ["IRN", "JOR", "KWT", "SAU", "SYR", "TUR"],
+  "flag": "flags/iq.svg",
 },
 {
 	"name": "Israel",
@@ -128,6 +143,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Hebrew", "Arabic"],
   "borders": ["EGY", "JOR", "LBN", "SYR"],
+  "flag": "flags/il.svg",
 },
 {
 	"name": "Japan",
@@ -136,6 +152,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Japanese"],
 	"borders": [],
+  "flag": "flags/jp.svg",
 },
 {
 	"name": "Jordan",
@@ -144,6 +161,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
 	"borders": ["IRQ", "ISR", "SAU", "SYR"],
+  "flag": "flags/jo.svg",
 },
 {
 	"name": "Kazakhstan",
@@ -152,6 +170,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Central Asia",
 	"language": ["Kazakh", "Russian"],
 	"borders": ["CHN", "KGZ", "RUS", "TKM", "UZB"],
+  "flag": "flags/kz.svg",
 },
 {
 	"name": "Kuwait",
@@ -160,6 +179,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": ["IRN", "SAU"],
+  "flag": "flags/kw.svg",
 },
 {
   "name": "Kyrgyzstan",
@@ -168,6 +188,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Central Asia",
   "language": ["Kyrgyz", "Russian"],
   "borders": ["CHN", "KAZ", "TJK", "UZB"],
+  "flag": "flags/kg.svg",
 },
 {
 	"name": "Laos",
@@ -176,6 +197,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Lao"],
   "borders": ["MMR", "KHM", "CHN", "THA", "VNM"],
+  "flag": "flags/la.svg",
 },
 {
 	"name": "Lebanon",
@@ -184,6 +206,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Arabic", "French"],
 	"borders": ["ISR", "SYR"],
+  "flag": "flags/lb.svg",
 },
 {
 	"name": "Malaysia",
@@ -192,6 +215,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Malaysian"],
 	"borders": ["BRN", "IDN", "THA"],
+  "flag": "flags/my.svg",
 },
 {
 	"name": "Maldives",
@@ -200,6 +224,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Southern Asia",
   "language": ["Maldivian"],
   "borders": [],
+  "flag": "flags/mv.svg",
 },
 {
 	"name": "Mongolia",
@@ -208,6 +233,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Mongolian"],
 	"borders": ["CHN", "RUS"],
+  "flag": "flags/mn.svg",
 },
 {
 	"name": "Myanmar",
@@ -216,6 +242,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Burmese"],
 	"borders": ["BGD", "CHN", "IND", "LAO", "THA"],
+  "flag": "flags/mm.svg",
 },
 {
 	"name": "Nepal",
@@ -224,6 +251,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Southern Asia",
 	"language": ["Nepali"],
 	"borders": ["CHN", "IND"],
+  "flag": "flags/np.svg",
 },
 {
 	"name": "North Korea",
@@ -232,6 +260,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Korean"],
 	"borders": ["CHN", "KOR", "RUS"],
+  "flag": "flags/kp.svg",
 },
 {
 	"name": "Oman",
@@ -240,6 +269,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Arabic"],
 	"borders": ["SAU", "ARE", "YEM"],
+  "flag": "flags/om.svg",
 },
 {
 	"name": "Pakistan",
@@ -248,6 +278,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Southern Asia",
 	"language": ["English", "Urdu"],
 	"borders": ["AFG", "CHN", "IND", "IRN"],
+  "flag": "flags/pk.svg",
 },
 {
 	"name": "Palestine",
@@ -256,6 +287,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": ["ISR", "EGY", "JOR"],
+  "flag": "flags/ps.svg",
 },
 {
 	"name": "Philippines",
@@ -264,6 +296,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Filipino", "English"],
 	"borders": [],
+  "flag": "flags/ph.svg",
 },
 {
 	"name": "Qatar",
@@ -272,6 +305,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": ["SAU"],
+  "flag": "flags/qa.svg",
 },
 {
 	"name": "Saudi Arabia",
@@ -280,6 +314,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Arabic"],
 	"borders": ["IRQ", "JOR", "KWT", "OMN", "QAT", "ARE", "YEM"],
+  "flag": "flags/sa.svg",
 },
 {
 	"name": "Singapore",
@@ -288,6 +323,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["English", "Malay", "Mandarin", "Tamil"],
 	"borders": [],
+  "flag": "flags/sg.svg",
 },
 {
 	"name": "South Korea",
@@ -296,6 +332,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Korean"],
 	"borders": ["PRK"],
+  "flag": "flags/kr.svg",
 },
 {
 	"name": "Sri Lanka",
@@ -304,6 +341,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Southern Asia",
 	"language": ["Sinhala", "Tamil"],
 	"borders": ["IND"],
+  "flag": "flags/lk.svg",
 },
 {
 	"name": "Syria",
@@ -312,6 +350,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": ["IRQ", "ISR", "JOR", "LBN", "TUR"],
+  "flag": "flags/sy.svg",
 },
 {
 	"name": "Taiwan",
@@ -320,6 +359,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Eastern Asia",
 	"language": ["Standard Chinese"],
 	"borders": [],
+  "flag": "flags/tw.svg",
 },
 {
 	"name": "Tajikistan",
@@ -328,6 +368,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Central Asia",
 	"language": ["Tajik"],
 	"borders": ["AFG", "CHN", "KGZ", "UZB"],
+  "flag": "flags/tj.svg",
 },
 {
 	"name": "Thailand",
@@ -336,6 +377,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Thai"],
 	"borders": ["Burma", "KHM", "LAO", "MYS"],
+  "flag": "flags/th.svg",
 },
 {
 	"name": "Timor-Leste",
@@ -344,6 +386,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Portuguese", "Tetum"],
 	"borders": ["IDN"],
+  "flag": "flags/tl.svg",
 },
 {
 	"name": "Turkey",
@@ -352,6 +395,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Turkish"],
 	"borders": ["ARM", "AZE", "BGR", "GEO", "GRC", "IRN", "IRQ", "SYR"],
+  "flag": "flags/tr.svg",
 },
 {
 	"name": "Turkmenistan",
@@ -360,6 +404,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Central Asia",
 	"language": ["Turkmen"],
   "borders": ["AFG", "IRN", "KAZ", "UZB"],
+  "flag": "flags/tm.svg",
 },
 {
   "name": "United Arab Emirates",
@@ -368,6 +413,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Western Asia",
   "language": ["Arabic"],
   "borders": ["OMN", "SAU"],
+  "flag": "flags/ae.svg",
 },
 {
 	"name": "Uzbekistan",
@@ -376,6 +422,7 @@ const COUNTRIES_ASIA = [
   "subregion": "Central Asia",
   "language": ["Uzbek"],
   "borders": ["AFG", "KAZ", "KGZ", "TJK", "TKM"],
+  "flag": "flags/uz.svg",
 },
 {
 	"name": "Vietnam",
@@ -384,6 +431,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "South-Eastern Asia",
 	"language": ["Vietnamese"],
 	"borders": ["KHM", "CHN", "LAO"],
+  "flag": "flags/vn.svg",
 },
 {
 	"name": "Yemen",
@@ -392,6 +440,7 @@ const COUNTRIES_ASIA = [
 	"subregion": "Western Asia",
 	"language": ["Arabic"],
 	"borders": ["OMN", "SAU"],
+  "flag": "flags/ye.svg",
 }
 
 ]

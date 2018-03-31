@@ -7,6 +7,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Northern Africa",
   "language": ["Arabic"],
   "borders": ["TUN", "LDY", "NER", "ESH", "MRT", "MLI", "MAR"],
+  "flag": "flags/dz.svg",
 },
 {
   "name": "Angola",
@@ -15,6 +16,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Middle Africa",
   "language": ["Portuguese"],
   "borders": ["COG", "COD", "ZMB", "NAM"],
+  "flag": "flags/ao.svg",
 },
 {
   "name": "Benin",
@@ -23,6 +25,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
   "language": ["French"],
   "borders": ["BFA", "NER", "NGA", "TGO"],
+  "flag": "flags/bj.svg",
 },
 {
   "name": "Botswana",
@@ -31,14 +34,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Southern Africa",
   "language": ["English", "Setswana"],
   "borders": ["NAM", "ZAF", "ZMB", "ZWE"],
-},
-{
-  "name": "British Indian Ocean Territory",
-  "capital": "Diego Garcia",
-  "region": "Africa",
-  "subregion": "Eastern Africa",
-  "language": ["English"],
-  "borders": [],
+  "flag": "flags/bw.svg",
 },
 {
   "name": "Burkina Faso",
@@ -47,6 +43,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["BEN", "CIV", "GHA", "MLI", "NER", "TGO"],
+  "flag": "flags/bf.svg",
 },
 {
 	"name": "Burundi",
@@ -55,6 +52,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Kirundi", "French"],
 	"borders": ["COD", "RWA", "TZA"],
+  "flag": "flags/bi.svg",
 },
 {
   "name": "Cameroon",
@@ -63,6 +61,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Middle Africa",
   "language": ["French", "English"],
   "borders": ["CAF", "TCD", "COG", "GNQ", "GAB", "NGA"],
+  "flag": "flags/cm.svg",
 },
 {
 	"name": "Cape Verde",
@@ -71,6 +70,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["Portuguese"],
 	"borders": [],
+  "flag": "flags/cv.svg",
 },
 {
 	"name": "Central African Republic",
@@ -79,6 +79,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["Sango", "French"],
 	"borders": ["CMR", "TCD", "COD", "COG", "SSD", "SDN"],
+  "flag": "flags/cf.svg",
 },
 {
 	"name": "Chad",
@@ -87,6 +88,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["French", "Arabic"],
 	"borders": ["CMR", "CAF", "LBY", "NER", "NGA", "SSD"],
+  "flag": "flags/td.svg",
 },
 {
 	"name": "Comoros",
@@ -95,6 +97,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Comorian", "Arabic", "French"],
 	"borders": [],
+  "flag": "flags/km.svg",
 },
 {
 	"name": "Republic of the Congo",
@@ -103,6 +106,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Middle Africa",
   "language": ["French"],
   "borders": ["AGO", "CMR", "CAF", "COD", "GAB"],
+  "flag": "flags/cg.svg",
 },
 {
 	"name": "Democratic Republic of the Congo",
@@ -111,6 +115,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["French"],
 	"borders": ["AGO", "BDI", "CAF", "COG", "RWA", "SSD", "TZA", "UGA", "ZMB"],
+  "flag": "flags/cd.svg",
 },
 {
 	"name": "Djibouti",
@@ -119,6 +124,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Eastern Africa",
   "language": ["French", "Arabic"],
 	"borders": ["ERI", "ETH", "SOM"],
+  "flag": "flags/dj.svg",
 },
 {
 	"name": "Egypt",
@@ -127,6 +133,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Northern Africa",
 	"language": ["Arabic"],
 	"borders": ["ISR", "LBY", "SDN"],
+  "flag": "flags/eg.svg",
 },
 {
   "name": "Equatorial Guinea",
@@ -135,6 +142,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["Spanish", "French", "Portuguese"],
 	"borders": ["CMR", "GAB"],
+  "flag": "flags/gq.svg",
 },
 {
 	"name": "Eritrea",
@@ -143,6 +151,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Tigrinya", "Arabic", "English"],
 	"borders": ["DJI", "ETH", "SDN"],
+  "flag": "flags/er.svg",
 },
 {
 	"name": "Ethiopia",
@@ -151,6 +160,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Eastern Africa",
   "language": ["Amharic"],
   "borders": ["DJI", "ERI", "KEN", "SOM", "SSD", "SDN"],
+  "flag": "flags/et.svg",
 },
 {
   "name": "Gabon",
@@ -159,6 +169,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Middle Africa",
   "language": ["French"],
 	"borders": ["CMR", "COG", "GNQ"],
+  "flag": "flags/ga.svg",
 },
 {
   "name": "Gambia",
@@ -167,6 +178,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
   "language": ["English"],
   "borders": ["SEN"],
+  "flag": "flags/gm.svg",
 },
 {
 	"name": "Ghana",
@@ -175,6 +187,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["English"],
 	"borders": ["BFA", "CIV", "TGO"],
+  "flag": "flags/gh.svg",
 },
 {
 	"name": "Guinea",
@@ -183,6 +196,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["CIV", "GNB", "LBR", "MLI", "SEN", "SLE"],
+  "flag": "flags/gn.svg",
 },
 {
 	"name": "Guinea-Bissau",
@@ -191,6 +205,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["Portuguese"],
 	"borders": ["GIN", "SEN"],
+  "flag": "flags/gw.svg",
 },
 {
 	"name": "Ivory Coast",
@@ -199,6 +214,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["BFA", "GHA", "GIN", "LBR", "MLI"],
+  "flag": "flags/ci.svg",
 },
 {
   "name": "Kenya",
@@ -207,6 +223,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Eastern Africa",
   "language": ["Swahili", "English"],
   "borders": ["ETH", "SOM", "SSD", "TZA", "UGA"],
+  "flag": "flags/ke.svg",
 },
 {
 	"name": "Lesotho",
@@ -215,6 +232,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Southern Africa",
 	"language": ["Sesotho", "English"],
 	"borders": ["ZAF"],
+  "flag": "flags/ls.svg",
 },
 {
 	"name": "Liberia",
@@ -223,6 +241,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["English"],
   "borders": ["GIN", "CIV", "SLE"],
+  "flag": "flags/lr.svg",
 },
 {
 	"name": "Libya",
@@ -231,6 +250,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Northern Africa",
 	"language": ["Arabic"],
   "borders": ["DZA", "TCD", "EGY", "NER", "SDN", "TUN"],
+  "flag": "flags/ly.svg",
 },
 {
 	"name": "Madagascar",
@@ -239,6 +259,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Malagasy", "French"],
 	"borders": [],
+  "flag": "flags/mg.svg",
 },
 {
 	"name": "Malawi",
@@ -248,6 +269,7 @@ const COUNTRIES_AFRICA = [
 	"language": ["Chichewa", "English"],
 	"languageCodes": ["en", "ny"],
 	"borders": ["MOZ", "TZA", "ZMB"],
+  "flag": "flags/mw.svg",
 },
 {
 	"name": "Mali",
@@ -256,6 +278,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["DZA", "BFA", "GIN", "CIV", "MRT", "NER", "SEN"],
+  "flag": "flags/ml.svg",
 },
 {
 	"name": "Mauritania",
@@ -264,6 +287,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
   "language": ["Arabic"],
   "borders": ["DZA", "MLI", "SEN", "ESH"],
+  "flag": "flags/gd.svg",
 },
 {
 	"name": "Mauritius",
@@ -272,14 +296,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["French"],
 	"borders": [],
-},
-{
-  "name": "Mayotte",
-  "capital": "Mamoudzou",
-  "region": "Africa",
-  "subregion": "Eastern Africa",
-  "language": ["French"],
-  "borders": [],
+  "flag": "flags/mu.svg",
 },
 {
 	"name": "Morocco",
@@ -288,6 +305,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Northern Africa",
   "language": ["Arabic", "Berber"],
   "borders": ["DZA", "ESH", "ESP"],
+  "flag": "flags/ma.svg",
 },
 {
 	"name": "Mozambique",
@@ -296,6 +314,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Eastern Africa",
   "language": ["Portuguese"],
   "borders": ["MWI", "ZAF", "SWZ", "TZA", "ZMB", "ZWE"],
+  "flag": "flags/mz.svg",
 },
 {
 	"name": "Namibia",
@@ -304,6 +323,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Southern Africa",
 	"language": ["English"],
 	"borders": ["AGO", "BWA", "ZAF", "ZMB"],
+  "flag": "flags/na.svg",
 },
 {
 	"name": "Niger",
@@ -312,6 +332,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["DZA", "BEN", "BFA", "TCD", "LBY", "MLI", "NGA"],
+  "flag": "flags/ne.svg",
 },
 {
 	"name": "Nigeria",
@@ -320,14 +341,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
   "language": ["English"],
   "borders": ["BEN", "CMR", "TCD", "NER"],
-},
-{
-	"name": "R\u00e9union",
-	"capital": "Saint-Denis",
-	"region": "Africa",
-	"subregion": "Eastern Africa",
-	"language": ["French"],
-	"borders": [],
+  "flag": "flags/ng.svg",
 },
 {
 	"name": "Rwanda",
@@ -336,14 +350,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Kinyarwanda", "French", "English"],
 	"borders": ["BDI", "COD", "TZA", "UGA"],
-},
-{
-	"name": "Saint Helena",
-	"capital": "Jamestown",
-	"region": "Africa",
-	"subregion": "Western Africa",
-	"language": ["English"],
-	"borders": [],
+  "flag": "flags/rw.svg",
 },
 {
 	"name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
@@ -352,6 +359,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["Portuguese"],
 	"borders": [],
+  "flag": "flags/st.svg",
 },
 {
   "name": "Senegal",
@@ -360,6 +368,7 @@ const COUNTRIES_AFRICA = [
   "subregion": "Western Africa",
   "language": ["French"],
   "borders": ["The Gambia", "GIN", "GNB", "MLI", "MRT"],
+  "flag": "flags/sn.svg",
 },
 {
 	"name": "Seychelles",
@@ -368,6 +377,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["French", "English", "Seychellois Creole"],
 	"borders": [],
+  "flag": "flags/sc.svg",
 },
 {
 	"name": "Sierra Leone",
@@ -376,6 +386,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["English"],
 	"borders": ["GIN", "LBR"],
+  "flag": "flags/sl.svg",
 },
 {
 	"name": "Somalia",
@@ -384,6 +395,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Somali", "Arabic"],
   "borders": ["DJI", "ETH", "KEN"],
+  "flag": "flags/so.svg",
 },
 {
 	"name": "South Africa",
@@ -392,6 +404,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Southern Africa",
 	"language": ["Afrikaans", "English", "Southern Ndebele", "Northern Sotho", "Southern Sotho", "Swazi", "Tsonga", "Tswana", "Venda", "Xhosa", "Zulu"],
 	"borders": ["BWA", "LSO", "MOZ", "NAM", "SWZ", "ZWE"],
+  "flag": "flags/za.svg",
 },
 {
 	"name": "South Sudan",
@@ -400,6 +413,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Middle Africa",
 	"language": ["English"],
 	"borders": ["CAF", "COD", "ETH", "KEN", "SDN", "UGA"],
+  "flag": "flags/ss.svg",
 },
 {
 	"name": "Sudan",
@@ -408,6 +422,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Northern Africa",
 	"language": ["Arabic", "English"],
 	"borders": ["CAF", "TCD", "EGY", "ERI", "ETH", "LBY", "SSD"],
+  "flag": "flags/sd.svg",
 },
 {
 	"name": "Swaziland",
@@ -416,6 +431,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Southern Africa",
 	"language": ["Swazi", "English"],
 	"borders": ["MOZ", "ZAF"],
+  "flag": "flags/sz.svg",
 },
 {
 	"name": "Tanzania",
@@ -424,6 +440,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Swahili", "English"],
   "borders": ["BDI", "COD", "KEN", "MWI", "MOZ", "RWA", "UGA", "ZMB"],
+  "flag": "flags/tz.svg",
 },
 {
 	"name": "Togo",
@@ -432,6 +449,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Western Africa",
 	"language": ["French"],
 	"borders": ["BEN", "BFA", "GHA"],
+  "flag": "flags/tg.svg",
 },
 {
 	"name": "Tunisia",
@@ -440,6 +458,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Northern Africa",
 	"language": ["Arabic"],
 	"borders": ["DZA", "LBY"],
+  "flag": "flags/tn.svg",
 },
 {
 	"name": "Uganda",
@@ -448,6 +467,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["English", "Swahili"],
 	"borders": ["COD", "KEN", "RWA", "SSD", "TZA"],
+  "flag": "flags/ug.svg",
 },
 {
 	"name": "Western Sahara",
@@ -456,6 +476,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Northern Africa",
 	"language": ["Berber", "Hassaniya", "Spanish"],
 	"borders": ["DZA", "MRT", "MAR"],
+  "flag": "flags/eh.svg",
 },
 {
 	"name": "Zambia",
@@ -464,6 +485,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["English"],
 	"borders": ["AGO", "BWA", "COD", "MWI", "MOZ", "NAM", "TZA", "ZWE"],
+  "flag": "flags/zm.svg",
 },
 {
 	"name": "Zimbabwe",
@@ -472,6 +494,7 @@ const COUNTRIES_AFRICA = [
 	"subregion": "Eastern Africa",
 	"language": ["Chewa", "Chibarwe", "English", "Kalanga", "Koisan", "Nambya", "Ndau", "Ndebele", "Shangani", "Shona", "Zimbabwean sign language", "Sotho", "Tonga", "Tswana", "Venda", "Xhosa"],
 	"borders": ["BWA", "MOZ", "ZAF", "ZMB"],
+  "flag": "flags/zw.svg",
 }
 
 ]
